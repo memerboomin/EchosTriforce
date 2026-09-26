@@ -1,0 +1,67 @@
+{
+  "blend": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "mode": "material",
+  "engine": "cycles",
+  "bbox_min": [
+    -0.3998866081237793,
+    -0.610754668712616,
+    -0.08332163840532303
+  ],
+  "bbox_max": [
+    0.5277250409126282,
+    0.4819695055484772,
+    1.791730284690857
+  ],
+  "size_xyz": [
+    0.9276116490364075,
+    1.0927242040634155,
+    1.8750519752502441
+  ],
+  "objects": [
+    "CH_Link_Belt_LOD0",
+    "CH_Link_Body_LOD0",
+    "CH_Link_BootCuff_L_LOD0",
+    "CH_Link_BootCuff_R_LOD0",
+    "CH_Link_Buckle_LOD0",
+    "CH_Link_CapTail_LOD0",
+    "CH_Link_Guard_LOD0",
+    "CH_Link_Head_LOD0",
+    "CH_Link_Hilt_LOD0",
+    "CH_Link_Mask_LOD0",
+    "CH_Link_Ocarina_LOD0",
+    "CH_Link_Pouch_LOD0",
+    "CH_Link_Sheath_LOD0",
+    "CH_Link_ShieldRim_LOD0",
+    "CH_Link_Shield_LOD0",
+    "CH_Link_TunicSkirt_LOD0"
+  ],
+  "renders": {
+    "front": {
+      "file": "review/06_rig/POSE_lunge/material_front.png",
+      "az_el_lens": [
+        0,
+        0,
+        0
+      ],
+      "distance": 4.546362102031708
+    },
+    "threequarter": {
+      "file": "review/06_rig/POSE_lunge/material_threequarter.png",
+      "az_el_lens": [
+        35,
+        15,
+        50
+      ],
+      "distance": 3.929421115873588
+    },
+    "side": {
+      "file": "review/06_rig/POSE_lunge/material_side.png",
+      "az_el_lens": [
+        90,
+        0,
+        0
+      ],
+      "distance": 4.463805824518204
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "blend": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "mode": "clay",
+  "engine": "workbench",
+  "bbox_min": [
+    -0.9427880644798279,
+    -0.22233343124389648,
+    -0.0008115620003081858
+  ],
+  "bbox_max": [
+    0.9427919387817383,
+    0.21557550132274628,
+    1.8511348962783813
+  ],
+  "size_xyz": [
+    1.885580062866211,
+    0.43790894746780396,
+    1.851946473121643
+  ],
+  "objects": [
+    "CH_Link_Belt_LOD2",
+    "CH_Link_Body_LOD2",
+    "CH_Link_BootCuff_L_LOD2",
+    "CH_Link_BootCuff_R_LOD2",
+    "CH_Link_Buckle_LOD2",
+    "CH_Link_CapTail_LOD2",
+    "CH_Link_Guard_LOD2",
+    "CH_Link_Head_LOD2",
+    "CH_Link_Hilt_LOD2",
+    "CH_Link_Mask_LOD2",
+    "CH_Link_Ocarina_LOD2",
+    "CH_Link_Pouch_LOD2",
+    "CH_Link_Sheath_LOD2",
+    "CH_Link_ShieldRim_LOD2",
+    "CH_Link_Shield_LOD2",
+    "CH_Link_TunicSkirt_LOD2"
+  ],
+  "renders": {
+    "threequarter": {
+      "file": "review/04_topology/lod2/clay_threequarter.png",
+      "az_el_lens": [
+        35,
+        15,
+        50
+      ],
+      "distance": 3.908483955698708
+    },
+    "gameplay": {
+      "file": "review/04_topology/lod2/clay_gameplay_160px.png",
+      "subject_px": 160
+    }
+  }
+}

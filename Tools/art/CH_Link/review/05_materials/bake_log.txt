@@ -1,0 +1,324 @@
+00:00.273  blend            | Read blend: "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend"
+00:02.924  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:02.924  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:03.185  cycles           | ERROR Failed to load 2 image files
+00:04.502  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:04.502  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:04.535  cycles           | ERROR Failed to load 2 image files
+00:05.685  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:05.685  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:05.714  cycles           | ERROR Failed to load 2 image files
+00:06.803  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:06.803  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:07.131  cycles           | ERROR Failed to load 2 image files
+00:07.651  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:07.651  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:07.851  cycles           | ERROR Failed to load 2 image files
+00:08.186  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:08.186  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:08.385  cycles           | ERROR Failed to load 2 image files
+00:08.718  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:08.718  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:08.919  cycles           | ERROR Failed to load 2 image files
+00:09.475  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:09.475  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:09.676  cycles           | ERROR Failed to load 2 image files
+00:18.620  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:18.620  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:18.833  cycles           | ERROR Failed to load 2 image files
+00:22.854  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:22.854  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:23.109  cycles           | ERROR Failed to load 2 image files
+00:25.743  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:25.743  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:25.827  cycles           | ERROR Failed to load 2 image files
+00:28.015  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:28.015  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:28.100  cycles           | ERROR Failed to load 2 image files
+00:30.320  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:30.320  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:30.657  cycles           | ERROR Failed to load 2 image files
+00:32.281  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:32.281  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:32.527  cycles           | ERROR Failed to load 2 image files
+00:34.076  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:34.076  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:34.162  cycles           | ERROR Failed to load 2 image files
+00:35.733  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:35.734  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:35.817  cycles           | ERROR Failed to load 2 image files
+00:37.342  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:37.342  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:37.675  cycles           | ERROR Failed to load 2 image files
+00:39.022  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:39.022  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:39.265  cycles           | ERROR Failed to load 2 image files
+00:40.649  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:40.649  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:40.734  cycles           | ERROR Failed to load 2 image files
+00:42.132  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:42.132  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:42.216  cycles           | ERROR Failed to load 2 image files
+00:43.578  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:43.578  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:43.910  cycles           | ERROR Failed to load 2 image files
+00:45.153  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:45.153  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:45.394  cycles           | ERROR Failed to load 2 image files
+00:46.737  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:46.737  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:46.821  cycles           | ERROR Failed to load 2 image files
+00:48.184  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:48.184  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:48.269  cycles           | ERROR Failed to load 2 image files
+00:49.606  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:49.606  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:49.944  cycles           | ERROR Failed to load 2 image files
+00:51.221  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:51.221  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:51.462  cycles           | ERROR Failed to load 2 image files
+00:52.851  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:52.851  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:52.935  cycles           | ERROR Failed to load 2 image files
+00:54.378  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:54.378  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:54.462  cycles           | ERROR Failed to load 2 image files
+00:55.843  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:55.843  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:56.174  cycles           | ERROR Failed to load 2 image files
+00:57.476  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:57.476  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:57.720  cycles           | ERROR Failed to load 2 image files
+00:59.153  cycles           | WARNING Image file EnvSamplerTex does not exist.
+00:59.153  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+00:59.237  cycles           | ERROR Failed to load 2 image files
+01:00.693  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:00.693  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:00.777  cycles           | ERROR Failed to load 2 image files
+01:02.190  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:02.190  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:02.521  cycles           | ERROR Failed to load 2 image files
+01:03.809  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:03.809  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:04.052  cycles           | ERROR Failed to load 2 image files
+01:05.453  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:05.453  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:05.538  cycles           | ERROR Failed to load 2 image files
+01:06.972  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:06.972  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:07.057  cycles           | ERROR Failed to load 2 image files
+01:08.447  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:08.447  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:08.783  cycles           | ERROR Failed to load 2 image files
+01:10.902  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:10.902  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:11.118  cycles           | ERROR Failed to load 2 image files
+01:34.551  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:34.551  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:34.772  cycles           | ERROR Failed to load 2 image files
+01:44.021  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:44.021  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:44.235  cycles           | ERROR Failed to load 2 image files
+01:47.056  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:47.056  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:47.270  cycles           | ERROR Failed to load 2 image files
+01:49.280  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:49.280  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:49.495  cycles           | ERROR Failed to load 2 image files
+01:52.119  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:52.119  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:52.333  cycles           | ERROR Failed to load 2 image files
+01:54.928  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:54.928  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:55.148  cycles           | ERROR Failed to load 2 image files
+01:59.021  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:59.021  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:59.237  cycles           | ERROR Failed to load 2 image files
+01:59.603  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+01:59.603  cycles           | WARNING Image file EnvSamplerTex does not exist.
+01:59.816  cycles           | ERROR Failed to load 2 image files
+02:00.154  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:00.154  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:00.365  cycles           | ERROR Failed to load 2 image files
+02:00.714  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:00.714  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:00.927  cycles           | ERROR Failed to load 2 image files
+02:01.289  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:01.289  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:01.500  cycles           | ERROR Failed to load 2 image files
+02:01.858  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:01.858  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:02.071  cycles           | ERROR Failed to load 2 image files
+02:02.453  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:02.453  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:02.669  cycles           | ERROR Failed to load 2 image files
+02:03.005  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:03.005  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:03.220  cycles           | ERROR Failed to load 2 image files
+02:03.553  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:03.553  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:03.767  cycles           | ERROR Failed to load 2 image files
+02:04.098  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:04.098  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:04.313  cycles           | ERROR Failed to load 2 image files
+02:04.640  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:04.640  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:04.852  cycles           | ERROR Failed to load 2 image files
+02:05.179  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:05.179  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:05.393  cycles           | ERROR Failed to load 2 image files
+02:05.717  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:05.717  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:05.931  cycles           | ERROR Failed to load 2 image files
+02:06.246  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:06.246  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:06.459  cycles           | ERROR Failed to load 2 image files
+02:06.775  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:06.775  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:06.986  cycles           | ERROR Failed to load 2 image files
+02:07.324  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:07.324  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:07.536  cycles           | ERROR Failed to load 2 image files
+02:07.851  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:07.851  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:08.084  cycles           | ERROR Failed to load 2 image files
+02:08.400  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:08.400  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:08.612  cycles           | ERROR Failed to load 2 image files
+02:08.950  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:08.950  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:09.163  cycles           | ERROR Failed to load 2 image files
+02:09.475  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:09.475  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:09.688  cycles           | ERROR Failed to load 2 image files
+02:09.999  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:09.999  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:10.211  cycles           | ERROR Failed to load 2 image files
+02:10.527  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:10.527  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:10.743  cycles           | ERROR Failed to load 2 image files
+02:17.607  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:17.607  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:17.859  cycles           | ERROR Failed to load 2 image files
+02:20.547  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:20.547  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:20.809  cycles           | ERROR Failed to load 2 image files
+02:23.714  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:23.714  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:24.012  cycles           | ERROR Failed to load 2 image files
+02:24.950  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:24.950  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:25.232  cycles           | ERROR Failed to load 2 image files
+02:26.134  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:26.134  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:26.433  cycles           | ERROR Failed to load 2 image files
+02:27.412  cycles           | WARNING Image file EnvSamplerTex does not exist.
+02:27.412  cycles           | WARNING Image file /Users/Shared/Epic Games/temp/render/ttt/M_tex/Baked/T_Manny_02_BN.TGA does not exist.
+02:27.722  cycles           | ERROR Failed to load 2 image files
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+[05_materials] HIGH_Bake: 170950 gear vertices removed
+[05_materials] Head set: 2048 px, 2006 px/m, UV fill 54 %
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Head         baked (5 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   CapTail      baked (7 s cumulative)
+[05_materials]   T_Link_Head_BaseColor: 7.4 % sentinel texels filled
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials] Head set done in 18 s
+[05_materials] Body set: 4096 px, 1309 px/m, UV fill 41 %
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Body         baked (10 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   TunicSkirt   baked (16 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Belt         baked (23 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Buckle       baked (29 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   BootCuff_L   baked (35 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   BootCuff_R   baked (41 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Pouch        baked (48 s cumulative)
+[05_materials]   T_Link_Body_BaseColor: 48.7 % sentinel texels filled
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials] Body set done in 94 s
+[05_materials] Gear set: 2048 px, 1390 px/m, UV fill 48 %
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Shield       baked (2 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   ShieldRim    baked (3 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Sheath       baked (5 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Hilt         baked (7 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Guard        baked (8 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Ocarina      baked (10 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials]   Mask         baked (11 s cumulative)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+[05_materials] Gear set done in 30 s
+[05_materials] LODs rebuilt from the unwrapped LOD0: {1: 19240, 2: 7129}
+Info: Saved as "CH_Link_master.blend"
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

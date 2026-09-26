@@ -1,0 +1,6 @@
+{
+  "asset": "SKM_LinkHybrid",
+  "fps": 30,
+  "clips": [],
+  "note": "no clips ship with the mesh; the game's A_Sword_*, A_Guard, A_Cast, A_Victory (Tools/art/anims) play on the same skeleton. POSE_* actions in the master are review poses only."
+}

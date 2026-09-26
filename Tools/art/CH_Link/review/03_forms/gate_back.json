@@ -1,0 +1,21 @@
+{
+  "view": "back",
+  "az": 180.0,
+  "matte": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/ref/matte_back.png",
+  "m_per_px": 0.00127389,
+  "iou": 0.8919,
+  "ref_only_pct": 3.98,
+  "render_only_pct": 7.65,
+  "band_width_diff": [
+    0.0082,
+    -0.0007,
+    -0.0062,
+    0.0041,
+    0.0234,
+    -0.0096,
+    0.0082,
+    0.0014,
+    -0.0062,
+    -0.0041
+  ]
+}

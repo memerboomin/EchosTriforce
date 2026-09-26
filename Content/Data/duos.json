@@ -1,0 +1,88 @@
+{
+ "Duos": [
+  {
+   "Id": "DUO_SHEIK",
+   "Name": "Ombre et lame",
+   "A": "link",
+   "B": "sheik",
+   "Resonance": 40,
+   "MPA": 0,
+   "MPB": 0,
+   "Kind": "Physical",
+   "Target": "Enemy",
+   "Power": 1.1,
+   "Hits": 2,
+   "Element": "Neutral",
+   "Apply": [
+    {
+     "Status": "Fragile",
+     "Chance": 1.0,
+     "Duration": 2,
+     "Magnitude": 0.15
+    }
+   ],
+   "HealPower": 0.0,
+   "Breach": 0,
+   "Desc": "Deux impacts P1,1 ; Fragilité 100 %.",
+   "RequireForm": ""
+  },
+  {
+   "Id": "DUO_MIPHA",
+   "Name": "Marée du courage",
+   "A": "link",
+   "B": "mipha",
+   "Resonance": 50,
+   "MPA": 0,
+   "MPB": 8,
+   "Kind": "Magical",
+   "Target": "Enemy",
+   "Power": 1.5,
+   "Hits": 1,
+   "Element": "Water",
+   "Apply": [],
+   "HealPower": 0.7,
+   "Breach": 0,
+   "Desc": "P1,5 eau ; soin du groupe P0,7.",
+   "RequireForm": ""
+  },
+  {
+   "Id": "DUO_DARUK",
+   "Name": "Roc et acier",
+   "A": "link",
+   "B": "daruk",
+   "Resonance": 50,
+   "MPA": 0,
+   "MPB": 0,
+   "Kind": "Physical",
+   "Target": "Enemy",
+   "Power": 1.8,
+   "Hits": 1,
+   "Element": "Earth",
+   "Apply": [],
+   "HealPower": 0.0,
+   "Breach": 100,
+   "Desc": "P1,8 terre ; Brèche +100.",
+   "RequireForm": ""
+  },
+  {
+   "Id": "DUO_MIDNA",
+   "Name": "Crépuscule",
+   "A": "link",
+   "B": "midna",
+   "Resonance": 60,
+   "MPA": 0,
+   "MPB": 0,
+   "Kind": "Magical",
+   "Target": "AllEnemies",
+   "Power": 1.3,
+   "Hits": 1,
+   "Element": "Shadow",
+   "Apply": [],
+   "HealPower": 0.0,
+   "Breach": 0,
+   "Desc": "Tous P1,3 ombre ; retarde les petites cibles de 100.",
+   "RequireForm": "Wolf",
+   "TargetGauge": -100
+  }
+ ]
+}

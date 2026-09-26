@@ -1,0 +1,324 @@
+{
+  "asset": "SKM_LinkHybrid",
+  "generated": "2026-09-26T03:12:44",
+  "blender": "5.2.1 LTS",
+  "source": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "target_engine": "Unreal Engine 5.8 (EchosTriforce), FBX importer (Interchange FBX disabled as in Tools/ue)",
+  "units": {
+    "file": "centimetres (scene unit scale 0.01, FBX_SCALE_NONE)",
+    "authoring": "metres, Z up, facing -Y",
+    "engine": "UE X = Blender X, UE Y = -Blender Y (ue_pipeline_gotchas)"
+  },
+  "target_height_m": 1.851,
+  "bounds_m_build_pose_lod0": {
+    "min": [
+      -0.5758,
+      -0.3052,
+      0.0
+    ],
+    "max": [
+      0.5673,
+      0.2127,
+      1.851
+    ]
+  },
+  "files": {
+    "LOD0": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/exports/SKM_LinkHybrid_LOD0.fbx",
+    "LOD1": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/exports/SKM_LinkHybrid_LOD1.fbx",
+    "LOD2": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/exports/SKM_LinkHybrid_LOD2.fbx",
+    "Hilt": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/exports/SKM_LinkHybrid_Hilt.fbx"
+  },
+  "lods": [
+    {
+      "level": 0,
+      "objects": [
+        "CH_Link_Belt_LOD0",
+        "CH_Link_Body_LOD0",
+        "CH_Link_BootCuff_L_LOD0",
+        "CH_Link_BootCuff_R_LOD0",
+        "CH_Link_Buckle_LOD0",
+        "CH_Link_CapTail_LOD0",
+        "CH_Link_Guard_LOD0",
+        "CH_Link_Head_LOD0",
+        "CH_Link_Hilt_LOD0",
+        "CH_Link_Mask_LOD0",
+        "CH_Link_Ocarina_LOD0",
+        "CH_Link_Pouch_LOD0",
+        "CH_Link_Sheath_LOD0",
+        "CH_Link_ShieldRim_LOD0",
+        "CH_Link_Shield_LOD0",
+        "CH_Link_TunicSkirt_LOD0"
+      ],
+      "tris": 46502,
+      "tris_without_hilt": 46206
+    },
+    {
+      "level": 1,
+      "objects": [
+        "CH_Link_Belt_LOD1",
+        "CH_Link_Body_LOD1",
+        "CH_Link_BootCuff_L_LOD1",
+        "CH_Link_BootCuff_R_LOD1",
+        "CH_Link_Buckle_LOD1",
+        "CH_Link_CapTail_LOD1",
+        "CH_Link_Guard_LOD1",
+        "CH_Link_Head_LOD1",
+        "CH_Link_Hilt_LOD1",
+        "CH_Link_Mask_LOD1",
+        "CH_Link_Ocarina_LOD1",
+        "CH_Link_Pouch_LOD1",
+        "CH_Link_Sheath_LOD1",
+        "CH_Link_ShieldRim_LOD1",
+        "CH_Link_Shield_LOD1",
+        "CH_Link_TunicSkirt_LOD1"
+      ],
+      "tris": 19240,
+      "tris_without_hilt": 19108
+    },
+    {
+      "level": 2,
+      "objects": [
+        "CH_Link_Belt_LOD2",
+        "CH_Link_Body_LOD2",
+        "CH_Link_BootCuff_L_LOD2",
+        "CH_Link_BootCuff_R_LOD2",
+        "CH_Link_Buckle_LOD2",
+        "CH_Link_CapTail_LOD2",
+        "CH_Link_Guard_LOD2",
+        "CH_Link_Head_LOD2",
+        "CH_Link_Hilt_LOD2",
+        "CH_Link_Mask_LOD2",
+        "CH_Link_Ocarina_LOD2",
+        "CH_Link_Pouch_LOD2",
+        "CH_Link_Sheath_LOD2",
+        "CH_Link_ShieldRim_LOD2",
+        "CH_Link_Shield_LOD2",
+        "CH_Link_TunicSkirt_LOD2"
+      ],
+      "tris": 7129,
+      "tris_without_hilt": 7077
+    }
+  ],
+  "materials": {
+    "M_Link_Head": "Head, CapTail",
+    "M_Link_Body": "Body, TunicSkirt, Belt, Buckle, BootCuff_L/R, Pouch",
+    "M_Link_Gear": "Shield, ShieldRim, Sheath, Hilt, Guard, Ocarina, Mask"
+  },
+  "textures": {
+    "dir": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/textures",
+    "files": [
+      "T_Link_Body_AO.png",
+      "T_Link_Body_BaseColor.png",
+      "T_Link_Body_Metallic.png",
+      "T_Link_Body_Normal.png",
+      "T_Link_Body_Roughness.png",
+      "T_Link_Gear_AO.png",
+      "T_Link_Gear_BaseColor.png",
+      "T_Link_Gear_Metallic.png",
+      "T_Link_Gear_Normal.png",
+      "T_Link_Gear_Roughness.png",
+      "T_Link_Head_AO.png",
+      "T_Link_Head_BaseColor.png",
+      "T_Link_Head_Metallic.png",
+      "T_Link_Head_Normal.png",
+      "T_Link_Head_Roughness.png"
+    ],
+    "Head": "2048",
+    "Body": "4096",
+    "Gear": "2048"
+  },
+  "texture_contract": {
+    "basecolor": "sRGB",
+    "normal": "Non-Color, tangent space, OpenGL +Y: flip green on UE import",
+    "roughness": "Non-Color",
+    "metallic": "Non-Color",
+    "ao": "Non-Color",
+    "packed_channels": "none"
+  },
+  "skeleton": {
+    "name": "SK_Mannequin (UE5 mannequin, /Game/Characters/Mannequins/Meshes/SK_Mannequin)",
+    "bones": 89,
+    "added": [
+      "weapon_r (grip, child of hand_r, as SKM_Link)"
+    ],
+    "deform_bones": [
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "spine_04",
+      "spine_05",
+      "neck_01",
+      "neck_02",
+      "head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "lowerarm_twist_02_l",
+      "lowerarm_twist_01_l",
+      "hand_l",
+      "index_metacarpal_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "middle_metacarpal_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "pinky_metacarpal_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "ring_metacarpal_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "upperarm_twist_01_l",
+      "upperarm_twist_02_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "lowerarm_twist_02_r",
+      "lowerarm_twist_01_r",
+      "hand_r",
+      "pinky_metacarpal_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "ring_metacarpal_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "middle_metacarpal_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "index_metacarpal_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "upperarm_twist_01_r",
+      "upperarm_twist_02_r",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "calf_twist_02_r",
+      "calf_twist_01_r",
+      "thigh_twist_01_r",
+      "thigh_twist_02_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "calf_twist_02_l",
+      "calf_twist_01_l",
+      "thigh_twist_01_l",
+      "thigh_twist_02_l",
+      "ik_foot_root",
+      "ik_foot_l",
+      "ik_foot_r",
+      "ik_hand_root",
+      "ik_hand_gun",
+      "ik_hand_l",
+      "ik_hand_r",
+      "interaction",
+      "center_of_mass"
+    ],
+    "rest_pose": "mannequin reference pose (meshes inverse-skinned from the sheets' T-pose build pose)",
+    "max_influences": 4
+  },
+  "sockets": [
+    {
+      "name": "SOCKET_weapon_r",
+      "parent_bone": "hand_r",
+      "world_location_m_rest_pose": [
+        -0.5204,
+        -0.2068,
+        0.9882
+      ],
+      "axes": "local +Y forward of the attachment, +Z up"
+    },
+    {
+      "name": "SOCKET_weapon_l",
+      "parent_bone": "hand_l",
+      "world_location_m_rest_pose": [
+        0.5204,
+        -0.2068,
+        0.9882
+      ],
+      "axes": "local +Y forward of the attachment, +Z up"
+    },
+    {
+      "name": "SOCKET_back_shield",
+      "parent_bone": "spine_05",
+      "world_location_m_rest_pose": [
+        0.0152,
+        0.1695,
+        1.1766
+      ],
+      "axes": "local +Y forward of the attachment, +Z up"
+    },
+    {
+      "name": "SOCKET_back_sword",
+      "parent_bone": "spine_05",
+      "world_location_m_rest_pose": [
+        0.2719,
+        0.1117,
+        1.6717
+      ],
+      "axes": "local +Y forward of the attachment, +Z up"
+    },
+    {
+      "name": "SOCKET_head",
+      "parent_bone": "head",
+      "world_location_m_rest_pose": [
+        -0.0,
+        -0.0066,
+        1.6258
+      ],
+      "axes": "local +Y forward of the attachment, +Z up"
+    }
+  ],
+  "rigid_parts": {
+    "pelvis": [
+      "Belt",
+      "Buckle",
+      "Pouch",
+      "Ocarina",
+      "Mask"
+    ],
+    "calf_l/r": [
+      "BootCuff_L",
+      "BootCuff_R"
+    ],
+    "head": [
+      "CapTail"
+    ],
+    "spine_05": [
+      "Shield",
+      "ShieldRim",
+      "Sheath",
+      "Hilt",
+      "Guard"
+    ]
+  },
+  "colliders": "none shipped: the physics asset is authored in UE",
+  "animation_contract": "animation-contract.json",
+  "inferred_from_no_reference": [
+    "cap tail cross-section and exact path (side panel only, the HIGH has a flat hood)",
+    "sheath depth between back and shield (y 0.11-0.135; the side panel draws no sheath)",
+    "shield inner face and straps (not drawn), shield stand-off (+1.8 cm vs side panel to clear the sheath)",
+    "mask face width along Y (0.10 m; drawn in profile only)",
+    "hip and thigh volume under the tunic skirt (hidden)",
+    "sole tread (generic flat sole)",
+    "glove finger thickness (hands drawn as a flat paddle)",
+    "top-down shapes (no top view)"
+  ]
+}

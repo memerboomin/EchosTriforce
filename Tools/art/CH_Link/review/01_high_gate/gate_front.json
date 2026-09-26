@@ -1,0 +1,21 @@
+{
+  "view": "front",
+  "az": 0.0,
+  "matte": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/ref/matte_front.png",
+  "m_per_px": 0.00127389,
+  "iou": 0.8374,
+  "ref_only_pct": 2.78,
+  "render_only_pct": 16.1,
+  "band_width_diff": [
+    0.1314,
+    0.0261,
+    -0.0062,
+    0.0103,
+    -0.0034,
+    0.0083,
+    0.1431,
+    0.0124,
+    0.0206,
+    0.0
+  ]
+}

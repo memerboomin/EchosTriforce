@@ -1,0 +1,2072 @@
+{
+ "ANM_ATN_RETURN_FROM_WALK": {
+  "under": "atrfws",
+  "upper": "atrfw",
+  "face": "fat"
+ },
+ "ANM_ATN_RETURN_FROM_RUN": {
+  "under": "atrfds",
+  "upper": "atrfd",
+  "face": "fat"
+ },
+ "ANM_ATN_BACK_WALK": {
+  "under": "atbw",
+  "upper": "atbw",
+  "face": "fat"
+ },
+ "ANM_ATN_BACK_RUN": {
+  "under": "atbd",
+  "upper": "atbd",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_BACK_WALK": {
+  "under": "atrbws",
+  "upper": "atrbw",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_BACK_RUN": {
+  "under": "atrbds",
+  "upper": "atrbd",
+  "face": "fat"
+ },
+ "ANM_ATN_WALK_LEFT": {
+  "under": "atswls",
+  "upper": "atswl",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_WALK_LEFT": {
+  "under": "atrswls",
+  "upper": "atrswl",
+  "face": "fat"
+ },
+ "ANM_ATN_WALK_RIGHT": {
+  "under": "atswrs",
+  "upper": "atswr",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_WALK_RIGHT": {
+  "under": "atrswrs",
+  "upper": "atrswr",
+  "face": "fat"
+ },
+ "ANM_ATN_RUN_LEFT": {
+  "under": "atsdls",
+  "upper": "atsdl",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_RUN_LEFT": {
+  "under": "atrsdls",
+  "upper": "atrsdl",
+  "face": "fat"
+ },
+ "ANM_ATN_RUN_RIGHT": {
+  "under": "atsdrs",
+  "upper": "atsdr",
+  "face": "fat"
+ },
+ "ANM_ATN_LOCK_RUN_RIGHT": {
+  "under": "atrsdrs",
+  "upper": "atrsdr",
+  "face": "fat"
+ },
+ "ANM_WALK_HEAVY": {
+  "under": "walkh",
+  "upper": "walkh",
+  "face": "fat"
+ },
+ "ANM_ATN_BACK_WALK_HEAVY": {
+  "under": "atrbwh",
+  "upper": "atl",
+  "face": null
+ },
+ "ANM_ATN_WAIT_LEFT": {
+  "under": "atl",
+  "upper": "at",
+  "face": "fat"
+ },
+ "ANM_ATN_WAIT_RIGHT": {
+  "under": "atr",
+  "upper": "at",
+  "face": "fat"
+ },
+ "ANM_WALK": {
+  "under": "walks",
+  "upper": "walks",
+  "face": null
+ },
+ "ANM_RUN": {
+  "under": "dashs",
+  "upper": "dasha",
+  "face": "fat"
+ },
+ "ANM_SWIM_WAIT": {
+  "under": "swimwait",
+  "upper": "swimwait",
+  "face": "fswimwait"
+ },
+ "ANM_STEP_TURN": {
+  "under": "stepl",
+  "upper": "stepl",
+  "face": null
+ },
+ "ANM_SMALL_GUARD": {
+  "under": "stepr",
+  "upper": "stepr",
+  "face": null
+ },
+ "ANM_STEP_TURN_TIRED": {
+  "under": "stepl",
+  "upper": "waitd",
+  "face": null
+ },
+ "ANM_SMALL_GUARD_TIRED": {
+  "under": "stepr",
+  "upper": "waitd",
+  "face": null
+ },
+ "ANM_WAIT": {
+  "under": "waits",
+  "upper": "waits",
+  "face": null
+ },
+ "ANM_WAIT_B": {
+  "under": "waitb",
+  "upper": "waitb",
+  "face": "fat"
+ },
+ "ANM_WAIT_B_TO_A": {
+  "under": "waitbtoa",
+  "upper": "waitbtoa",
+  "face": "fwaitbtoa"
+ },
+ "ANM_RUN_B": {
+  "under": "dashb",
+  "upper": "dashb",
+  "face": "fat"
+ },
+ "ANM_SIDE_JUMP_LEFT": {
+  "under": "atsjlst",
+  "upper": "atsjlst",
+  "face": "fjmpb"
+ },
+ "ANM_SIDE_JUMP_RIGHT": {
+  "under": "atsjrst",
+  "upper": "atsjrst",
+  "face": "fjmpb"
+ },
+ "ANM_SIDE_JUMP_LEFT_LAND": {
+  "under": "atsjled",
+  "upper": "atsjled",
+  "face": "fat"
+ },
+ "ANM_SIDE_JUMP_RIGHT_LAND": {
+  "under": "atsjred",
+  "upper": "atsjred",
+  "face": "fat"
+ },
+ "ANM_BACK_JUMP": {
+  "under": "atsjbst",
+  "upper": "atsjbst",
+  "face": "fjmpb"
+ },
+ "ANM_BACK_JUMP_LAND": {
+  "under": "atsjbed",
+  "upper": "atsjbed",
+  "face": "fat"
+ },
+ "ANM_FRONT_ROLL": {
+  "under": "rollf",
+  "upper": "rollf",
+  "face": "fjmpb"
+ },
+ "ANM_ROLL_CRASH": {
+  "under": "rollfmis",
+  "upper": "rollfmis",
+  "face": "fa"
+ },
+ "ANM_BARRIER_RECOIL": {
+  "under": "rollfgood",
+  "upper": "rollfgood",
+  "face": "frollfgood"
+ },
+ "ANM_BACKFLIP": {
+  "under": "rollbst",
+  "upper": "rollbst",
+  "face": "fjmpb"
+ },
+ "ANM_BACKFLIP_LAND": {
+  "under": "rollbed",
+  "upper": "rollbed",
+  "face": "fat"
+ },
+ "ANM_SLIP": {
+  "under": "slip",
+  "upper": "slip",
+  "face": "fat"
+ },
+ "ANM_CROUCH": {
+  "under": "crouch",
+  "upper": "crouch",
+  "face": null
+ },
+ "ANM_CROUCH_START": {
+  "under": "crouchs",
+  "upper": "crouchs",
+  "face": "fat"
+ },
+ "ANM_GUARD_LEFT": {
+  "under": "atdefl",
+  "upper": "atdefl",
+  "face": "fat"
+ },
+ "ANM_GUARD_RIGHT": {
+  "under": "atdefr",
+  "upper": "atdefr",
+  "face": "fat"
+ },
+ "ANM_CROUCH_DEF": {
+  "under": "crouchdefs",
+  "upper": "crouchdefs",
+  "face": "fat"
+ },
+ "ANM_SHIELD_ATTACK": {
+  "under": "atgpush",
+  "upper": "atgpush",
+  "face": "fat"
+ },
+ "ANM_SHIELD_ATTACK_RECOIL": {
+  "under": "atgpushre",
+  "upper": "atgpushre",
+  "face": "fat"
+ },
+ "ANM_GUARD_BREAK": {
+  "under": "atdefng",
+  "upper": "atdefng",
+  "face": "fatdefng"
+ },
+ "ANM_JUMP_START": {
+  "under": "jumpst",
+  "upper": "jumpst",
+  "face": "fjmpa"
+ },
+ "ANM_JUMP": {
+  "under": "jumps",
+  "upper": "jumps",
+  "face": "fjmpa"
+ },
+ "ANM_JUMP_LAND": {
+  "under": "jumpsed",
+  "upper": "jumpsed",
+  "face": "fa"
+ },
+ "ANM_CRAWL_START": {
+  "under": "lie",
+  "upper": "lie",
+  "face": "fa"
+ },
+ "ANM_CRAWL": {
+  "under": "lief",
+  "upper": "lief",
+  "face": "fa"
+ },
+ "ANM_WAIT_PUSH_PULL": {
+  "under": "waitpp",
+  "upper": "waitpp",
+  "face": "fa"
+ },
+ "ANM_PUSH_LIGHT": {
+  "under": "pushw",
+  "upper": "pushw",
+  "face": "fpushw"
+ },
+ "ANM_PUSH_START": {
+  "under": "pushtswst",
+  "upper": "pushtswst",
+  "face": "fat"
+ },
+ "ANM_PUSH": {
+  "under": "pushtsw",
+  "upper": "pushtsw",
+  "face": "fat"
+ },
+ "ANM_PULL_LIGHT": {
+  "under": "pullw",
+  "upper": "pullw",
+  "face": "fpullw"
+ },
+ "ANM_PULL_START": {
+  "under": "pulltswst",
+  "upper": "pulltswst",
+  "face": "fat"
+ },
+ "ANM_PULL": {
+  "under": "pulltsw",
+  "upper": "pulltsw",
+  "face": "fat"
+ },
+ "ANM_HORSE_MOUNT_LEFT": {
+  "under": "ridehl",
+  "upper": "ridehl",
+  "face": "fa"
+ },
+ "ANM_HORSE_MOUNT_RIGHT": {
+  "under": "ridehr",
+  "upper": "ridehr",
+  "face": "fa"
+ },
+ "ANM_HORSE_MOUNT_BACK": {
+  "under": "ridehb",
+  "upper": "ridehb",
+  "face": "fa"
+ },
+ "ANM_HORSE_GETOFF_LEFT": {
+  "under": "fallhl",
+  "upper": "fallhl",
+  "face": "fa"
+ },
+ "ANM_HORSE_GETOFF_RIGHT": {
+  "under": "fallhr",
+  "upper": "fallhr",
+  "face": "fa"
+ },
+ "ANM_HORSE_STOP": {
+  "under": "stops",
+  "upper": "stops",
+  "face": "fat"
+ },
+ "ANM_HORSE_STOP_TO_STAND": {
+  "under": "stopstostands",
+  "upper": "stopstostands",
+  "face": "fat"
+ },
+ "ANM_HORSE_STAND": {
+  "under": "stands",
+  "upper": "stands",
+  "face": "fat"
+ },
+ "ANM_HORSE_JUMP_START": {
+  "under": "jumphsst",
+  "upper": "jumphsst",
+  "face": "fat"
+ },
+ "ANM_HORSE_JUMP": {
+  "under": "jumphs",
+  "upper": "jumphs",
+  "face": "fat"
+ },
+ "ANM_HORSE_JUMP_LAND": {
+  "under": "jumphsed",
+  "upper": "jumphsed",
+  "face": "fat"
+ },
+ "ANM_HORSE_WAIT": {
+  "under": "waiths",
+  "upper": "waiths",
+  "face": null
+ },
+ "ANM_HORSE_WALK_A": {
+  "under": "walkhas",
+  "upper": "walkhas",
+  "face": null
+ },
+ "ANM_HORSE_WALK_B": {
+  "under": "walkhbs",
+  "upper": "walkhbs",
+  "face": null
+ },
+ "ANM_HORSE_DASH_A": {
+  "under": "dashhas",
+  "upper": "dashhas",
+  "face": "fat"
+ },
+ "ANM_HORSE_DASH_B": {
+  "under": "dashhbs",
+  "upper": "dashhbs",
+  "face": "fat"
+ },
+ "ANM_WSTARTH": {
+  "under": "wstarth",
+  "upper": "waiths",
+  "face": null
+ },
+ "ANM_HORSE_DASH_START": {
+  "under": "dstarths",
+  "upper": "dstarths",
+  "face": "fcut"
+ },
+ "ANM_HORSE_LASH": {
+  "under": "lashs",
+  "upper": "lashs",
+  "face": "fcute"
+ },
+ "ANM_HORSE_CUT_TURN": {
+  "under": "cuthtb",
+  "upper": "cuthtb",
+  "face": "fcuthtb"
+ },
+ "ANM_HORSE_WAIT_A": {
+  "under": "swaitha",
+  "upper": "swaitha",
+  "face": "fswaitha"
+ },
+ "ANM_HORSE_WAIT_B": {
+  "under": "swaithb",
+  "upper": "swaithb",
+  "face": null
+ },
+ "ANM_HORSE_DIE_RECOVER": {
+  "under": "diehup",
+  "upper": "diehup",
+  "face": "fdiehup"
+ },
+ "ANM_HORSE_TURN_B": {
+  "under": "turnbs",
+  "upper": "turnbs",
+  "face": null
+ },
+ "ANM_HORSE_CROUCH": {
+  "under": "waithlie",
+  "upper": "waithlie",
+  "face": "fat"
+ },
+ "ANM_HORSE_DMG_LEFT": {
+  "under": "spillhl",
+  "upper": "spillhl",
+  "face": "fspillh"
+ },
+ "ANM_HORSE_DMG_RIGHT": {
+  "under": "spillhr",
+  "upper": "spillhr",
+  "face": "fspillh"
+ },
+ "ANM_HORSE_HANG_LEFT": {
+  "under": "hanghl",
+  "upper": "hanghl",
+  "face": "fhangh"
+ },
+ "ANM_HORSE_HANG_RIGHT": {
+  "under": "hanghr",
+  "upper": "hanghr",
+  "face": "fhangh"
+ },
+ "ANM_HORSE_TURN_LEFT": {
+  "under": "turnls",
+  "upper": "turnls",
+  "face": null
+ },
+ "ANM_HORSE_TURN_RIGHT": {
+  "under": "turnrs",
+  "upper": "turnrs",
+  "face": null
+ },
+ "ANM_HORSE_RIDE_LEFT": {
+  "under": "ridewl",
+  "upper": "ridewl",
+  "face": "fa"
+ },
+ "ANM_HORSE_RIDE_RIGHT": {
+  "under": "ridewr",
+  "upper": "ridewr",
+  "face": "fa"
+ },
+ "ANM_HORSE_FALL_LEFT": {
+  "under": "fallwl",
+  "upper": "fallwl",
+  "face": "fa"
+ },
+ "ANM_HORSE_FALL_RIGHT": {
+  "under": "fallwr",
+  "upper": "fallwr",
+  "face": "fa"
+ },
+ "ANM_HORSE_TAME_WAIT_B": {
+  "under": "waitwb",
+  "upper": "waitwb",
+  "face": "fwaitwb"
+ },
+ "ANM_HORSE_TAME_WAIT_A_TO_B": {
+  "under": "waitwatowb",
+  "upper": "waitwatowb",
+  "face": "fwaitwatowb"
+ },
+ "ANM_CUT_NM_VERTICAL": {
+  "under": "cuta",
+  "upper": "cuta",
+  "face": "fcuta"
+ },
+ "ANM_CUT_NM_LEFT": {
+  "under": "cutl",
+  "upper": "cutl",
+  "face": "fcutl"
+ },
+ "ANM_CUT_NM_RIGHT": {
+  "under": "cutr",
+  "upper": "cutr",
+  "face": "fcutr"
+ },
+ "ANM_CUT_COMBO_STAB": {
+  "under": "cutfl",
+  "upper": "cutfl",
+  "face": "fcutf"
+ },
+ "ANM_CUT_NM_STAB": {
+  "under": "cutfr",
+  "upper": "cutfr",
+  "face": "fcutf"
+ },
+ "ANM_CUT_FINISH_LEFT": {
+  "under": "cutea",
+  "upper": "cutea",
+  "face": "fcutea"
+ },
+ "ANM_CUT_FINISH_VERTICAL": {
+  "under": "cuteb",
+  "upper": "cuteb",
+  "face": "fcuteb"
+ },
+ "ANM_CUT_FINISH_STAB": {
+  "under": "cutec",
+  "upper": "cutec",
+  "face": "fcute"
+ },
+ "ANM_CUT_MORTAL_DRAW_A": {
+  "under": "cutef",
+  "upper": "cutef",
+  "face": "fa"
+ },
+ "ANM_CUT_MORTAL_DRAW_B": {
+  "under": "cutee",
+  "upper": "cutee",
+  "face": "fa"
+ },
+ "ANM_CUT_FINISH_RIGHT": {
+  "under": "cuteg",
+  "upper": "cuteg",
+  "face": "fcuteg"
+ },
+ "ANM_CUT_TWIRL": {
+  "under": "cutedst",
+  "upper": "cutedst",
+  "face": "fa"
+ },
+ "ANM_CUT_TWIRL_LAND": {
+  "under": "cuteded",
+  "upper": "cuteded",
+  "face": "fa"
+ },
+ "ANM_CUT_RECOIL_A": {
+  "under": "cutrel",
+  "upper": "cutrel",
+  "face": "fcutre"
+ },
+ "ANM_CUT_RECOIL_B": {
+  "under": "cutrer",
+  "upper": "cutrer",
+  "face": "fcutre"
+ },
+ "ANM_CUT_JUMP": {
+  "under": "cutjst",
+  "upper": "cutjst",
+  "face": "fcutjst"
+ },
+ "ANM_CUT_JUMP_LAND": {
+  "under": "cutjed",
+  "upper": "cutjed",
+  "face": "fcutjed"
+ },
+ "ANM_CUT_TURN_LEFT": {
+  "under": "cuttb",
+  "upper": "cuttb",
+  "face": "fcuttb"
+ },
+ "ANM_CUT_TURN_RIGHT": {
+  "under": "cutt",
+  "upper": "cutt",
+  "face": "fcutt"
+ },
+ "ANM_CUT_TURN_CHARGE_START": {
+  "under": "cuttp",
+  "upper": "cuttp",
+  "face": "fat"
+ },
+ "ANM_CUT_TURN_CHARGE": {
+  "under": "cuttpwfb",
+  "upper": "cuttpwfb",
+  "face": "fat"
+ },
+ "ANM_CUT_TURN_CHARGE_MOVE": {
+  "under": "cuttpwlr",
+  "upper": "cuttpwlr",
+  "face": "fat"
+ },
+ "ANM_CUT_FINISHING_BLOW_JUMP": {
+  "under": "cutust",
+  "upper": "cutust",
+  "face": "fcute"
+ },
+ "ANM_CUT_FINISHING_BLOW_FALL": {
+  "under": "cutu",
+  "upper": "cutu",
+  "face": "fcutu"
+ },
+ "ANM_CUT_FINISHING_BLOW_STAB": {
+  "under": "cutued",
+  "upper": "cutued",
+  "face": "fcutued"
+ },
+ "ANM_CUT_FINISHING_BLOW_MISS": {
+  "under": "cutung",
+  "upper": "cutung",
+  "face": "fcutung"
+ },
+ "ANM_CUT_HEAD_JUMP": {
+  "under": "cutehst",
+  "upper": "cutehst",
+  "face": "fcutehst"
+ },
+ "ANM_CUT_HEAD": {
+  "under": "cuteh",
+  "upper": "cuteh",
+  "face": "fcuteh"
+ },
+ "ANM_CUT_HEAD_LAND": {
+  "under": "cutehed",
+  "upper": "cutehed",
+  "face": "fat"
+ },
+ "ANM_DMG_SMALL_A": {
+  "under": "damf",
+  "upper": "damf",
+  "face": "fb"
+ },
+ "ANM_DMG_SMALL_B": {
+  "under": "damb",
+  "upper": "damb",
+  "face": "fb"
+ },
+ "ANM_DMG_SMALL_LEFT": {
+  "under": "daml",
+  "upper": "daml",
+  "face": "fb"
+ },
+ "ANM_DMG_SMALL_RIGHT": {
+  "under": "damr",
+  "upper": "damr",
+  "face": "fb"
+ },
+ "ANM_DMG_AIR_FRONT": {
+  "under": "damff",
+  "upper": "damff",
+  "face": "fc"
+ },
+ "ANM_DMG_LARGE": {
+  "under": "damfb",
+  "upper": "damfb",
+  "face": "fc"
+ },
+ "ANM_DMG_AIR_LEFT": {
+  "under": "damfl",
+  "upper": "damfl",
+  "face": "fc"
+ },
+ "ANM_DMG_AIR_RIGHT": {
+  "under": "damfr",
+  "upper": "damfr",
+  "face": "fc"
+ },
+ "ANM_DMG_AIR_LAND": {
+  "under": "damffup",
+  "upper": "damffup",
+  "face": "fdamffup"
+ },
+ "ANM_DMG_LARGE_LAND": {
+  "under": "damfbup",
+  "upper": "damfbup",
+  "face": "fdamfbup"
+ },
+ "ANM_DMG_AIR_LEFT_LAND": {
+  "under": "damflup",
+  "upper": "damflup",
+  "face": "fdamfrlup"
+ },
+ "ANM_DMG_AIR_RIGHT_LAND": {
+  "under": "damfrup",
+  "upper": "damfrup",
+  "face": "fdamfrlup"
+ },
+ "ANM_DMG": {
+  "under": "dam",
+  "upper": "dam",
+  "face": "fb"
+ },
+ "ANM_DMG_FALL": {
+  "under": "landdama",
+  "upper": "landdama",
+  "face": "fb"
+ },
+ "ANM_DMG_FALL_RECOVER": {
+  "under": "landdamast",
+  "upper": "landdamast",
+  "face": "fa"
+ },
+ "ANM_FINISH": {
+  "under": "finisha",
+  "upper": "finisha",
+  "face": "ffinisha"
+ },
+ "ANM_FINISH_END": {
+  "under": "finished",
+  "upper": "finished",
+  "face": "ffinished"
+ },
+ "ANM_SERVICE_WAIT": {
+  "under": "swaita",
+  "upper": "swaita",
+  "face": "fswaita"
+ },
+ "ANM_CLIMB_JUMP": {
+  "under": "vjmp",
+  "upper": "vjmp",
+  "face": "fa"
+ },
+ "ANM_HANG_READY": {
+  "under": "vjmpcha",
+  "upper": "vjmpcha",
+  "face": "fa"
+ },
+ "ANM_CLIMB_TOP_SMALL": {
+  "under": "vjmpchb",
+  "upper": "vjmpchb",
+  "face": "fa"
+ },
+ "ANM_HANG_CLIMB_TOP": {
+  "under": "vjmpcl",
+  "upper": "vjmpcl",
+  "face": "fa"
+ },
+ "ANM_HANG_ONE_HAND": {
+  "under": "hang",
+  "upper": "hang",
+  "face": "fa"
+ },
+ "ANM_HANG_ONE_HAND_MOVE": {
+  "under": "hangup",
+  "upper": "hangup",
+  "face": "fa"
+ },
+ "ANM_HANG_MOVE_LEFT": {
+  "under": "hangl",
+  "upper": "hangl",
+  "face": "fa"
+ },
+ "ANM_HANG_MOVE_RIGHT": {
+  "under": "hangr",
+  "upper": "hangr",
+  "face": "fa"
+ },
+ "ANM_LADDER_UP_START": {
+  "under": "ladupst",
+  "upper": "ladupst",
+  "face": "fa"
+ },
+ "ANM_LADDER_UP_END_LEFT": {
+  "under": "ladupedl",
+  "upper": "ladupedl",
+  "face": "fa"
+ },
+ "ANM_LADDER_UP_END_RIGHT": {
+  "under": "ladupedr",
+  "upper": "ladupedr",
+  "face": "fa"
+ },
+ "ANM_LADDER_DOWN_START": {
+  "under": "laddwst",
+  "upper": "laddwst",
+  "face": "fa"
+ },
+ "ANM_LADDER_DOWN_END_LEFT": {
+  "under": "laddwedl",
+  "upper": "laddwedl",
+  "face": "fa"
+ },
+ "ANM_LADDER_DOWN_END_RIGHT": {
+  "under": "laddwedr",
+  "upper": "laddwedr",
+  "face": "fa"
+ },
+ "ANM_LADDER_RIGHT_TO_LEFT": {
+  "under": "ladrtol",
+  "upper": "ladrtol",
+  "face": "fa"
+ },
+ "ANM_LADDER_LEFT_TO_RIGHT": {
+  "under": "ladltor",
+  "upper": "ladltor",
+  "face": "fa"
+ },
+ "ANM_CLIMB_HANG": {
+  "under": "climbhang",
+  "upper": "climbhang",
+  "face": "fat"
+ },
+ "ANM_CLIMB_START": {
+  "under": "climbst",
+  "upper": "climbst",
+  "face": "fat"
+ },
+ "ANM_CLIMB_LEFT": {
+  "under": "climbl",
+  "upper": "climbl",
+  "face": "fat"
+ },
+ "ANM_CLIMB_RIGHT": {
+  "under": "climbr",
+  "upper": "climbr",
+  "face": "fat"
+ },
+ "ANM_CLIMB_SLIDE_LEFT": {
+  "under": "climbslidel",
+  "upper": "climbslidel",
+  "face": "fat"
+ },
+ "ANM_CLIMB_SLIDE_RIGHT": {
+  "under": "climbslider",
+  "upper": "climbslider",
+  "face": "fat"
+ },
+ "ANM_CLIMB_HANG_MISS": {
+  "under": "climbhangmiss",
+  "upper": "climbhangmiss",
+  "face": "fclimbhangmiss"
+ },
+ "ANM_ROOF_UP": {
+  "under": "roofup",
+  "upper": "roofup",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG_WAIT": {
+  "under": "roofwait",
+  "upper": "roofwait",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG_MOVE": {
+  "under": "rooff",
+  "upper": "rooff",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG_LEFT": {
+  "under": "roofl",
+  "upper": "roofl",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG_RIGHT": {
+  "under": "roofr",
+  "upper": "roofr",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG_TURN": {
+  "under": "roofturn",
+  "upper": "roofturn",
+  "face": "fat"
+ },
+ "ANM_ROOF_HANG": {
+  "under": "roofhang",
+  "upper": "roofhang",
+  "face": "fat"
+ },
+ "ANM_GRAB_UP_START": {
+  "under": "grabp",
+  "upper": "grabp",
+  "face": "fgrabp"
+ },
+ "ANM_GRAB_UP": {
+  "under": "grabup",
+  "upper": "grabup",
+  "face": "fgrabup"
+ },
+ "ANM_THROW": {
+  "under": "grabthrow",
+  "upper": "grabthrow",
+  "face": "fgrabthrow"
+ },
+ "ANM_THROW_HEAVY": {
+  "under": "heavythrow",
+  "upper": "heavythrow",
+  "face": "fheavythrow"
+ },
+ "ANM_PICK_UP_LARGE_START": {
+  "under": "grabng",
+  "upper": "grabng",
+  "face": "fgrabng"
+ },
+ "ANM_PICK_UP_LARGE": {
+  "under": "grabre",
+  "upper": "grabre",
+  "face": "fgrabre"
+ },
+ "ANM_CARRY": {
+  "under": "carry",
+  "upper": "carry",
+  "face": "fa"
+ },
+ "ANM_WAIT_TIRED": {
+  "under": "waitd",
+  "upper": "waitd",
+  "face": "fwaitd"
+ },
+ "ANM_WAIT_TO_TIRED": {
+  "under": "waitatod",
+  "upper": "waitatod",
+  "face": "fwaitatod"
+ },
+ "ANM_TALK": {
+  "under": "talka",
+  "upper": "talka",
+  "face": "fa"
+ },
+ "ANM_WAIT_START": {
+  "under": "waitst",
+  "upper": "waitst",
+  "face": "fwaitst"
+ },
+ "ANM_FROZEN_FREE": {
+  "under": "cutst",
+  "upper": "cutst",
+  "face": "fcutst"
+ },
+ "ANM_BOOMERANG_CATCH": {
+  "under": "boomcatch",
+  "upper": "boomcatch",
+  "face": "fat"
+ },
+ "ANM_WALK_SLOPE": {
+  "under": "walkslopew",
+  "upper": "walkslopew",
+  "face": "fa"
+ },
+ "ANM_SLIDE_FORWARD": {
+  "under": "slidef",
+  "upper": "slidef",
+  "face": "fa"
+ },
+ "ANM_SLIDE_BACKWARD": {
+  "under": "slideb",
+  "upper": "slideb",
+  "face": "fa"
+ },
+ "ANM_SLIDE_FORWARD_END": {
+  "under": "slidefed",
+  "upper": "slidefed",
+  "face": "fa"
+ },
+ "ANM_SLIDE_BACKWARD_END": {
+  "under": "slidebed",
+  "upper": "slidebed",
+  "face": "fa"
+ },
+ "ANM_SWIM_A": {
+  "under": "swiminga",
+  "upper": "swiminga",
+  "face": "fswiminga"
+ },
+ "ANM_SWIM_RESURFACE": {
+  "under": "swimp",
+  "upper": "swimp",
+  "face": "fswimp"
+ },
+ "ANM_ATN_SWIM_LEFT": {
+  "under": "atsswl",
+  "upper": "atsswl",
+  "face": "fat"
+ },
+ "ANM_ATN_SWIM_RIGHT": {
+  "under": "atsswr",
+  "upper": "atsswr",
+  "face": "fat"
+ },
+ "ANM_ATN_SWIM_BACK": {
+  "under": "atbsw",
+  "upper": "atbsw",
+  "face": "fat"
+ },
+ "ANM_SWIM_DASH": {
+  "under": "swimdash",
+  "upper": "swimdash",
+  "face": "fat"
+ },
+ "ANM_SWIM_DIVE": {
+  "under": "swimdive",
+  "upper": "swimdive",
+  "face": "fswimdive"
+ },
+ "ANM_SWIM_ZORA_START": {
+  "under": "swimingst",
+  "upper": "swimingst",
+  "face": "fat"
+ },
+ "ANM_SWIM_C": {
+  "under": "swimingc",
+  "upper": "swimingc",
+  "face": "fat"
+ },
+ "ANM_SWIM_DMG_FRONT": {
+  "under": "damswf",
+  "upper": "damswf",
+  "face": "fb"
+ },
+ "ANM_SWIM_DMG_BACK": {
+  "under": "damswb",
+  "upper": "damswb",
+  "face": "fb"
+ },
+ "ANM_SWIM_DMG_LEFT": {
+  "under": "damswl",
+  "upper": "damswl",
+  "face": "fb"
+ },
+ "ANM_SWIM_DMG_RIGHT": {
+  "under": "damswr",
+  "upper": "damswr",
+  "face": "fb"
+ },
+ "ANM_SWIM_DMG_FREEZE": {
+  "under": "damsww",
+  "upper": "damsww",
+  "face": "fb"
+ },
+ "ANM_TRES_OPEN_SMALL": {
+  "under": "boxopshort",
+  "upper": "boxopshort",
+  "face": "fboxopshort"
+ },
+ "ANM_TRES_OPEN_KICK": {
+  "under": "boxopkick",
+  "upper": "boxopkick",
+  "face": "fboxopkick"
+ },
+ "ANM_TRES_OPEN_BIG": {
+  "under": "boxop",
+  "upper": "boxop",
+  "face": "fboxop"
+ },
+ "ANM_GET_A": {
+  "under": "geta",
+  "upper": "geta",
+  "face": "fget"
+ },
+ "ANM_GET_A_WAIT": {
+  "under": "getawait",
+  "upper": "getawait",
+  "face": "fgetwait"
+ },
+ "ANM_GET_A_WAIT2": {
+  "under": "getawait",
+  "upper": "waits",
+  "face": "fg"
+ },
+ "ANM_GET_HOLDOUT": {
+  "under": "getawait",
+  "upper": "holdout",
+  "face": "fg"
+ },
+ "ANM_TURN_BACK": {
+  "under": "turnback",
+  "upper": "turnback",
+  "face": "fturnback"
+ },
+ "ANM_VJUMP_START": {
+  "under": "vjmpst",
+  "upper": "vjmpst",
+  "face": "fvjmpst"
+ },
+ "ANM_WAIT_SIT": {
+  "under": "waitsit",
+  "upper": "waitsit",
+  "face": "fa"
+ },
+ "ANM_WAIT_CANOE_LEFT": {
+  "under": "waitcanoer",
+  "upper": "waitcanoel",
+  "face": "fa"
+ },
+ "ANM_WAIT_CANOE_RIGHT": {
+  "under": "waitcanoer",
+  "upper": "waitcanoer",
+  "face": "fa"
+ },
+ "ANM_CANOE_ROW_LEFT": {
+  "under": "waitsit",
+  "upper": "rowl",
+  "face": "fa"
+ },
+ "ANM_CANOE_ROW_RIGHT": {
+  "under": "waitsit",
+  "upper": "rowr",
+  "face": "fa"
+ },
+ "ANM_CANOE_ROW_LEFT_BACK": {
+  "under": "waitsit",
+  "upper": "rowbl",
+  "face": "fa"
+ },
+ "ANM_CANOE_ROW_RIGHT_BACK": {
+  "under": "waitsit",
+  "upper": "rowbr",
+  "face": "fa"
+ },
+ "ANM_CANOE_CHANGE_HAND": {
+  "under": "waitsit",
+  "upper": "changehand",
+  "face": "fa"
+ },
+ "ANM_CANOE_FISH_LEFT": {
+  "under": "canoefishl",
+  "upper": "canoefishl",
+  "face": "ff"
+ },
+ "ANM_CANOE_FISH_RIGHT": {
+  "under": "canoefishr",
+  "upper": "canoefishr",
+  "face": "ff"
+ },
+ "ANM_CANOE_REEL": {
+  "under": "canoereeling",
+  "upper": "canoereeling",
+  "face": "fa"
+ },
+ "ANM_CANOE_RELEASE": {
+  "under": "canorelease",
+  "upper": "canorelease",
+  "face": "fcanorelease"
+ },
+ "ANM_CANOE_PADDLE_TO_ROD": {
+  "under": "padorutorod",
+  "upper": "padorutorod",
+  "face": "fa"
+ },
+ "ANM_REEL": {
+  "under": "reeling",
+  "upper": "reeling",
+  "face": "fa"
+ },
+ "ANM_REEL_LEFT_RIGHT": {
+  "under": "reelinglr",
+  "upper": "reelinglr",
+  "face": "fa"
+ },
+ "ANM_LAND_UP": {
+  "under": "landingup",
+  "upper": "landingup",
+  "face": "fa"
+ },
+ "ANM_DOOR_OPEN_LEFT": {
+  "under": "dooropa",
+  "upper": "dooropa",
+  "face": "fdooropa"
+ },
+ "ANM_DOOR_OPEN_RIGHT": {
+  "under": "dooropb",
+  "upper": "dooropb",
+  "face": "fdooropb"
+ },
+ "ANM_DOOR_OPEN_LOCK_LEFT": {
+  "under": "doorlocka",
+  "upper": "doorlocka",
+  "face": "fa"
+ },
+ "ANM_DOOR_OPEN_LOCK_RIGHT": {
+  "under": "doorlockb",
+  "upper": "doorlockb",
+  "face": "fa"
+ },
+ "ANM_DOOR_OPEN_ROLL": {
+  "under": "dooropc",
+  "upper": "dooropc",
+  "face": "fa"
+ },
+ "ANM_DOOR_OPEN_SLIDE": {
+  "under": "dooropd",
+  "upper": "dooropd",
+  "face": "fa"
+ },
+ "ANM_PICK_UP": {
+  "under": "pickup",
+  "upper": "pickup",
+  "face": "fa"
+ },
+ "ANM_ROLL_JUMP": {
+  "under": "rooljmp",
+  "upper": "rooljmp",
+  "face": "fa"
+ },
+ "ANM_SIDE_ROLL_LEFT": {
+  "under": "mrolll",
+  "upper": "mrolll",
+  "face": "fa"
+ },
+ "ANM_SIDE_ROLL_RIGHT": {
+  "under": "mrollr",
+  "upper": "mrollr",
+  "face": "fa"
+ },
+ "ANM_RIDE_WAIT": {
+  "under": "shwait",
+  "upper": "shwait",
+  "face": "fa"
+ },
+ "ANM_RIDE_FRONT": {
+  "under": "shfront",
+  "upper": "shfront",
+  "face": "fa"
+ },
+ "ANM_RIDE_CROUCH": {
+  "under": "shcrouch",
+  "upper": "shcrouch",
+  "face": "fa"
+ },
+ "ANM_RIDE_STOP": {
+  "under": "shstop",
+  "upper": "shstop",
+  "face": "fa"
+ },
+ "ANM_RIDE_JUMP_START": {
+  "under": "shjumpst",
+  "upper": "shjumpst",
+  "face": "fa"
+ },
+ "ANM_RIDE_JUMP": {
+  "under": "shjump",
+  "upper": "shjump",
+  "face": "fa"
+ },
+ "ANM_RIDE_JUMP_LAND": {
+  "under": "shjumped",
+  "upper": "shjumped",
+  "face": "fa"
+ },
+ "ANM_RIDE_KICK": {
+  "under": "shkick",
+  "upper": "shkick",
+  "face": "fa"
+ },
+ "ANM_RIDE_CUT_TURN_CHARGE": {
+  "under": "shtp",
+  "upper": "shtp",
+  "face": "fa"
+ },
+ "ANM_RIDE_CUT_TURN": {
+  "under": "sht",
+  "upper": "sht",
+  "face": "fa"
+ },
+ "ANM_ROPE_SWING": {
+  "under": "ropeswing",
+  "upper": "ropeswing",
+  "face": "fa"
+ },
+ "ANM_TRANSFORM_TO_WOLF": {
+  "under": "changeatow",
+  "upper": "changeatow",
+  "face": "fchangeatow"
+ },
+ "ANM_TRANSFORM_TO_HUMAN": {
+  "under": "changewtoa",
+  "upper": "changewtoa",
+  "face": "fchangewtoa"
+ },
+ "ANM_WAIT_WIND": {
+  "under": "waitwind",
+  "upper": "waitwind",
+  "face": "fwaitwind"
+ },
+ "ANM_BOTTLE_DRINK_START": {
+  "under": "bindrinkst",
+  "upper": "bindrinkst",
+  "face": "fbindrinkst"
+ },
+ "ANM_BOTTLE_DRINK": {
+  "under": "bindrink",
+  "upper": "bindrink",
+  "face": "fbindrink"
+ },
+ "ANM_BOTTLE_DRINK_END": {
+  "under": "bindrinked",
+  "upper": "bindrinked",
+  "face": "fbindrinked"
+ },
+ "ANM_BOTTLE_DRINK_NASTY": {
+  "under": "binbad",
+  "upper": "binbad",
+  "face": "fbinbad"
+ },
+ "ANM_BOTTLE_OPEN": {
+  "under": "binop",
+  "upper": "binop",
+  "face": "fbinop"
+ },
+ "ANM_BOTTLE_POUR": {
+  "under": "binout",
+  "upper": "binout",
+  "face": "fbinout"
+ },
+ "ANM_BOTTLE_FAIRY": {
+  "under": "binfairy",
+  "upper": "binfairy",
+  "face": "fbinfairy"
+ },
+ "ANM_BOTTLE_SWING": {
+  "under": "binswings",
+  "upper": "binswings",
+  "face": "fbinswings"
+ },
+ "ANM_BOTTLE_SWING_DOWN": {
+  "under": "binswingu",
+  "upper": "binswingu",
+  "face": "fbinswingu"
+ },
+ "ANM_BOTTLE_GET": {
+  "under": "binget",
+  "upper": "binget",
+  "face": "fbinget"
+ },
+ "ANM_BOTTLE_SCOOP": {
+  "under": "binscoop",
+  "upper": "binscoop",
+  "face": "fa"
+ },
+ "ANM_LANTERN_SWING": {
+  "under": "lighting",
+  "upper": "lighting",
+  "face": "fa"
+ },
+ "ANM_OIL_BOTTLE_POUR_START": {
+  "under": "pourst",
+  "upper": "pourst",
+  "face": "fa"
+ },
+ "ANM_OIL_BOTTLE_POUR": {
+  "under": "pour",
+  "upper": "pour",
+  "face": "fa"
+ },
+ "ANM_OIL_BOTTLE_POUR_END": {
+  "under": "poured",
+  "upper": "poured",
+  "face": "fa"
+ },
+ "ANM_GRASS_WHISTLE_START": {
+  "under": "grassast",
+  "upper": "grassast",
+  "face": "fgrassast"
+ },
+ "ANM_GRASS_WHISTLE_PLAY": {
+  "under": "grassaplay",
+  "upper": "grassaplay",
+  "face": "fgrassaplay"
+ },
+ "ANM_HAWK_CATCH": {
+  "under": "catchtaka",
+  "upper": "catchtaka",
+  "face": "fcatchtaka"
+ },
+ "ANM_HAWK_WAIT": {
+  "under": "waittaka",
+  "upper": "waittaka",
+  "face": "fcatchtaka"
+ },
+ "ANM_WAIT_D_B": {
+  "under": "waitdb",
+  "upper": "waitdb",
+  "face": "fwaitst"
+ },
+ "ANM_HORSE_WAIT_D_B": {
+  "under": "waithdb",
+  "upper": "waithdb",
+  "face": "fwaithdb"
+ },
+ "ANM_MG_KICK": {
+  "under": "mgkick",
+  "upper": "mgkick",
+  "face": "fa"
+ },
+ "ANM_DIE": {
+  "under": "die",
+  "upper": "die",
+  "face": "fdie"
+ },
+ "ANM_HORSE_DIE": {
+  "under": "dieh",
+  "upper": "dieh",
+  "face": "fdieh"
+ },
+ "ANM_SWIM_DIE": {
+  "under": "swimdiea",
+  "upper": "swimdiea",
+  "face": "fswimdiea"
+ },
+ "ANM_SWIM_DROWN": {
+  "under": "swimdiep",
+  "upper": "swimdiep",
+  "face": "fswimdiep"
+ },
+ "ANM_ATN_COW": {
+  "under": "cowat",
+  "upper": "cowat",
+  "face": "fcowat"
+ },
+ "ANM_COW_CATCH_START": {
+  "under": "cowcatchst",
+  "upper": "cowcatchst",
+  "face": "fcowcatchst"
+ },
+ "ANM_COW_CATCH": {
+  "under": "cowcatch",
+  "upper": "cowcatch",
+  "face": "fat"
+ },
+ "ANM_COW_A_D": {
+  "under": "cowad",
+  "upper": "cowad",
+  "face": "fat"
+ },
+ "ANM_COW_PRESS": {
+  "under": "cowpress",
+  "upper": "cowpress",
+  "face": "fat"
+ },
+ "ANM_COW_THROW_LEFT": {
+  "under": "cowthrowl",
+  "upper": "cowthrowl",
+  "face": "fcowthrow"
+ },
+ "ANM_COW_THROW_RIGHT": {
+  "under": "cowthrowr",
+  "upper": "cowthrowr",
+  "face": "fcowthrow"
+ },
+ "ANM_ATN_RIGHT": {
+  "under": "atr",
+  "upper": "cowwait",
+  "face": "fat"
+ },
+ "ANM_COW_MOVE_LEFT_RIGHT": {
+  "under": "cowwlr",
+  "upper": "cowwlr",
+  "face": "fat"
+ },
+ "ANM_COW_STROKE": {
+  "under": "cowstroke",
+  "upper": "cowstroke",
+  "face": "ff"
+ },
+ "ANM_ENTRANCE": {
+  "under": "entrance",
+  "upper": "entrance",
+  "face": "fentrance"
+ },
+ "ANM_FALL": {
+  "under": "fall",
+  "upper": "fall",
+  "face": "fc"
+ },
+ "ANM_APPEARANCE": {
+  "under": "appearance",
+  "upper": "appearance",
+  "face": "fat"
+ },
+ "ANM_S_JUMP_START": {
+  "under": "sjmpst",
+  "upper": "sjmpst",
+  "face": "fa"
+ },
+ "ANM_S_JUMP_END": {
+  "under": "sjmped",
+  "upper": "sjmped",
+  "face": "fa"
+ },
+ "ANM_HOOKSHOT_FLY_LEFT": {
+  "under": "hsjmpl",
+  "upper": "hsjmpl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_FLY_RIGHT": {
+  "under": "hsjmpr",
+  "upper": "hsjmpr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_SHOOT": {
+  "under": "hsshoot",
+  "upper": "hsshoot",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_END_LEFT": {
+  "under": "hshangedl",
+  "upper": "hshangedl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_END_RIGHT": {
+  "under": "hshangedr",
+  "upper": "hshangedr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_LEFT": {
+  "under": "hshangl",
+  "upper": "hshangl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_RIGHT": {
+  "under": "hshangr",
+  "upper": "hshangr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_WAIT_LEFT": {
+  "under": "hshangwaitl",
+  "upper": "hshangwaitl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_WAIT_RIGHT": {
+  "under": "hshangwaitr",
+  "upper": "hshangwaitr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_SHOOT_LEFT": {
+  "under": "hshangshootl",
+  "upper": "hshangshootl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_SHOOT_RIGHT": {
+  "under": "hshangshootr",
+  "upper": "hshangshootr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_LEFT_START": {
+  "under": "hshanglh",
+  "upper": "hshanglh",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_HANG_RIGHT_START": {
+  "under": "hshangrh",
+  "upper": "hshangrh",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_END_LEFT": {
+  "under": "hswalledl",
+  "upper": "hswalledl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_END_RIGHT": {
+  "under": "hswalledr",
+  "upper": "hswalledr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_LEFT": {
+  "under": "hswalll",
+  "upper": "hswalll",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_RIGHT": {
+  "under": "hswallr",
+  "upper": "hswallr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_WAIT_LEFT": {
+  "under": "hswallwaitl",
+  "upper": "hswallwaitl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_WAIT_RIGHT": {
+  "under": "hswallwaitr",
+  "upper": "hswallwaitr",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_SHOOT_LEFT": {
+  "under": "hswallshootl",
+  "upper": "hswallshootl",
+  "face": "fat"
+ },
+ "ANM_HOOKSHOT_WALL_SHOOT_RIGHT": {
+  "under": "hswallshootr",
+  "upper": "hswallshootr",
+  "face": "fat"
+ },
+ "ANM_HVY_BOOTS_PUT_ON": {
+  "under": "putonh",
+  "upper": "putonh",
+  "face": "fputonh"
+ },
+ "ANM_SUMOU_MIAU": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_HAKEYOI": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_FIGHT_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_FIGHT_STEP_LEFT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_FIGHT_STEP_RIGHT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_FIGHT_STEP": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE_GORON": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_DODGE_TACKLE": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE_MISS": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE_SHOCK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_TACKLE_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE_WAIT_GORON": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_TACKLE_STAGGER": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_TACKLE_STAGGER_GORON": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_TACKLE_SHOCK_RETURN": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PUNCH": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_PUNCH_MISS_SHOCK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PUNCH_MISS_SHOCK_RETURN": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PUNCH_SHOCK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_STAGGER": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PUSH_BACK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PULL_BACK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_PULL_BACK_GORON": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_WIN": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_WIN_GORON": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_LOSE": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_LOSE_GORON": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_SUMOU_KNOCKED_DOWN": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_GET_UP": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_SHIKO": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_SUMOU_SHIKO_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_DMG_FBW": {
+  "under": "damfbw",
+  "upper": "damfbw",
+  "face": "fdamfbw"
+ },
+ "ANM_IRONBALL_WAIT": {
+  "under": "ibwait",
+  "upper": "ibwait",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_WALK": {
+  "under": "ibwalk",
+  "upper": "ibwalk",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_ATTACK": {
+  "under": "ibattack",
+  "upper": "ibattack",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_TURN": {
+  "under": "ibturn",
+  "upper": "ibturn",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_THROW": {
+  "under": "ibthrow",
+  "upper": "ibthrow",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_PULL": {
+  "under": "ibpull",
+  "upper": "ibpull",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_CATCH": {
+  "under": "ibcatch",
+  "upper": "ibcatch",
+  "face": "fat"
+ },
+ "ANM_IRONBALL_DEF": {
+  "under": "ibdef",
+  "upper": "ibdef",
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_HANG": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_HANG_MISS": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_HANG_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_HANG_WAIT_B": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_CUT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_CUT_B": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_MORPHEEL_CUT_FINAL": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_MORPHEEL_SPIT_OUT": {
+  "under": null,
+  "upper": null,
+  "face": "fa"
+ },
+ "ANM_DRAGON_HANG_LEFT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_HANG_RIGHT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_HANG": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_HANG_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_HANG_WAIT_B": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_CUT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_CUT_B": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DRAGON_CUT_FINAL": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_COPYROD_SWING": {
+  "under": "rodswing",
+  "upper": "rodswing",
+  "face": "fat"
+ },
+ "ANM_COPYROD_SWING_LARGE": {
+  "under": "rodswingl",
+  "upper": "rodswingl",
+  "face": "fat"
+ },
+ "ANM_GET_MASTER_SWORD": {
+  "under": "getswl",
+  "upper": "getswl",
+  "face": "fgetswl"
+ },
+ "ANM_WAIT_F": {
+  "under": "waitf",
+  "upper": "waitf",
+  "face": "fb"
+ },
+ "ANM_ELEC_STUN_GND": {
+  "under": "numba",
+  "upper": "numba",
+  "face": "fc"
+ },
+ "ANM_ELEC_STUN_AIR": {
+  "under": "numbb",
+  "upper": "numbb",
+  "face": "fc"
+ },
+ "ANM_KEY_CATCH": {
+  "under": "keycatchh",
+  "upper": "keycatchh",
+  "face": "fkeycatchh"
+ },
+ "ANM_HORSE_GET_ITEM": {
+  "under": "waiths",
+  "upper": "getawait",
+  "face": "fgetwait"
+ },
+ "ANM_TWGATE_PULLED_IN": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_CHAIN_PICK_UP": {
+  "under": "chainpickup",
+  "upper": "chainpickup",
+  "face": "fa"
+ },
+ "ANM_CHAIN_PULL": {
+  "under": "chain",
+  "upper": "chain",
+  "face": "fat"
+ },
+ "ANM_CHAIN_PULL_FYRUS": {
+  "under": "chainfm",
+  "upper": "chainfm",
+  "face": "fat"
+ },
+ "ANM_CHAIN_PULL_END": {
+  "under": "chained",
+  "upper": "chained",
+  "face": "fat"
+ },
+ "ANM_WAIT_INSECT": {
+  "under": "waitinsect",
+  "upper": "waitinsect",
+  "face": "fwaitinsect"
+ },
+ "ANM_DEMO_MHOP": {
+  "under": "demomhop",
+  "upper": "demomhop",
+  "face": "fdemomhop"
+ },
+ "ANM_PULL_IRONBALL_SWITCH": {
+  "under": "hangibt",
+  "upper": "hangibt",
+  "face": "fa"
+ },
+ "ANM_TRADE_ITEM_PULL_OUT": {
+  "under": "warashibe",
+  "upper": "warashibe",
+  "face": "fwarashibe"
+ },
+ "ANM_TRADE_ITEM_WAIT": {
+  "under": "warashibe_wait",
+  "upper": "warashibe_wait",
+  "face": "fg"
+ },
+ "ANM_DEMO_KAMAE": {
+  "under": "demo_kamae",
+  "upper": "demo_kamae",
+  "face": "fat"
+ },
+ "ANM_CUT_JUMP_LARGE_CHARGE": {
+  "under": "cuttjp",
+  "upper": "cuttjp",
+  "face": "fcuttjp"
+ },
+ "ANM_CUT_JUMP_LARGE_START": {
+  "under": "cuttjst",
+  "upper": "cuttjst",
+  "face": "fat"
+ },
+ "ANM_CUT_JUMP_LARGE": {
+  "under": "cuttj",
+  "upper": "cuttj",
+  "face": "fcuttj"
+ },
+ "ANM_CUT_JUMP_LARGE_LAND": {
+  "under": "cuttjed",
+  "upper": "cuttjed",
+  "face": "fcuttjed"
+ },
+ "ANM_DEMO_MASTER_SWORD_STICK": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_DEMO_MASTER_SWORD_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_DEMO_MASTER_SWORD_PULL": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_GANON_CHANCE": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_GANON_CHANCE_LOSING": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_GANON_CHANCE_WINNING": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_GANON_CHANCE_WIN": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_GANON_CHANCE_LOSE": {
+  "under": null,
+  "upper": null,
+  "face": "fat"
+ },
+ "ANM_GANON_FINISH": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_GANON_FINISH_WAIT": {
+  "under": null,
+  "upper": null,
+  "face": null
+ },
+ "ANM_GANON_ON_HORSE": {
+  "under": "waiths",
+  "upper": null,
+  "face": null
+ },
+ "ANM_DIVE_START": {
+  "under": "jumpbst",
+  "upper": "jumpbst",
+  "face": "fa"
+ },
+ "ANM_DIVE": {
+  "under": "jumpb",
+  "upper": "jumpb",
+  "face": "fa"
+ },
+ "ANM_ODOROKU": {
+  "under": "odoroku",
+  "upper": "odoroku",
+  "face": "fodoroku"
+ },
+ "ANM_ASHIMOTO": {
+  "under": "ashimoto",
+  "upper": "ashimoto",
+  "face": "fashimoto"
+ }
+}

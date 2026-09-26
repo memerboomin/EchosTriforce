@@ -1,0 +1,9699 @@
+
+===== PAGE 1 =====
+DOSSIER DE CONCEPTION  /  VERSION 1.0
+ZELDA
+Les Échos
+de la Triforce
+Un RPG à commandes
+inspiré de Final Fantasy VIII / IX
+SYSTÈMES  ·  PROGRESSION  ·  COMPAGNONS  ·  MASQUES
+21 jeux principaux  /  1 257 références  /  50 sources
+Catalogue de préproduction JSON incorporé au PDF
+20 septembre 2026
+Concept de fan non officiel. Titre de travail.
+
+===== PAGE 2 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+002
+GUIDE DE LECTURE
+Du concept au prototype
+Ce dossier transforme l’idée en règles jouables, puis relie ces règles à un catalogue documenté. Les
+chapitres 1 à 24 décrivent le jeu ; les chapitres 25-26 et les annexes servent à planifier et intégrer les
+équipements.
+Pour décider…
+Lire en priorité
+Comment Link progresse
+Chapitres 4-11 : combat, niveaux, aptitudes et équipement.
+Qui l’accompagne et comment il se
+transforme
+Chapitres 12-14 : personnages, esprits, masques et Majora.
+Quel prototype développer
+Chapitres 17 et 22-24 : donjon, architecture et jalons.
+Quels objets sont recensés
+Matrice 25, légende A, registres B-E et catalogue F.
+Ce qui relève des jeux ou de ce concept
+Chapitre 2 ; labels C/P ; sources en annexe J.
+Périmètre honnête
+1 257 références de préproduction sont recensées avec réapparitions et variantes par jeu. Les
+grandes collections fermées sont détaillées : 24 masques MM 64 anneaux Oracle 38 tenues TFH 28
+accessoires et 11 vêtements EOW 107 pièces BOTW et 135 pièces TOTK. Les dérivés tous les
+contenants les véhicules et les combinaisons infinies ne sont pas revendiqués exhaustifs.
+Le document propose un système complet de référence, pas un jeu déjà programmé. Les valeurs
+chiffrées demandent une validation en prototype. Le catalogue JSON incorporé permet de préparer les
+données ; les quêtes détaillées, la localisation et les assets de production restent à fabriquer.
+
+===== PAGE 3 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+003
+Sommaire
+5
+01 Le jeu à construire
+6
+02 Lire le canon sans le confondre avec le projet
+7
+03 Boucle de jeu et rythme des récompenses
+8
+04 Moteur de combat : ATB en mode Attente
+9
+05 Statistiques, dégâts et garde-fous
+10
+06 Éléments, altérations et Brèche
+11
+07 Niveaux et croissance de Link
+12
+08 Apprentissage, talents et styles de Link
+13
+09 Répertoire de techniques : valeurs initiales
+15
+10 Armes, armures et menus d’équipement
+16
+11 Effets distinctifs et équipement légendaire
+17
+12 Compagnons : rôles, recrutement et identité
+18
+13 Résonance, duos et invocations
+20
+14 Transformations de Link et masque de Majora
+21
+15 Monde et histoire : les Archives d’Hyrule
+22
+16 Donjons, ennemis et boss
+24
+17 Prototype jouable : Citerne des mémoires
+26
+18 Quêtes et déblocages : règles de collection
+27
+19 Forge, Amalgame et économie
+28
+20 Objets consommables, exploration et sauvegarde
+29
+21 Interface, accessibilité et direction artistique
+30
+22 Architecture technique pour développer ensuite
+31
+23 Règles de données et cas limites
+32
+24 Production : de la démo à la campagne
+33
+25 Matrice de couverture des jeux
+34
+26 Guide du catalogue et priorités de normalisation
+
+===== PAGE 4 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+004
+35
+A Profils et codes de déblocage
+38
+B Les 24 masques de Majora’s Mask
+39
+C Les 64 anneaux des Oracle
+42
+D Les 38 tenues de Tri Force Heroes
+44
+E Echoes of Wisdom : accessoires et vêtements
+46
+F Catalogue des armes, armures et reliques
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 46
+F.Z1 The Legend of Zelda
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 47
+F.Z2 The Adventure of Link
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 48
+F.ALTTP A Link to the Past
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 49
+F.LA Link’s Awakening
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 50
+F.OOT Ocarina of Time
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 52
+F.MM Majora’s Mask
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 53
+F.OOS Oracle of Seasons
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 54
+F.OOA Oracle of Ages
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 55
+F.FS Four Swords
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 55
+F.WW The Wind Waker
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 56
+F.FSA Four Swords Adventures
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 57
+F.MC The Minish Cap
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 58
+F.TP Twilight Princess
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 59
+F.PH Phantom Hourglass
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 60
+F.ST Spirit Tracks
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 61
+F.SS Skyward Sword
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 63
+F.ALBW A Link Between Worlds
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 64
+F.TFH Tri Force Heroes
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 65
+F.BOTW Breath of the Wild
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 73
+F.TOTK Tears of the Kingdom
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 81
+F.EOW Echoes of Wisdom
+82
+G Variantes, alias et héritages particuliers
+83
+H Jeux dérivés : extension prévue, inventaire distinct
+85
+I Données incorporées et remise au développeur
+86
+J Sources et méthode de recherche
+
+===== PAGE 5 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+005
+CHAPITRE 01
+Le jeu à construire
+Zelda : Les Échos de la Triforce est un titre de travail pour un RPG solo de fan : exploration de
+donjons, groupe de trois personnages, combats à commandes, équipement visible et collection d’objets
+issus des différentes aventures. Link demeure le personnage principal ; deux compagnons actifs
+apportent soins, contrôle ou dégâts spécialisés.
+La promesse
+Trouver une relique connue de Zelda doit changer une décision de combat, ouvrir un passage ou
+apprendre une technique. Monter de niveau doit rendre Link sensiblement plus fort. Changer de
+tenue doit être aussi utile que changer d’épée.
+Décision de conception
+Spécification v1
+Format
+PC, manette et clavier ; aventure solo ; 2,5D à caméra fixe ou 3D légère.
+Combat
+ATB en mode Attente : jauges de préparation et pause pendant le choix des commandes.
+Équipe
+Link + 2 alliés actifs ; 8 personnages permanents ciblés ; invités en extensions.
+Progression
+Niveaux 1-99 ; fin de campagne visée vers 45-55 ; PA pour apprendre les techniques ;
+liens d’esprits.
+Contenu cible
+8 chapitres, 10 donjons principaux, 6 sanctuaires optionnels ; objectif indicatif de 25-35
+h.
+Première version jouable
+Un donjon de 30-45 min ; Link, Sheik, Mipha ; une transformation ; 12 équipements.
+Collection
+Catalogue transversal ; déblocages garantis ; anciennes armes améliorables ; apparences
+conservées.
+L’inspiration FFVIII concerne le lien durable avec des esprits et la puissance spectaculaire des
+invocations. L’inspiration FFIX concerne les aptitudes apprises au contact de l’équipement, puis
+conservées. La fiche officielle de FFIX décrit ce principe d’apprentissage [S02]. Ici, les sorts consomment
+des PM et les ennemis suivent des niveaux de zone fixes : ces choix appartiennent à ce nouveau
+système.
+Les chiffres sont des valeurs de départ pour un prototype, pas un équilibrage déjà testé par des joueurs.
+Les ambitions de durée et de production sont des hypothèses à mesurer après le premier donjon.
+
+===== PAGE 6 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+006
+CHAPITRE 02
+Lire le canon sans le confondre avec le
+projet
+C = constat documentaire. P = proposition pour ce RPG. Les noms, leurs jeux d’apparition et les
+grandes distinctions de lore relèvent de C. Les statistiques, résistances, quêtes de déblocage, coûts,
+arbres de talents, groupes d’alliés et scénarios ci-dessous relèvent de P, sauf mention contraire. Les
+identifiants Sxx renvoient aux sources cliquables en fin de document.
+Point sensible
+C : jeux d’origine
+P : règle retenue
+Tenue Zora
+OOT : respiration sous l’eau ; BOTW : capacités
+de nage. TP : protection aquatique avec
+faiblesses au feu et à la glace [S08, S20, S34].
+Une tenue complète peut donner 50 % de
+résistance eau. Ce nombre est créé pour le RPG.
+Masque de
+Majora
+Le masque antagoniste de MM ne constitue pas
+une transformation normale de Link. Le
+couvre-chef BOTW/TOTK est un objet distinct
+dans son usage [S10, S34, S41].
+Un pouvoir postgame « Résonance de Majora »
+est une invention explicite.
+Formes de MM
+Mojo, Goron, Zora et Oni viennent de masques ;
+le masque du Géant agit dans un contexte
+particulier [S10].
+Quatre formes régulières et une forme Géant
+réservée à certaines arènes.
+Sheik
+Sheik est l’identité adoptée par Zelda dans OOT
+[S46].
+Un seul emplacement de personnage ; deux
+postures débloquées progressivement.
+Anneaux
+Oracle
+Les deux épisodes proposent un registre
+partagé de 64 anneaux ; un anneau est porté à
+la fois dans ces jeux [S13, S14].
+Deux emplacements d’accessoires ; les variantes
+d’une même famille ne se cumulent pas.
+Echoes of
+Wisdom
+Les vêtements et accessoires documentés
+concernent Zelda [S44, S45].
+Vêtements pour Zelda ; accessoires compatibles
+transférables ; transmog de Link annoncé comme
+adaptation.
+Épée de Quatre
+Objet lié à la division du héros, dans plusieurs
+épisodes [S16].
+Une technique produit des doubles temporaires ;
+aucun quatrième personnage permanent.
+Le récit est une continuité de fan autonome. La chronologie publiée par Nintendo sert de repère
+[S01] ; elle n’est pas une preuve qu’un événement officiel a fusionné toutes les époques. Les relations
+entre incarnations, sages et peuples restent documentées séparément dans le codex.
+Le catalogue couvre les 21 jeux principaux, en intégrant les grandes variantes de remakes, DLC et
+amiibo décrites par les inventaires consultés. Il ne prétend pas établir un inventaire universel de chaque
+objet de tous les dérivés, adaptations et produits promotionnels. Les dérivés sont traités dans une
+annexe d’extension. Les ingrédients, trésors de vente, cartes, clés ordinaires et toutes les combinaisons
+d’Amalgame ne sont pas énumérés comme équipements individuels.
+
+===== PAGE 7 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+007
+CHAPITRE 03
+Boucle de jeu et rythme des
+récompenses
+Échelle
+Boucle
+Récompense attendue
+30 secondes
+Observer une intention, choisir cible / élément /
+protection, résoudre une action.
+Une faiblesse comprise ou une jauge de
+Brèche avancée.
+5 minutes
+Explorer deux salles, résoudre une interaction,
+combattre un groupe visible.
+Un matériau, un raccourci, des PA.
+30-45 minutes
+Acquérir un outil, modifier sa tenue, vaincre le gardien
+du donjon.
+Une technique durable et une relique
+importante.
+2-4 heures
+Achever un arc régional et une quête de compagnon.
+Un compagnon, une forme ou une
+invocation ; nouvel atelier.
+Les ennemis apparaissent dans le décor. Un contact ouvre une arène courte ; le joueur peut contourner
+les groupes connus. Frapper le symbole ennemi donne +200 de jauge initiale à l’équipe ; être surpris
+donne ce bonus aux adversaires. Les combats ordinaires visent 45-90 secondes ; les élites 2-3 minutes ;
+un boss 5-8 minutes à vitesse normale.
+Une énigme combine un outil et une lecture de l’environnement : grappin sur une vanne, feu sur un
+sceau végétal, bottes de fer pour stabiliser un mécanisme. Un outil déjà obtenu reste utilisable en
+exploration, même s’il n’occupe pas un des deux raccourcis de combat. Aucun passage critique ne doit
+dépendre d’un objet vendu ou manqué définitivement.
+Limiter le flux principal à 5-8 nouvelles pièces significatives par donjon. Le grand catalogue se déploie
+par contrats, boutiques d’archives et défis facultatifs ; il ne doit pas saturer les menus du début. Une
+récompense majeure est annoncée avant sa quête et obtenue sans tirage aléatoire.
+
+===== PAGE 8 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+008
+CHAPITRE 04
+Moteur de combat : ATB en mode
+Attente
+Une activation est le droit d’un acteur à exécuter une commande. Ce terme remplace « tour » dans les
+règles techniques : il évite de confondre une action personnelle avec un round de toute l’équipe. Les
+trois alliés sont entièrement commandés par le joueur ; l’IA ne prend jamais une décision à sa place par
+défaut.
+Horloge de référence
+Chaque acteur vivant possède J entre 0 et 1 000. À temps actif : J += (100 + 3 × AGI) ×
+multiplicateur_vitesse × delta_secondes. Hâte = 1,25 ; Lenteur = 0,80 ; seul le plus fort effet de
+chaque catégorie s’applique. AGI finale plafonnée à 80.
+Au seuil 1 000, l’acteur entre dans la file prête. Les jauges de tous les acteurs s’arrêtent dès qu’un menu
+de choix s’ouvre, pendant les animations et pendant la résolution logique. Les ennemis prêts choisissent
+instantanément leur action mais passent par la même file. Égalité : instant de seuil calculé précisément,
+puis numéro d’instance stable. Les jauges ne dépassent pas 1 000 ; attendre dans un menu ne crée
+donc jamais de bonus.
+Commande de base
+Coût
+Résolution
+Attaquer
+Une activation
+P1 physique, une cible ; arme et portée appliquées.
+Techniques / magie
+Une activation + PM
+Six techniques préparées ; sélection cible et aperçu des coûts.
+Outils
+Une activation ; PM ou
+charge
+Deux outils de combat ; les outils d’exploration restent disponibles
+hors combat.
+Objets
+Une activation +
+consommable
+Effet immédiat ; consommation seulement après validation finale.
+Garde
+Une activation
+Dégâts reçus ×0,5 jusqu’au début de la prochaine activation du
+porteur.
+Relais
+Une activation du
+sortant
+Entrant depuis la réserve : J=0 ; PV / PM conservés ; impossible si
+le sortant est KO.
+Changer d’arme
+Une activation
+Charge un ensemble arme + main secondaire valide ; pas de
+changement de tenue.
+Fuir
+Une activation
+100 % hors boss et pièges scénarisés ; aucune récompense de
+combat.
+Après résolution : appliquer déclencheurs, états de fin d’activation et KO, remettre J à 0 puis ajouter les
+éventuels bonus de récupération (maximum 250). Un ennemi éliminé perd immédiatement son entrée
+dans la file. Un personnage ranimé revient avec J=0. Les commandes non validées sont annulables sans
+coût ; les commandes validées sont atomiques.
+Les durées « 2 activations » diminuent à la fin des deux prochaines activations de la cible. Une
+application pendant sa propre action ne décrémente pas immédiatement sa durée. Poison et
+régénération se déclenchent à ces mêmes fins d’activation. Garde et certaines préparations ont leur
+règle explicite de début d’activation.
+
+===== PAGE 9 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+009
+Un mode de confort « ordre fixe » pourra remplacer le remplissage continu par une file calculée à
+l’avance. Il est reporté après le prototype : toute la première version utilise le même moteur ATB Attente
+afin d’éviter deux équilibrages simultanés.
+CHAPITRE 05
+Statistiques, dégâts et garde-fous
+PV = vie ; PM = magie ; FOR = force ; MAG = magie offensive ; VIT = vitalité ; SPR = esprit ; AGI =
+vitesse ; CHC = chance. Les attributs ont un plafond de 255, sauf AGI 80 et CHC 50. Les valeurs
+intermédiaires restent décimales ; seul le résultat final d’un effet est arrondi vers le bas.
+Grandeur
+Formule proposée
+Attaque / magie
+ATQ = 2 × FOR + puissance_arme. AMAG = 2 × MAG + focus_arme.
+Défenses
+DEF = VIT + défense_équipement. DFM = SPR + protection_magique_équipement.
+Dégâts physiques
+floor((2 × ATQ + 10) × P × 100 / (100 + DEF_cible) × E × C × G × V).
+Dégâts magiques
+Même formule avec AMAG et DFM. P = coefficient de la technique.
+Modificateurs
+E = élément ; C = 1,5 si critique, sinon 1 ; G = 0,5 sous Garde, sinon 1 ; V dans [0,95 ;
+1,05].
+Soin
+floor((2 × AMAG + 30) × P_soin × bonus_soins) ; sans défense, sans critique.
+Précision
+100 % de base ; Cécité -25 points ; esquive totale plafonnée à 20 % ; précision finale
+60-100 %.
+Critique
+min(30 %, 5 % + 0,25 × CHC points + bonus). Les dégâts périodiques ne critiquent pas.
+Planchers / plafonds
+Dégât positif minimal 1 ; immunité explicite = 0 ; 9 999 par impact ; PV max 9 999, PM max
+500.
+Résistance élémentaire totale = somme des sources, bornée entre -50 % et +75 %. E = 1 - résistance.
+Un drapeau d’immunité explicite donne E=0 ; il ne résulte jamais d’une addition d’équipements. Les
+vulnérabilités et bonus conditionnels s’appliquent ensuite une seule fois. Pas d’absorption automatique :
+elle exige une technique identifiée.
+Bonus FOR, MAG, DEF et DFM provenant de passifs sont additionnés avant application, plafonnés à +40
+% par attribut ; malus additionnés plafonnés à -50 %. Les bonus de dégâts distincts sont additionnés et
+plafonnés à +50 %, puis appliqués une fois. Les familles de passifs identiques gardent la valeur la plus
+forte. Deux anneaux de puissance ne contournent pas cette règle.
+Exemple calculable
+Link niveau 10 : FOR=30 ; arme rang 2 de puissance 24 ; ATQ=84. Contre DEF=40, une frappe P1
+neutre, sans critique, avec V=1 donne floor(178 × 100/140)=127. Un sort ennemi AMAG=60 face à
+DFM=48 donne 87 ; avec résistance eau 50 %, il donne 43. Garde et résistance eau ensemble
+donnent 21.
+Le calcul choisit une seule composante d’élément par impact. Une technique multi-élément doit être
+divisée en impacts avec des puissances dont la somme est affichée. Trois flèches P0,4 représentent P1,2
+total ; un arc à plusieurs flèches ne triple pas gratuitement le coefficient P1.
+
+===== PAGE 10 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+010
+CHAPITRE 06
+Éléments, altérations et Brèche
+Le projet définit huit éléments : feu, eau, glace, foudre, vent, terre, lumière et ombre, plus neutre. Cette
+grille unifiée est une adaptation RPG ; les différents Zelda n’emploient pas tous ce système. Chaque
+ennemi possède sa propre matrice, affichée après Analyse ou après un premier impact de cet élément.
+État / effet
+Règle exacte de départ
+Contre-jeu
+Mouillé
+2 activations ; prochain impact foudre ×1,5 ou feu ×0,75 ;
+consomme Mouillé.
+Se sécher avec un objet ;
+exploiter avec foudre.
+Brûlure
+Perd 4 % PV max, cap 120, à la fin de 3 activations.
+Eau ou remède ; pas de cumul
+avec Gel.
+Gel
+Perd une activation ; prochain physique ×1,25 et brise Gel.
+Feu libère la cible ; boss :
+Lenteur une activation à la
+place.
+Choc
+Jauge immédiatement -200, une fois par activation adverse.
+Protection foudre ; boss -100.
+Poison
+3 % PV max, cap 100, pendant 3 activations ; non létal sur alliés.
+Antidote ; ne stacke pas, durée
+rafraîchie.
+Sommeil
+Saute une activation ; dégâts directs réveillent.
+Réveil ou soutien ; boss
+immunisés sauf script.
+Silence / Cécité
+Silence bloque magie et chants 2 activations ; Cécité réduit
+précision de 25 points.
+Objets, outils mécaniques et
+Garde restent utilisables.
+Provocation
+L’ennemi vise le provocateur pour sa prochaine action
+mono-cible compatible.
+Les zones et scripts de boss
+l’ignorent ; UI le précise.
+Fragilité
+DEF -15 %, 2 activations.
+Dissipation ; une seule instance.
+Enlisement
+AGI ×0,8, 2 activations ; aucun effet additionnel si Lenteur déjà
+plus forte.
+Vent, saut ou bottes adaptées.
+Probabilité d’un état = taux de la technique × (1 - résistance à cet état). Un ennemi de boss possède des
+résistances explicites, jamais une immunité cachée au dernier moment. Après une interruption subie, il
+reçoit Stabilité pendant ses deux prochaines activations : aucun nouveau saut d’action n’est possible.
+Les dégâts et les réactions élémentaires restent autorisés.
+Brèche : jauge de vulnérabilité séparée, seuil 100 pour un petit ennemi, 200 pour une élite, 300 pour un
+boss. Attaque normale +10 ; impact de faiblesse +20 supplémentaires ; outil adapté +40 ; technique de
+brisure selon fiche. Au seuil, la cible subit -200 de jauge ATB et +25 % de dégâts jusqu’à la fin de sa
+prochaine activation. Remise à zéro puis Stabilité de Brèche pendant deux activations de la cible. Le
+boss affiche toujours seuil et progression.
+Ordre des effets : validation de cible > précision > dégâts > réaction élémentaire > Brèche > altération
+> déclencheurs > KO > événements de quête. Une réaction ne déclenche pas une autre réaction :
+profondeur maximale de chaîne = 1. Les dégâts réfléchis et contre-attaques ne produisent ni Résonance
+ni nouvelles contre-attaques.
+
+===== PAGE 11 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+011
+CHAPITRE 07
+Niveaux et croissance de Link
+Poser x = niveau - 1. Les valeurs ci-dessous constituent la courbe nue de Link, avant équipement. Les
+autres personnages utilisent des multiplicateurs par attribut puis un arrondi inférieur. Les monstres
+gardent leur niveau prévu par la zone ; le joueur peut revenir plus puissant dans une ancienne région.
+Attribut
+Croissance
+N1
+N10
+N30
+N50
+N99
+PV
+floor(180 + 42x + 0,6x²)
+180
+606
+1 902
+3 678
+9 999*
+PM
+min(500, 25 + 4x)
+25
+61
+141
+221
+417
+FOR
+12 + 2x
+12
+30
+70
+110
+208
+MAG
+10 + 2x
+10
+28
+68
+108
+206
+VIT / SPR
+10 + floor(1,5x)
+10
+23
+53
+83
+157
+AGI
+12 + floor(x/4)
+12
+14
+19
+24
+36
+CHC
+5 + floor(x/6)
+5
+6
+9
+13
+21
+*La formule PV donne 10 058 au niveau 99 ; le plafond 9 999 est appliqué. Un gain de niveau augmente
+PV et PM courants de la différence entre les maxima, sans soigner complètement. Cela évite que
+l’approche d’un niveau annule tout le risque d’un boss.
+Expérience
+XP nécessaire de L à L+1 = 50 + 25L + 10L², pour L=1…98. XP totale pour atteindre N = somme de
+cette expression de 1 à N-1. Les gains sont attribués intégralement à chaque personnage recruté,
+actif ou en réserve ; aucun partage diviseur par taille du groupe.
+Récompense type par ennemi de niveau L : floor((50 + 25L + 10L²) / 12). Une élite vaut trois ennemis,
+un boss huit. Un combat à trois ennemis de niveau comparable représente ainsi environ un quart de
+niveau. La quête principale peut accorder l’équivalent de deux combats. Au-delà de 10 niveaux d’écart
+en faveur du joueur, XP ennemie ×0,25 ; PA inchangés pour permettre l’apprentissage.
+Les compagnons rejoignent au niveau de Link ; leur XP suivante est alignée sur la même fraction
+d’avancement. Les quêtes de lien donnent de nouvelles aptitudes, pas des statistiques permanentes
+manquables. En fin de jeu, des arènes proposent un ajustement de niveau volontaire ; aucun
+changement silencieux des zones existantes.
+
+===== PAGE 12 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+012
+CHAPITRE 08
+Apprentissage, talents et styles de Link
+Link dispose de six emplacements de techniques actives préparées. Attaque, Garde, Objet, Relais,
+Forme et les deux outils ne prennent pas ces places. Un équipement donne accès à une technique tant
+qu’il est porté ; les points d’aptitude (PA) gagnés en victoire permettent de la maîtriser définitivement.
+Une technique de marteau maîtrisée exige toujours une arme ou un outil de marteau compatible.
+Palier d’aptitude
+PA nécessaires
+Usage
+Fondamental
+30
+Taillade, Tir précis, première défense.
+Avancé
+80
+Contrôle, deux cibles, protection de groupe.
+Expert
+150
+Techniques de donjon et passifs spécialisés.
+Légendaire
+300
+Pouvoir unique, quête dédiée requise.
+Un combat ordinaire donne 3 PA ; élite 8 ; boss 20. Chaque pièce portée reçoit les PA complets pour sa
+technique active d’apprentissage. Le même identifiant de technique n’obtient ces PA qu’une fois par
+combat, même présent sur deux pièces. Les membres en réserve conservent l’apprentissage de leur
+équipement. Retirer ou améliorer une arme conserve les PA déjà acquis.
+Capacité de passifs = min(30, 6 + floor((niveau-1)/3)). Les passifs coûtent 2, 4 ou 6 points. Exemple :
+Résistance poison 4 ; contre-attaque légère 4 ; PM +10 % 4 ; récupération après Garde 2. Les bonus
+d’une pièce portée et son passif maîtrisé identique ne se cumulent pas. Un menu indique clairement les
+doublons.
+Style
+Fonction
+Déblocage de branche
+Lame du Courage
+Mono-cible, coups de grâce, rayon d’épée.
+Maître d’armes du chapitre 1.
+Gardien d’Hyrule
+Parades, provocation, protection.
+Épreuve du bouclier au chapitre 2.
+Œil du Héros
+Arcs, analyse, cibles aériennes.
+École de tir au chapitre 2.
+Art des Reliques
+Grappins, bombes, baguettes, combos d’énigmes.
+Atelier de chapitre 1.
+Chants des Âges
+Soins légers, vitesse, dissipation.
+Premier instrument au chapitre 3.
+Âmes et Masques
+Formes et liens ; consommation de Résonance.
+Termina au chapitre 4.
+Le niveau débloque de la capacité et des statistiques ; il n’achète pas automatiquement tout l’arbre.
+L’accès à une technique dépend d’une source d’apprentissage et, pour les dernières aptitudes, d’une
+quête. Toute spécialisation peut être réorganisée gratuitement hors combat.
+
+===== PAGE 13 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+013
+CHAPITRE 09
+Répertoire de techniques : valeurs
+initiales
+P indique la puissance dans la formule de dégâts. « Tous » applique la puissance annoncée à chaque
+cible. Une aptitude de groupe coûte davantage pour couvrir ce rendement. Les techniques nommées
+d’après un mouvement connu restent des adaptations chiffrées ; leurs coûts et effets ne décrivent pas
+les jeux d’origine.
+ID
+Technique
+Coût PM / PA
+Effet proposé
+Source
+d’apprentissage P
+L01
+Taillade
+3 PM / 30 PA
+P1,25 ; lame ; aucun état.
+Épée de départ
+L02
+Attaque circulaire
+8 / 80
+Tous, P0,8 ; Brèche +20.
+Épreuve du maître
+L03
+Coup de grâce
+8 / 80
+P1,3 ; P2 si cible sous 25 % PV.
+Mémoire TP
+L04
+Frappe à revers
+10 / 150
+P1,5 ; ignore 25 % DEF.
+Quête Sheik
+L05
+Rayon d’épée
+6 / 150
+P1,4 lumière ; exige PV à 100 %.
+Master Sword
+L06
+Grande circulaire
+20 / 300
+Tous P1,6 ; exige L02 maîtrisée.
+Héritage MC / TP
+G01
+Coup de bouclier
+4 / 30
+P0,6 ; Brèche +40 ; bouclier.
+Bouclier
+G02
+Provocation
+4 / 30
+Cible un ennemi ; prochaine attaque
+compatible.
+Entraînement Goron
+G03
+Interception
+8 / 80
+Prend le prochain coup destiné à un allié ;
+Garde active.
+Bouclier hylien
+G04
+Parade miroir
+12 / 150
+Renvoie le prochain sort mono-cible à 50 % de
+ses dégâts ; 1 activation.
+Bouclier miroir
+G05
+Rempart
+14 / 150
+Groupe : dégâts physiques ×0,75, 2
+activations.
+Quête Daruk
+G06
+Serment du héros
+24 / 300
+Groupe : barrière égale à 15 % PV max, 2
+activations.
+Finale de lien
+A01
+Tir précis
+4 / 30
+P1,3 ; ignore Cécité, pas l’immunité.
+Arc
+A02
+Flèche de feu
+6 / 80
+P1,3 feu ; Brûlure 40 %.
+Arc + flèche
+débloquée
+A03
+Flèche de glace
+8 / 80
+P1,1 glace ; Gel 40 %.
+Arc + flèche
+débloquée
+A04
+Flèche de foudre
+8 / 80
+P1,3 foudre ; Choc 60 %.
+Atelier Gerudo
+A05
+Volée
+14 / 150
+Trois impacts P0,5 sur une cible ; une seule
+génération de Résonance.
+Arc de Revali
+A06
+Flèche de lumière
+20 / 300
+P2 lumière ; dissipe un bonus ennemi.
+Sanctuaire de lumière
+R01
+Grappin tactique
+3 / 30
+P0,7 ; enlève Couvert ; Brèche +40 sur cible
+ancrable.
+Grappin
+R02
+Boomerang
+entravant
+5 / 80
+P0,8 ; J ennemi -150 ; boss -75.
+Boomerang
+R03
+Brise-garde
+8 / 80
+P1,1 ; Brèche +60 ; arme lourde.
+Marteau / masse
+
+===== PAGE 14 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+014
+ID
+Technique
+Coût PM / PA
+Effet proposé
+Source
+d’apprentissage P
+R04
+Graine mystère
+10 / 150
+Reproduit le dernier élément allié à P1,4 ;
+neutre si aucun.
+Oracle
+R05
+Double grappin
+12 / 150
+Deux cibles P0,8 ; supprime Couvert.
+Double Clawshots
+R06
+Amalgame
+maîtrisé
+16 / 300
+P1,8 avec élément du matériau ; consomme 1
+charge.
+Atelier céleste
+C01
+Chant
+d’apaisement
+8 / 30
+Une cible : soin P1,2.
+Ocarina
+C02
+Chant des
+tempêtes
+12 / 80
+Tous ennemis : P0,6 eau, Mouillé 100 %.
+Moulin
+C03
+Chant du temps
+12 / 150
+Un allié : Hâte 2 activations.
+Harp of Ages
+C04
+Vent de Farore
+10 / 150
+Retire Enlisement / Cécité d’un allié ; J +100.
+Fontaine de Farore
+C05
+Amour de Nayru
+18 / 150
+Un allié : dégâts magiques ×0,5, 2 activations.
+Fontaine de Nayru
+C06
+Chœur du Courage
+24 / 300
+Groupe : soin P1,1 et supprime Silence.
+Huit instruments
+S01
+Accord spirituel
+0 PM / 30
+Une activation : +12 Résonance ; 1
+fois/personnage/combat.
+Premier lien
+S02
+Souffle des
+ancêtres
+8 / 80
+Un allié : SPR +15 %, 2 activations.
+Premier esprit rang 2
+S03
+Passage des âmes
+12 / 150
+Retire Poison / Brûlure d’un allié.
+Trois masques
+S04
+Réveil féerique
+24 / 150
+Réanime un allié à 25 % PV ; 1/combat.
+Grande Fée
+S05
+Quatre reflets
+16 PM + 40 R
+/ 300
+Quatre impacts P0,45 ; doubles visuels
+seulement.
+Four Sword
+S06
+Lame du
+crépuscule
+18 PM + 40 R
+/ 300
+P2 ombre ; Fragilité 100 %, 2 activations.
+Lien Midna rang 3
+Les techniques S05/S06 utilisent la même Résonance que les transformations. La technique Accord
+spirituel remplace le gain normal de Résonance de son activation ; elle n’ajoute pas 12 + 6. Les valeurs
+« 1/combat » sont stockées par identifiant d’acteur, même après un Relais ou un KO.
+
+===== PAGE 15 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+015
+CHAPITRE 10
+Armes, armures et menus
+d’équipement
+Emplacement
+Règle
+Arme + main secondaire
+Une main permet un bouclier ou un focus. Deux mains occupent les deux slots. Les arcs
+sont à deux mains.
+Tête / torse / jambes
+Trois pièces modulaires ; les tenues anciennes monobloc occupent les trois
+emplacements.
+Accessoire A / B
+Deux objets distincts ; une famille d’anneau, bijou ou amélioration ne cumule que son
+meilleur rang.
+Relique
+Un masque, un instrument spirituel ou un talisman ; rend sa commande spéciale
+disponible.
+Esprit lié
+Un lien par personnage ; aucun esprit ne peut être lié simultanément à deux personnages
+actifs.
+Apparence
+Calque cosmétique de tout objet possédé une fois ; sans modifier ses statistiques.
+Les armes utilisent cinq rangs de puissance : 12 / 24 / 38 / 54 / 74. Une arme magique convertit cette
+valeur en focus ; une arme physique en puissance. Un arc et une lance ne reçoivent pas
+automatiquement un second bonus de puissance. Un profil élémentaire conserve le nombre de mains de
+l’arme source. La casse permanente est désactivée ; les objets rouillés deviennent des pistes
+d’amélioration.
+Défense par pièce tête / jambes : 2 / 4 / 6 / 9 / 12. Torse : 4 / 8 / 13 / 19 / 26. Une tenue monobloc
+additionne ces trois valeurs. DFM suit la même somme pour TENUE et SAGE ; GARDE ajoute 20 % DEF
+mais enlève 20 % DFM ; les effets spécifiques de pièce s’appliquent ensuite. Un bouclier apporte
+uniquement la DEF indiquée dans son profil.
+Exemple demandé : tenue de l’eau
+Choisir la tenue Zora complète affiche « Eau : -50 % de dégâts reçus ». Une version moderne à trois
+pièces donne 15 % par pièce et 5 % de bonus d’ensemble. Une tunique Zora monobloc occupe les
+trois slots et donne directement 50 %. La version issue de TP conserve en contrepartie -20 % de
+résistance feu et glace. Ces valeurs sont des adaptations P.
+Le menu présente : personnage en pied, emplacements, PV/PM/ATQ/AMAG/DEF/DFM/AGI avant-après,
+matrice des résistances, techniques offertes, PA acquis, origine du jeu, condition de déblocage. Un
+bouton compare ; un autre montre l’apparence ; un troisième enregistre un ensemble. Trois ensembles
+rapides sont disponibles par personnage, gratuitement hors combat.
+Filtres : type, origine, rang, élément, apprentissage incomplet, favori, utilisable par le personnage,
+récemment obtenu. Un onglet Collection montre aussi les objets verrouillés avec un indice de quête. Les
+variantes d’une même arme forment une fiche à onglets, pas vingt lignes de menu identiques.
+
+===== PAGE 16 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+016
+CHAPITRE 11
+Effets distinctifs et équipement
+légendaire
+Les profils du catalogue servent de valeurs par défaut. Les fiches ci-dessous les remplacent
+intégralement quand elles concernent le même objet. Les variantes historiques d’une relique peuvent
+partager le même modèle de combat, avec une apparence et un codex propres.
+Objet / ensemble
+Spécification P
+Déblocage P
+Master Sword
+R4, une main, puissance 54 ; P1,2 contre Spectre ; L05 à
+150 PA. Une seule version active par sauvegarde.
+C5 : purifier trois sceaux du
+Temple du Temps.
+Master Sword
+accomplie
+R5 puissance 74 ; conserve les PA ; rayon utilisable à 90
+% PV après maîtrise.
+C8 : bénédiction finale ; variantes
+SS / ALTTP / ALBW dans le codex.
+Biggoron’s Sword
+R4 deux mains, puissance 54 ; attaque P1,25 ; aucune
+main secondaire ; R03.
+C6 : réparer la forge géante, puis
+duel sans objet.
+Four Sword
+R4 une main ; S05 ; les doubles ne disposent ni PV, ni
+tours, ni équipements.
+C4 : quatre salles de coopération
+avec l’équipe.
+Great Fairy’s Sword
+R4 deux mains ; AMAG +12 en plus de la puissance ;
+aucun vol de vie gratuit.
+C6 : restaurer quatre fontaines.
+Mirror Shield
+R3 DEF +13 ; G04 ; renvoi seulement sur sort compatible
+signalé.
+C4 : énigme de miroirs.
+Hylian Shield
+R4 DEF +19 ; Interception ; résistance Désarmement 50
+%.
+C5 : épreuve de protection de
+trois PNJ.
+Magic Armor
+Tenue entière R4 ; dégâts reçus -20 %, coûte 10 rubis par
+impact ; inactive si solde insuffisant.
+C5 : atelier marchand restauré ;
+pas de dette.
+Iron Boots
+Jambes R2 ; immunité au recul ; AGI -4 ; active les dalles
+lourdes.
+C2 : carrière ; retrait gratuit hors
+combat.
+Hover Boots
+Jambes R3 ; ignore premier effet de sol de chaque combat
+; AGI +1.
+C5 : sanctuaire de l’ombre.
+Climbing / Froggy /
+Glide
+Exploration : escalade / parois humides / chute dirigée sur
+points prévus ; AGI +1 par pièce.
+C3 / C7 / C7 ; pas de simulation
+physique universelle.
+Desert Voe / Gerudo
+Chaleur d’exploration ignorée ; résistance feu 25 % en
+tenue complète ; déguisement pour dialogues Gerudo.
+C3 : marché et quête d’accès.
+Ember / Frostbite /
+Charged
+Respectivement dégâts feu / glace / foudre +15 % avec
+trois pièces ; n’immunise pas à cet élément.
+C7 : sanctuaires de climat.
+Radiant / Evil Spirit
+Radiant : armes osseuses +15 %. Evil Spirit : ombre reçue
+-30 %, soin reçu -10 %.
+C5 : exploration d’Ikana /
+profondeurs.
+Mystic
+Convertit 20 % des dégâts après défense en rubis perdus,
+1 rubis pour 5 PV évités ; maximum 50 rubis/coup.
+C7 : marchand des esprits.
+Ancient / Zonaite
+Ancient : dégâts aux automates +15 %. Zonaite : outils
+mécaniques -15 % PM, trois pièces.
+C7 : laboratoire ; distinction
+Sheikah / Zonai conservée.
+Majora’s Mask
+BOTW/TOTK
+Réduit l’agressivité de certains groupes en exploration ;
+aucun effet sur boss ni transformation.
+C7 : colisée de cinq familles.
+One-Hit Obliterator
+Prêt temporaire dans une épreuve dédiée ; adversaires et
+Link à un coup ; aucun transport dans la campagne.
+Après fin : défi séparé et
+apparence de trophée [S50].
+
+===== PAGE 17 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+017
+Les effets météo, nage, vol et discrétion se traduisent dans des situations prévues. Un bonus annoncé
+comme « résistance chaleur » n’est pas automatiquement une immunité aux sorts de feu. Le codex
+distingue température ambiante, altération et dégâts élémentaires.
+CHAPITRE 12
+Compagnons : rôles, recrutement et
+identité
+Équipe permanente ciblée : Link, Sheik/Zelda, Impa, Midna, Mipha, Daruk, Revali et Urbosa. Le chapitre 1
+introduit Sheik ; Mipha rejoint pour le premier arc aquatique ; les autres se répartissent ensuite. Les
+Champions sont rencontrés comme des échos conscients d’une mémoire : le scénario ne prétend pas
+annuler leur histoire. Les compétences du tableau sont des propositions, même lorsqu’elles évoquent un
+pouvoir existant.
+Personnage
+Rôle / multiplicateurs de
+base
+Kit de départ P
+Recrutement P
+Link
+Polyvalent ; tous ×1
+L01, Garde, R01 ; armes multiples.
+Départ
+Sheik / Zelda
+Sheik : PV ×0,9, FOR ×0,9,
+MAG ×1,1, AGI ×1,2. Zelda :
+mêmes PV ; MAG ×1,25, AGI
+×1.
+Aiguille P1 ; Voile (esquive +10 points, 8
+PM) ; Révélation gratuite 1/combat ; en
+Zelda, Sceau lumière P1,5, 10 PM.
+Sheik C1 ; posture
+Zelda C5.
+Impa
+PV ×1,05 ; FOR ×1,05 ; DEF
+×1,1 ; AGI ×1,05
+Lame P1 ; protection d’un allié ; marque de
+faiblesse, 8 PM, Brèche +40.
+C2 : défense de
+Cocorico.
+Mipha
+PV ×0,95 ; MAG ×1,2 ; SPR
+×1,2
+Lance P1 ; Soin P1,6, 8 PM ; vague P1 eau, 8
+PM ; Réveil 25 % PV, 24 PM, 1/combat.
+C2 : citerne.
+Daruk
+PV ×1,3 ; FOR ×1,1 ; VIT ×1,3
+; AGI ×0,8
+Marteau P1,25 ; Provocation ; Rempart ;
+percussion Brèche +60, 10 PM.
+C2 : mine en péril.
+Revali
+PV ×0,9 ; FOR ×1,1 ; AGI
+×1,2
+Tir P1 ; volée 3×P0,45, 12 PM ; rafale vent
+P1,2, 10 PM ; Analyse.
+C3 : épreuve
+aérienne.
+Urbosa
+PV ×1,1 ; FOR ×1,15 ; MAG
+×1,05
+Cimeterre P1 ; arc foudre P1,4, 10 PM ;
+brise-garde ; foudre de zone P1,0, 16 PM.
+C3 : duel du désert.
+Midna
+PV ×0,9 ; MAG ×1,25 ; SPR
+×1,1
+Trait ombre P1,3, 6 PM ; déplacement de
+cible ; dissipation 8 PM ; duo loup.
+C5 : miroir réparé.
+Les multiplicateurs non indiqués valent 1. Les bonus DEF dérivés d’Impa s’appliquent après VIT +
+équipement. Sheik et Zelda partagent niveau, PV, PM, passifs, compteurs et emplacement ; changer de
+posture consomme une activation, conserve les proportions PV/PM si un maximum change, et ne peut
+pas réinitialiser une aptitude limitée.
+Invité optionnel
+Contribution P
+Limite de production
+Saria
+Chants végétaux, soin régulier, indices de forêt.
+Un sanctuaire et deux aptitudes.
+Medli
+Vent et reflets lumineux ; soutien de la Grande
+Mer.
+Un donjon ; harpe comme focus.
+Ruto / Sidon
+Ruto : magie eau ; Sidon : protection de groupe.
+Choisir un seul invité aquatique pour la
+première extension.
+Tulin / Riju
+Tulin : précision vent ; Riju : marques foudre.
+Successeurs distincts des Champions ;
+quêtes propres.
+
+===== PAGE 18 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+018
+Invité optionnel
+Contribution P
+Limite de production
+Tetra / Linebeck
+Vol de rubis sur monstres / objets marins.
+Invités scénarisés ; Tetra est une autre
+incarnation de Zelda.
+Ravio / Hilda
+Marchand d’outils / magie de Lorule.
+Ravio d’abord PNJ de service ; Hilda
+soutien ponctuel.
+Zelda spectrale / Esprit
+Lokomo
+Possession d’une armure / chant à deux voix.
+Épisode ST ; identité distincte, pas cumul
+avec Sheik sans scène explicative.
+Rauru / Mineru
+Lumière / automate piloté.
+Extension TOTK / Guerre du Sceau ; pas
+au premier prototype.
+Chaque compagnon possède trois rangs de lien : recrutement ; quête personnelle ; résolution. Les rangs
+2 et 3 ouvrent une aptitude et un duo. Pas de dialogues à répéter pour accumuler arbitrairement des
+points. Les choix narratifs modifient des scènes et apparences ; aucun soin essentiel ne devient
+inaccessible.
+CHAPITRE 13
+Résonance, duos et invocations
+Une ressource commune
+Résonance d’équipe R de 0 à 100. Action utile alliée : +6 ; faiblesse élémentaire exploitée : +4 ;
+protection qui empêche effectivement des dégâts : +2. Maximum +12 par activation, quels que
+soient les impacts ou cibles. Une action qui dépense R ne produit pas de R. Une victoire conserve au
+plus 25 ; repos = 0.
+Les invocations consomment une activation et la Résonance indiquée. Elles produisent un effet
+immédiat ; leur animation est raccourcissable et n’influe pas sur les jauges. Une invocation ne peut être
+utilisée qu’une fois par combat, par identité d’esprit. Les invocations ne deviennent pas des unités à PV
+supplémentaires ; cela évite d’ajouter un quatrième acteur à gérer.
+Esprit proposé
+R
+Effet P
+Lien / acquisition P
+Grande Fée
+60
+Groupe : soin P2 et retire Poison / Brûlure / Silence ;
+n’annule pas KO.
+C2, première fontaine ; passif
+soins +5 %.
+Valoo
+75
+Tous ennemis : feu P2,3 ; Brûlure 100 % si sensible.
+C6, sommet de l’île ; passif feu +5
+%.
+Jabun
+75
+Tous ennemis : eau P2 ; Mouillé ; alliés eau reçue
+-25 % durant 2 activations.
+C6, grotte marine ; passif eau +5
+%.
+Les Quatre Géants
+10
+0
+Tous ennemis P2 terre ; annule une attaque de
+catastrophe télégraphiée compatible.
+C4, pacte des quatre régions ;
+passif Brèche +5.
+Poisson-Rêve
+10
+0
+Restaure 20 % PM au groupe et dissipe tous les
+bonus ennemis non scénarisés.
+C6, réunir huit instruments ;
+passif PM max +5 %.
+Esprit de la forêt
+60
+Groupe : régénération 5 % PV, 3 activations ;
+entrave ennemis terrestres.
+C1-3, quête Saria ; passif poison
+reçu -10 %.
+Protection de Nayru
+80
+Groupe : dégâts magiques ×0,5, 2 activations.
+C3, fontaine ; invocation décrite
+comme bénédiction, pas contrôle
+d’une déesse.
+
+===== PAGE 19 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+019
+Esprit proposé
+R
+Effet P
+Lien / acquisition P
+Souffle de Farore
+70
+Groupe : Hâte 2 activations ; retire Enlisement.
+C3, fontaine ; passif AGI +1.
+Chaque lien apprend deux passifs au maximum : premier à 80 PA, second à 150 PA après sa quête. Un
+seul lien actif par personnage ; les passifs appris utilisent la capacité de passifs normale. Aucun stock de
+sorts n’est sacrifié à l’équipement. Une invocation liée à un personnage KO n’est pas disponible jusqu’à
+son retour.
+Duo
+R / autres coûts
+Effet P
+Link + Sheik : Ombre et lame
+40 R ; chacun perd son
+activation prête
+Deux impacts P1,1 ; Fragilité 100 %.
+Link + Mipha : Marée du courage
+50 R ; Mipha 8 PM
+P1,5 eau ; soin du groupe P0,7.
+Link + Daruk : Roc et acier
+50 R
+P1,8 terre ; Brèche +100.
+Link loup + Midna : Crépuscule
+60 R
+Tous P1,3 ombre ; retarde les petites cibles de
+100.
+Un duo exige ses deux participants vivants, non contrôlés et prêts à J=1 000 ; il remet les deux jauges à
+0. Les autres coûts sont prélevés atomiquement. Le compteur des états de chaque participant avance
+d’une activation. L’interface explique pourquoi une commande est grisée.
+
+===== PAGE 20 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+020
+CHAPITRE 14
+Transformations de Link et masque de
+Majora
+Une forme change les commandes et les multiplicateurs de Link pendant trois activations
+personnelles après l’activation de transformation, Garde et objets compris. La transformation
+coûte donc du temps ; elle ne fournit pas immédiatement un coup gratuit. Le retour volontaire est
+gratuit au début d’une activation mais consomme la durée restante. KO, fin de combat et scène
+obligatoire rétablissent Link normal.
+PV et PM maxima ne changent pas. L’armure, les accessoires et leurs résistances restent actifs ;
+puissance d’arme et focus sont remplacés par une valeur de forme liée au rang narratif de Link, égale à
+12/24/38/54/74. Les effets uniques de l’arme et du bouclier sont suspendus. Les passifs appris
+compatibles restent actifs. Cette règle empêche une masse à deux mains de cumuler ses bonus avec les
+poings Goron.
+Forme
+Coût R / attributs
+Trois commandes P
+Faiblesse et usage
+Mojo / Deku
+40 ; AGI ×1,15 ; ATQ ×0,8 ;
+AMAG ×1,1
+Bulle P1,2 vent, 4 PM ; graines 3×P0,4, 6
+PM ; pollen : soin P0,8, 6 PM.
+Feu reçu ×1,25 ; fleurs de
+propulsion en exploration.
+Goron
+60 ; ATQ ×1,25 ; DEF ×1,3
+; AGI ×0,8
+Poing P1,25 ; roulade P1,7, 10 PM ;
+percussion : P1,0 et Brèche +80, 12 PM.
+Eau reçue ×1,25 ; dalles
+lourdes et rochers.
+Zora
+60 ; AGI ×1,1 ; AMAG ×1,2
+; eau reçue ×0,75
+Lames-nageoires 2×P0,65 ; onde P1,4
+eau, 8 PM ; barrière : dégâts ×0,65, 1
+activation, 8 PM.
+Foudre reçue ×1,25 ;
+nage et mécanismes
+sous-marins.
+Oni / Fierce
+Deity
+100 ; ATQ ×1,35 ; AMAG
+×1,2
+Lame P1,4 ; rayon lumière P2, 12 PM ;
+lune tranchante tous P1,5, 20 PM.
+Après retour : coût PM
++20 % pendant 2
+activations. Forme
+tardive.
+Géant
+100 ; ATQ ×1,3 ; DEF ×1,2
+Frappe P1,5 ; prise : Brèche +120, 12 PM
+; ancrage : protège une catastrophe
+compatible.
+Seulement arènes
+marquées giant_allowed ;
+jamais dans les couloirs.
+Loup du
+crépuscule
+50 ; ATQ ×1,1 ; AGI ×1,2
+Morsure P1,2 ; traque P1,4 contre cible
+marquée, 6 PM ; sens : Analyse et révèle
+Spectre.
+Aucun arc ni objet tenu ;
+commandes d’objets
+fermées ; lié à TP, pas à
+MM.
+Résonance de
+Majora
+100 ; AMAG ×1,35 ; ATQ
+×1,15
+Orbe lunaire P1,8 ombre, 10 PM ; danse
+maudite tous P1,1, 14 PM ; déchirure
+P2,3, 22 PM.
+Création de fan après fin ;
+corruption +20/action ; fin
+à 60 ; retire 10 % PV non
+létaux au retour.
+Les multiplicateurs de forme s’appliquent après les attributs dérivés et avant la formule de dégâts. Les
+multiplicateurs élémentaires particuliers de forme s’appliquent après la résistance d’équipement, sans
+descendre sous 0,1 hors immunité scriptée. Mouillé et la forme Zora peuvent donc créer un vrai risque
+face à la foudre.
+
+===== PAGE 21 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+021
+Comment permettre « se transformer avec Majora »
+Le masque original reste scellé dans le scénario. Une quête postgame fabrique un reflet purifié,
+nommé Résonance de Majora, à partir d’un souvenir lunaire. Ce reflet autorise la forme ci-dessus. Le
+journal indique clairement « pouvoir créé pour Les Échos de la Triforce ». Il ne réécrit ni la fonction
+du masque de MM ni celle du couvre-chef de BOTW/TOTK.
+En exploration, Mojo/Goron/Zora/Loup sont des modes contextuels débloqués par drapeau, sans
+dépense de Résonance. Entrer en combat démarre en Link normal ; choisir la forme coûte la ressource
+prévue. Les passages obligatoires ne nécessitent jamais de farmer la jauge.
+CHAPITRE 15
+Monde et histoire : les Archives
+d’Hyrule
+Prémisse P. Le Temple du Temps conserve des traces des aventures du héros. Une conscience née de
+ces archives, l’Archiviste, veut préserver chaque peuple en immobilisant ses souvenirs. Les fragments
+cessent alors de laisser leurs habitants choisir leur avenir. Link rejoint Sheik pour restaurer huit sceaux
+et rendre les échos à leurs mondes.
+Les échos ne sont pas les originaux déplacés de force. Un personnage sait progressivement qu’il
+représente une mémoire ; cela autorise des rencontres entre époques sans présenter le récit comme
+une suite officielle. Les fragments de Ganon, Vaati ou Yuga peuvent apparaître comme épreuves de
+mémoire, mais l’antagoniste principal et la conclusion sont propres au projet.
+Chapitre /
+niveaux
+Région et enjeu
+Systèmes / héritages
+C1 / 1-8
+Forêt et Temple : une mémoire effacée, premier
+sceau.
+Sheik ; épée, bouclier, grappin ; NES et
+OOT.
+C2 / 8-15
+Montagne et rivière : eau bloquée, forge arrêtée.
+Mipha, Daruk, Impa ; résistance eau et feu
+; Z2 / BOTW.
+C3 / 15-22
+Désert des saisons : routes mouvantes et
+tempêtes.
+Urbosa, Revali ; graines, instruments,
+Oracle, MC, ALTTP.
+C4 / 22-28
+Termina : une journée-mémoire en trois segments.
+Masques ; premières formes ; Four Swords
+/ TFH.
+C5 / 28-35
+Crépuscule et Lorule : les reflets deviennent
+hostiles.
+Midna ; Zelda révélée ; Master Sword ; TP /
+ALBW.
+C6 / 35-41
+Grande Mer et île du rêve : retrouver les voix
+perdues.
+Invocations marines ; WW / LA / PH / ST /
+EOW.
+C7 / 41-48
+Ciel et profondeurs : machines de conservation.
+SS / TOTK ; Amalgame contrôlé ; tenues
+Zonai.
+C8 / 48-55
+Cœur des Archives : libérer les mémoires.
+Armes accomplies ; choix de conclusion ;
+boss original.
+Après fin / 55-99
+Colisée, Lune et défis de maîtres.
+Oni, Majora, variantes légendaires ;
+niveaux 99 facultatifs.
+
+===== PAGE 22 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+022
+Le mécanisme de Termina utilise trois segments de quête, pas une horloge réelle globale. Rejouer le
+cycle réinitialise les positions des PNJ et des verrous locaux, jamais les objets permanents, l’XP ou les
+masques obtenus. Une frise du journal rend les rendez-vous compréhensibles. Aucun joueur n’est obligé
+de recommencer plusieurs heures de progression.
+Les peuples conservent leurs fonctions : Gorons pour la forge et la solidité, Zoras pour les courants et la
+mémoire musicale, Gerudos pour les tempêtes et les épreuves martiales, Ritos pour les hauteurs,
+Sheikahs pour les sceaux, Minish pour les passages miniatures, Twilis pour les reflets. Les attributs
+individuels priment sur les stéréotypes pour écrire chaque compagnon.
+CHAPITRE 16
+Donjons, ennemis et boss
+Donjon
+Outil / énigme
+Boss et contre-jeu P
+Racines du Temps
+Lumière et grappin ; exposer un œil.
+Écho de Gohma : atteindre l’œil avant la
+frappe.
+Citerne des mémoires
+Vannes, niveaux d’eau ; tenue Zora.
+Gardien Néréide original : crocheter ses
+conduits.
+Forge du volcan
+Bombes et bottes lourdes ; pression.
+Écho de Dodongo : ouvrir l’armure, éviter le
+souffle.
+Observatoire du désert
+Aimants et angles de vent.
+Sentinelle Gerudo originale : dissiper ses
+marques.
+Tour des saisons
+Saisons locales et graines Oracle.
+Vaati-mémoire : interrompre une canalisation
+visible.
+Temple de la Lune
+Masques sociaux puis formes.
+Twinmold-mémoire : arène compatible Géant.
+Miroir de Lorule
+Reflets de Link, ordre d’interrupteurs.
+Phantom Ganon : renvois et changement
+d’élément.
+Navire des chants
+Grappin, vent et instruments.
+Kraken des Archives original : attaques sur
+plusieurs membres.
+Cité suspendue
+Beetle, automatismes et Amalgame.
+Golem archiviste : circuits à désactiver.
+Cœur de la Triforce
+Réutilise trois outils, aucun nouveau
+système.
+Archiviste : alterne conservation, copie,
+libération.
+Famille ennemie
+Comportement P
+Réponse utile
+Bokoblin / Moblin
+Frappe frontale, chef qui ordonne un assaut.
+Provocation puis Brèche ; neutraliser
+le chef.
+Octorok / Deku
+Couverts, projectiles.
+Bouclier, boomerang, vent.
+Lizalfos
+Esquive annoncée puis riposte.
+Attendre, eau/glace ou tir précis.
+Stalfos / Gibdo /
+ReDead
+Protection physique ou peur.
+Lumière, chant d’apaisement,
+masque social hors combat.
+Keese / Peahat
+Cible aérienne, faible PV.
+Arc et vent ; lourdes armes moins
+pratiques.
+Chuchu
+État élémentaire persistant.
+Éviter la réaction nuisible ; Analyse.
+Darknut / Iron Knuckle
+Garde lourde, attaque lente.
+Grappin, marteau, coup à revers.
+
+===== PAGE 23 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+023
+Famille ennemie
+Comportement P
+Réponse utile
+Wizzrobe
+Change son élément après deux activations.
+Lire son aura ; conserver un outil
+neutre.
+Guardian / Construct
+Charge un rayon pendant une activation.
+Interrompre le circuit ou Parade
+miroir compatible.
+Lynel
+Contre les répétitions : troisième technique
+identique anticipée.
+Varier ; signal visuel avant contre.
+Un boss alterne apprentissage, combinaison et conclusion. Introduire un seul mécanisme nouveau par
+phase ; annoncer une attaque létale au moins une activation adverse à l’avance. Les boss ne gagnent
+pas gratuitement une seconde action au changement de phase. Une transition interrompt uniquement
+les animations devenues incohérentes, pas les ressources déjà dépensées.
+IA déterministe hors sélection pondérée : résoudre l’action préparée ; sinon appliquer la priorité de
+phase ; sinon choisir parmi les actions disponibles. Les probabilités sont associées à une graine
+sauvegardable. Aucun ciblage secret de l’allié le plus faible en difficulté normale, sauf comportement
+expliqué par le bestiaire.
+
+===== PAGE 24 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+024
+CHAPITRE 17
+Prototype jouable : Citerne des
+mémoires
+Objectif : vérifier que la tenue de l’eau, le grappin, les compagnons et une transformation créent quatre
+décisions différentes. Pour la démonstration isolée, Link/Sheik/Mipha commencent niveau 10 avec des
+équipements rang 2. Les outils et le masque Zora sont prêtés par une mémoire : leur présence anticipée
+ne modifie pas l’ordre de la campagne.
+Sall
+e
+Contenu / événement
+Critère de réussite
+01 V
+estib
+ule
+Tutoriel Garde contre un Octorok ; coffre de 3 potions.
+Le joueur termine sans ouvrir le
+manuel.
+02 B
+assin
+Deux Chuchus ; pluie visible ; comparaison tenue actuelle / Zora.
+Le delta Eau -50 % est visible avant
+confirmation.
+03 A
+telier
+Donne la tenue Zora monobloc ; explique les trois slots occupés.
+Changer la tenue met à jour
+immédiatement statistiques et modèle.
+04 C
+ondu
+ite
+Grappin sur vanne ; ouvre raccourci vers salle 01.
+L’outil fonctionne même non équipé au
+combat.
+05 C
+hape
+lle
+Mipha rejoint ; soin de groupe de test via Grande Fée prêtée.
+La Résonance et son coût sont lisibles.
+06 A
+rchiv
+es
+Combinaison de trois symboles ; coffre latéral : anneau de nage.
+Récompense facultative ; progression
+principale libre.
+07 É
+cluse
+Élite électrique ; eau favorable défensivement mais Mouillé
+dangereux.
+Le joueur comprend que tout aquatique
+n’est pas une faiblesse unique.
+08 F
+ontai
+ne
+Repos ; masque Zora ; tutoriel de trois activations.
+Aucun soin gratuit ni duplication
+d’arme à la transformation.
+09 A
+ntich
+ambr
+e
+Sauvegarde, liste des attaques connues, choix des passifs.
+Recharger reproduit équipe et
+inventaire.
+10 N
+éréid
+e
+Boss de trois phases, sortie et récompense.
+Victoire possible avec plusieurs équipes
+d’équipement.
+Acteur de test
+PV / PM
+ATQ / AMAG
+DEF / DFM
+AGI
+Link, rang 2
+606 / 61
+84 / 56
+48 / 48
+14
+Sheik
+545 / 61
+78 / 60
+40 / 48
+16
+Mipha
+575 / 61
+78 / 66
+40 / 54
+14
+Octorok
+180 / 20
+45 / 30
+20 / 20
+12
+
+===== PAGE 25 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+025
+Acteur de test
+PV / PM
+ATQ / AMAG
+DEF / DFM
+AGI
+Chuchu aqueux
+220 / 20
+35 / 45
+25 / 25
+10
+Sentinelle électrique
+600 / 40
+55 / 65
+40 / 40
+13
+Gardien Néréide
+2 800 / illimité
+65 / 60
+40 / 40
+14
+Ces valeurs d’adversaires et d’équipe sont des fixtures de test : elles sont fixées pour rendre les essais
+comparables. Link reçoit ici +25 DEF et DFM d’un équipement de démonstration. Les compagnons
+pourront suivre la formule générale lorsque la version de campagne sera intégrée. Néréide donne 400
+XP, 20 PA, 250 rubis et un sceau aquatique, une seule fois par sauvegarde de démonstration.
+Phase
+Déclencheur
+Cycle du boss / réponse attendue
+A - Conduits
+PV 100-66 %
+Jet d’eau P1 sur une cible ; préparation Crue ; Crue tous P1,2 eau. Un grappin
+sur conduit pendant la préparation remplace Crue par Jet et ajoute 80 Brèche.
+B - Surcharge
+PV sous 66 %
+Mouillé de groupe sans dégâts ; charge visible ; Arc électrique P1 foudre sur
+une cible. Garde, retrait de Mouillé ou interruption de Brèche protègent.
+C - Rupture
+PV sous 33 %
+Une Vague P1,1 eau ; une frappe neutre P1,2 ; prépare Déluge tous P1,6 eau.
+Deux interactions de vanne, partagées entre alliés, annulent Déluge.
+Une transition de phase est enregistrée après une action complète et commence à la prochaine
+activation du boss. Le boss ne répète pas la première action d’une phase s’il a été gelé ou interrompu :
+son index de cycle n’avance que sur une action effectivement résolue. Les vannes ont des identifiants
+persistants pendant le combat et sont remises à zéro lors d’une nouvelle préparation.
+Trace numérique de vérification
+Avec variance forcée à 1 : Link attaque Néréide, 127 dégâts. Le grappin de Link donne floor(178
+×0,7/1,4)=89. Jet d’eau de Néréide face à DFM 48 : 87 sans tenue, 43 en Zora, 21 en Zora + Garde.
+Soin de Mipha AMAG66, P1,6 : floor(162 ×1,6)=259. Ces résultats constituent des tests de
+non-régression.
+Mesures à recueillir sur cinq essais externes : temps de victoire, nombre de morts, compréhension de
+Mouillé, fréquence de changement de tenue, utilisation des trois compagnons et moments où une
+commande grisée semble inexpliquée. Une tenue ne doit pas décider seule de la victoire ; le joueur
+protégé doit encore gérer la surcharge électrique.
+
+===== PAGE 26 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+026
+CHAPITRE 18
+Quêtes et déblocages : règles de
+collection
+Chaque objet du catalogue possède un identifiant stable, un jeu d’origine, un profil, un rang et un code
+de déblocage. Le code fixe la procédure par défaut ; les fiches légendaires et les quêtes détaillées la
+remplacent lorsqu’elles existent. La disponibilité réelle est le maximum du chapitre demandé par le code
+et du chapitre d’ouverture de son archive d’origine.
+Exemple : B2 signifie boutique de rang 2 au chapitre 2 ; une arme B2 issue de TOTK attend néanmoins
+l’ouverture de l’archive TOTK au chapitre 7. Une arme de prototype prêtée en amont est identifiée
+comme prêt et disparaît seulement à la sortie de la démonstration isolée, jamais d’une vraie sauvegarde
+de campagne.
+Quête concrète P
+Étapes vérifiables
+Récompense
+Q_WATER_01 - La rivière
+muette
+Analyser une vanne ; sauver le mécanicien ; ouvrir trois
+conduits ; parler à Mipha.
+Tenue Zora de départ ;
+apprentissage résistance
+eau.
+Q_FORGE_02 - Le serment de
+Biggoron
+Obtenir plan ; ramener trois minerais uniques ; réussir
+duel à armes lourdes.
+Biggoron’s Sword ;
+apparence ancienne et
+moderne.
+Q_MOON_24 - Les visages
+retrouvés
+Terminer 23 quêtes de masques ; résoudre quatre salles
+lunaires ; refuser de sacrifier un écho.
+Fierce Deity’s Mask et
+forme Oni.
+Q_SHEIK_03 - Une seule
+mémoire
+Protéger les archives ; reconnaître les trois mélodies ;
+choix de dialogue sans verrou de puissance.
+Posture Zelda ; duo
+Ombre et lame.
+Q_MAJOR_01 - Le reflet apaisé
+Après fin : victoire colisée ; trois sceaux lunaires ; duel
+contre sa propre forme.
+Relique originale
+Résonance de Majora.
+Q_MASTER_01 - Les trois
+sceaux
+C5 : preuve de Courage, Sagesse et Puissance ; retour
+au piédestal.
+Master Sword R4 ;
+amélioration C8.
+Q_RING_64 - Cabinet de Vasu
+Obtenir des jetons dans les deux arcs Oracle ; choisir à
+chaque fois un anneau manquant.
+64 anneaux sans
+dépendance au hasard.
+Q_TAILOR_38 - L’atelier des
+trois héros
+Défis de bombes, arc, vent, exploration et défense ;
+crédits de couture.
+38 tenues TFH ; aucun
+achat externe.
+Contrats d’armes de monstres : le journal annonce la famille et le nombre requis. À l’achèvement, choisir
+une pièce inconnue de cette famille au rang débloqué. Les butins ordinaires servent aux matériaux ; la
+collection essentielle possède toujours une voie garantie. Les objets jadis amiibo ou DLC se débloquent
+ici par des défis internes au jeu.
+Aucun équipement permanent n’est définitivement manquable. Avant le dernier chapitre, le hub affiche
+les arcs incomplets. Après la fin, toutes les archives redeviennent accessibles. Vendre une relique est
+impossible ; les équipements ordinaires peuvent être rachetés à un tarif annoncé, leurs apparences et
+PA restent acquis.
+
+===== PAGE 27 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+027
+CHAPITRE 19
+Forge, Amalgame et économie
+Les rubis servent aux achats, à la forge et à quelques armures. Trois matériaux universels suffisent au
+prototype : minerai, essence et cristal. Un sceau unique accompagne les améliorations légendaires. La
+progression complète pourra proposer des variantes visuelles de matériaux par région, tout en gardant
+ces catégories fonctionnelles.
+Rang
+Puissance arme
+Prix d’achat courant
+Amélioration depuis rang précédent
+1
+12
+120 rubis
+Objet de départ ou coffre.
+2
+24
+350 rubis
+180 rubis + 3 minerais.
+3
+38
+900 rubis
+500 rubis + 3 essences.
+4
+54
+1 800 rubis
+1 200 rubis + 2 cristaux.
+5
+74
+3 500 rubis
+2 500 rubis + 1 sceau ; quête terminée.
+Un combat ordinaire donne environ 12 + 3 × niveau_zone rubis pour le groupe ; une élite ×2 ; un boss
+×8. Les contrats constituent une source ciblée de matériaux. Revente à 25 % du prix ; aucun objet
+fabriqué ne se revend au-dessus du coût de ses ingrédients. La forge transforme un objet, ne duplique ni
+son identifiant d’instance ni ses gemmes.
+Amalgame est une adaptation bornée de TOTK. Un support compatible accepte un matériau actif : feu,
+glace, foudre, eau, contondant ou lumineux. La recette modifie élément ou Brèche, pas les deux au rang
+initial. La base demeure ; le matériau possède trois charges de technique. Changer le matériau hors
+combat consomme le nouveau matériau et récupère zéro charge de l’ancien.
+Matériau P
+Effet de l’Amalgame
+Garde-fou
+Essence ignée / glacée /
+électrique
+Change l’élément de R06 ; applique état à 40 %.
+Ne s’ajoute pas à un
+élément déjà actif ;
+confirmation de
+remplacement.
+Écaille aquatique
+R06 eau ; Mouillé 100 %.
+Aucun bonus gratuit contre
+tout ennemi de feu :
+matrice propre.
+Noyau rocheux
+R06 neutre ; Brèche +60.
+Pas de cumul avec le bonus
+contondant d’une autre
+fusion.
+Fragment lumineux
+R06 lumière ; révèle Spectre une activation.
+Ne reproduit pas toute la
+fonction d’une Master
+Sword.
+Les variantes détériorées / intactes des armes TOTK sont des états de restauration. Le catalogue liste les
+bases nommées ; le champ variant_state peut valoir base, deteriorated ou pristine uniquement si la
+fiche canonique de l’arme le permet. Pour le RPG, restaurer donne +10 % à la puissance de base, sans
+dupliquer les PA. Les produits combinatoires d’Amalgame sont générés à partir de règles et ne gonflent
+pas artificiellement le nombre d’objets canoniques.
+
+===== PAGE 28 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+028
+CHAPITRE 20
+Objets consommables, exploration et
+sauvegarde
+Objet P
+Effet
+Prix / limite initiale
+Potion rouge
+Rend 35 % PV max à une cible.
+40 rubis ; 10 par type.
+Potion verte
+Rend 25 % PM max à une cible.
+65 rubis ; 10.
+Potion bleue
+Rend 50 % PV et 30 % PM.
+150 rubis ; 5.
+Fée en flacon
+Réanime à 25 % PV sur commande ; aucune activation
+automatique.
+Quête / fontaine ; 3.
+Remède
+Retire Poison, Brûlure, Silence ou Cécité d’une cible.
+35 rubis ; 10.
+Lait
+Rend 15 % PV au groupe.
+70 rubis ; 5.
+Bombe
+P1,3 neutre de zone ; nécessite commande Outil.
+25 rubis ; sac de 10 puis 20
+puis 30.
+Repas
+Bonus hors combat de +5 % à un attribut, trois combats.
+Un repas actif ; nouvelle
+recette remplace la
+précédente.
+Les sacs, bourses, carquois, flacons et améliorations de stockage ne sont pas des accessoires de
+combat. Le catalogue en mentionne des exemples représentatifs, notamment SS, sans détailler chaque
+capacité et chaque bouteille de chaque jeu. La sauvegarde stocke des capacités indépendantes. Le
+prototype utilise munitions élémentaires et bombes ; le tir normal ne consomme pas de flèches pour
+éviter la corvée d’approvisionnement.
+Les déplacements spéciaux sont des interactions balisées : nage, plongée, vol plané, miniaturisation,
+train et navigation apparaissent dans leurs arcs. Monter Epona ou piloter un bateau change la carte
+d’exploration ; aucun véhicule n’entre dans un combat ordinaire. Les mini-jeux de musique et de tir
+disposent d’une validation simplifiée accessible.
+Sauvegarde manuelle hors combat ; automatique à l’entrée de donjon, avant boss, après récompense
+majeure et après forge. Écriture atomique, version du schéma et copie précédente conservée. Une
+défaite propose réessayer, modifier l’équipement au point de contrôle ou retourner au hub. Aucun
+effacement d’XP ou d’objet permanent ; une tentative de boss rejouée ne duplique pas ses
+récompenses.
+
+===== PAGE 29 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+029
+CHAPITRE 21
+Interface, accessibilité et direction
+artistique
+L’écran de combat montre le groupe en bas à droite, l’ennemi sélectionné au centre, ses résistances
+connues et sa préparation en haut. Les jauges affichent les trois prochains acteurs estimés ; le marqueur
+devient « recalcul » lorsqu’une action modifie la vitesse. Les intentions complexes ne sont révélées
+qu’après Analyse, mais les grosses charges sont toujours visibles.
+Écran
+Contenu nécessaire
+Interaction principale
+Statut
+Niveau, XP restante, stats, résistances, sources de bonus.
+Survoler un chiffre détaille sa
+décomposition.
+Équipement
+Modèle, comparaison avant-après, PA, rang, origine,
+ensembles.
+Équiper, prévisualiser
+l’apparence, enregistrer
+ensemble.
+Techniques
+Six emplacements, apprentissage, source, coût, prérequis.
+Filtrer compatibles ; expliquer les
+verrous.
+Masques / esprits
+Forme, durée, coût R, commandes ; progression de lien.
+Tester les descriptions sans
+dépenser de ressources.
+Quêtes / codex
+Chapitre, objectif, indice, source d’archive ; registre C/P.
+Épingler un objectif ; chercher par
+jeu ou objet.
+Forge
+Objet avant-après ; matières et rubis ; PA conservés.
+Confirmer une transformation
+d’instance unique.
+Options dès le prototype : taille de texte 100/125/150 %, contraste élevé, symboles et libellés en plus
+des couleurs d’éléments, remappage des touches, vitesse des animations 1×/2×, suppression des
+flashes, sous-titres, maintien de touche au lieu de martèlement. La difficulté Histoire réduit dégâts
+ennemis à 70 % ; Standard vaut 100 % ; Héroïque 120 % avec les mêmes indices. Aucun timing manuel
+obligatoire pour parer.
+Direction artistique : silhouettes lisibles, armes reconnaissables, environnements en petites scènes
+denses, effets courts avec couleur et symbole. Chaque forme possède trois animations d’attaque, une
+posture, une réaction et une sortie. Les tenues doivent partager le même squelette de Link ; les pièces
+qui cassent la silhouette utilisent une variante validée. Prévoir un inventaire visuel avant de multiplier
+les centaines de skins.
+Pour le prototype, utiliser des modèles et sons originaux ou des ressources dont les droits sont vérifiés.
+Zelda et ses personnages appartiennent à leurs ayants droit ; le statut de projet de fan ne garantit pas
+une autorisation de diffusion. Prévoir avant publication une décision de droits ou une transposition en
+univers original.
+
+===== PAGE 30 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+030
+CHAPITRE 22
+Architecture technique pour
+développer ensuite
+Choix proposé : Godot 4 pour un prototype PC en 2,5D. Les définitions d’objets et de techniques sont des
+données ; les scènes portent la présentation. La documentation Godot décrit les Resources comme des
+conteneurs de données partageables [S03]. Le moteur de règles de combat doit rester testable sans
+charger une scène graphique.
+Module
+Responsabilité
+Contrat minimal
+CombatSimulation
+État pur, jauges, calculs, file,
+résolution.
+step(delta), submit(command), events[] ; graine
+déterministe.
+ActorState
+État vivant d’un acteur.
+PV/PM/J, états, forme, équipement d’instance,
+compteurs.
+ItemDefinition
+Identité et règles immuables d’un
+objet.
+id, origin, slots, tags, rank, profile, effect_override,
+sources.
+ItemInstance
+Exemplaire possédé.
+instance_id, definition_id, upgrades, fusion,
+ownership.
+AbilityDefinition
+Coût, ciblage, formule, effets.
+id, requirements, costs, target_rule, effects[],
+AP_cost.
+UnlockService
+Quêtes, ateliers et droits d’accès.
+evaluate(condition_tree), grant_once(reward_id).
+InventoryService
+Équipement, vente et forge
+atomiques.
+validate_loadout(), equip_transaction(),
+upgrade_transaction().
+SaveService
+Version, migration, écritures
+atomiques.
+serialize(), validate(), migrate(version),
+restore_backup().
+Presentation
+UI, animation, son, caméra.
+Lit les événements de combat ; ne calcule jamais
+les dégâts.
+Ordre de simulation : INITIALISER > REMPLIR_JAUGES > CHOISIR_ACTEUR > ATTENDRE_COMMANDE ou
+CHOIX_IA > VALIDER > RÉSOUDRE > FIN_ACTIVATION > VÉRIFIER_FIN. La présentation reçoit ensuite les
+événements déjà calculés. Si l’animation est accélérée ou interrompue, le résultat de combat reste
+identique.
+Les conditions de quête forment des expressions all/any/flag/count avec données validées. Éviter un
+script unique par arme. Les profils produisent les statistiques de base ; seules les exceptions nommées
+ajoutent un composant particulier. Ne jamais convertir automatiquement deux noms identiques en un
+seul objet : Master Sword, masques Goron et armures Zora doivent conserver leurs occurrences
+historiques.
+ItemDefinition {
+  id: "core.zora_outfit", origin: ["OOT"], canon_ref: ["S08"],
+  slots: ["head", "torso", "legs"], profile: "EAU", rank: 2,
+  effect_override: {water_resist: 0.50},
+  teach: {ability_id: "passive.water_guard", ap_required: 80},
+  unlock: {all: [{flag: "Q_WATER_01.done"}]},
+  design_status: "proposed", localization_key: "item.zora_outfit"
+}
+BattleCommand {
+  actor_id: "link", ability_id: "R01", target_ids: ["nereide"],
+  expected_state_revision: 42
+}
+
+===== PAGE 31 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+031
+Le JSON incorporé au PDF est un catalogue de préproduction, pas un import de jeu prêt à exécuter. Il
+contient les identifiants, noms de recherche, profils, rangs, effets proposés et références. Les fiches de
+quêtes, conditions structurées, slots exacts, animations et descriptions localisées doivent être
+normalisées avant import. Les exceptions détaillées dans ce document priment sur le profil générique ;
+elles devront devenir effect_override dans les données de production.
+CHAPITRE 23
+Règles de données et cas limites
+Risque
+Règle impérative
+Test d’acceptation
+Deux mains +
+bouclier
+Une transaction d’équipement valide l’ensemble
+final.
+Impossible de garder le bonus du bouclier
+avec Biggoron.
+Tenue monobloc
+Occupe trois slots et remplace les trois pièces en
+une opération.
+Zora complet ne cumule pas avec un torse
+Zora supplémentaire.
+Double identité
+Zelda
+character_identity unique pour Sheik/Zelda OOT.
+Impossible d’aligner les deux dans deux
+places actives.
+Masque et forme
+Le masque donne accès à la forme ; il ne copie
+pas le porteur.
+PV, PM, états et compteurs conservés au
+changement.
+Prime de victoire
+reward_id attribué une fois et sauvegardé
+atomiquement.
+Charger avant / après boss ne double ni
+sceau ni arme.
+PA et forge
+Les PA appartiennent au personnage + aptitude.
+Améliorer ou vendre la source ne retire pas
+la maîtrise.
+Résonance
+Une dépense de R ne génère pas R ; cap par
+activation.
+Volée et riposte ne remplissent pas
+instantanément la jauge.
+Relais / KO
+Les compteurs 1/combat restent sur l’acteur.
+Sortir puis rentrer ne rend pas un second
+Réveil.
+Invulnérabilité
+Drapeau explicite avec durée et contre connu.
+Résistances ordinaires plafonnées à 75 %,
+jamais 100 %.
+Version de
+sauvegarde
+Migration explicite ou restauration de copie
+saine.
+Un identifiant supprimé devient entrée de
+compensation, pas crash.
+Cible disparue
+Une commande validée résout une règle de
+reciblage déterminée.
+Frappe mono-cible va au vivant de plus
+petit id ; soin se rembourse si aucun allié
+valide.
+Phase de boss
+Transitions différées à la prochaine activation du
+boss.
+Aucun gain d’action lorsqu’un seuil PV est
+franchi.
+Validation de contenu au chargement : identifiants uniques ; source existante ; profil connu ; rang entre
+1 et 5 ; prix positif ; cible légale ; absence de cycle dans les prérequis ; maximum un effet de fusion ;
+capacités toujours non négatives. En compilation de test, toute exception non modélisée échoue
+clairement au lieu d’utiliser un bonus arbitraire.
+Vérifications de combat essentielles : les résultats numériques du prototype ; immunité élémentaire à
+zéro dégât ; multi-impact sans multiplication des gains ; fin de forme exactement après trois actions ; KO
+et réanimation ; résistance de boss aux interruptions ; sauvegarde/rechargement pendant une quête à
+récompense unique. Les essais visuels vérifient ensuite lisibilité, modèles de tenue et transitions.
+
+===== PAGE 32 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+032
+CHAPITRE 24
+Production : de la démo à la campagne
+Lot
+Livrable concret
+Critère de passage
+A - règles, 1-2 semaines
+indicatives
+Simulation sans graphismes : jauges, dégâts, Garde,
+états, victoire.
+Trace du prototype reproduite ;
+sauvegarde de graine.
+B - combat, 2-4 semaines
+Arène avec Link / Sheik / Mipha, 6 ennemis, un boss.
+Deux stratégies gagnantes ; temps
+de boss mesuré.
+C - équipement, 2-3
+semaines
+12 pièces, comparaison, eau -50 %, PA, trois
+ensembles.
+Aucun cumul interdit ;
+changement visible.
+D - forme, 2-3 semaines
+Zora, une invocation, une quête de déblocage.
+Durée / PV / ressources cohérents.
+E - donjon, 3-5 semaines
+10 salles, interactions, checkpoints, fin et écran de
+retour.
+5 tests externes et corrections des
+blocages.
+F - décision de suite
+Démo complète, temps passé relevé, budget
+d’assets chiffré.
+Autoriser ou réduire le périmètre
+avant de produire les archives.
+Ces plages décrivent des lots pour une petite équipe déjà opérationnelle ; elles ne constituent ni un
+devis ni un engagement de délai. Un développeur seul débutant peut demander beaucoup plus de
+temps. Le catalogue de plus de mille références représente surtout un coût de contenu, de modèles et
+de QA ; sa présence dans un document ne rend pas sa production automatique.
+Version campagne minimale : 4 chapitres, 4 compagnons, 4 donjons, 60 équipements réellement
+modélisés, 2 formes, 3 invocations. Version complète : 8 chapitres, 8 compagnons, 10 donjons, puis
+collections d’archives ajoutées par lots. Les centaines de variantes peuvent partager leurs rigs,
+animations et bases de statistiques tout en conservant des identités de collection.
+Priorité
+À fabriquer maintenant
+À conserver pour extension
+P0
+Combat, niveau, tenue eau, menus, apprentissage,
+sauvegarde, boss du prototype.
+Aucun autre système requis pour démontrer la
+promesse.
+P1
+Trois autres formes MM, compagnons permanents, forge,
+quêtes de lien.
+Tous les villages et arcs secondaires.
+P2
+Amalgame borné, cycle de Termina, transmog étendu,
+variantes de remakes.
+Catalogue des apparences au complet.
+P3
+Invités, armes de dérivés, Géant, Majora postgame, défis
+99.
+Véhicules détaillés, coopération en ligne,
+monde ouvert physique.
+
+===== PAGE 33 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+033
+CHAPITRE 25
+Matrice de couverture des jeux
+Années = première sortie, sans imposer la date européenne. Les nombres sont des occurrences
+cataloguées, comprenant certains outils et pouvoirs ; un objet présent dans deux jeux compte deux
+fois. Les 64 anneaux partagés des Oracle sont comptés une seule fois dans un registre commun. Une
+ligne de catalogue n’est donc ni une preuve d’objet unique ni une promesse de modèle 3D distinct.
+Jeu
+Anné
+e
+Réf.
+Périmètre du catalogue
+Z1 - The Legend of Zelda
+1986
+22
+Armes, bagues, outils majeurs.
+Z2 - The Adventure of Link
+1987
+20
+Arme, équipements, huit sorts, deux techniques.
+ALTTP - A Link to the Past
+1991
+38
+Épées, protections, baguettes et médaillons.
+LA - Link’s Awakening
+1993
+29
+DX / remake : couleurs et flacon ; instruments.
+OOT - Ocarina of Time
+1998
+47
+Équipements, bottes, sorts, masques sociaux ; variante
+3DS.
+MM - Majora’s Mask
+2000
+43
+Armes + les 24 masques détaillés séparément.
+OOS - Oracle of Seasons
+2001
+29
+Armes, saisons, graines ; anneaux dans registre
+commun.
+OOA - Oracle of Ages
+2001
+30
+Armes, temps, échange ; anneaux dans registre
+commun.
+FS - Four Swords
+2002
+14
+Objets portés et outils ; Four Sword.
+WW - The Wind Waker
+2002
+29
+GC / HD distingués pour outils spécifiques.
+FSA - Four Swords Adventures
+2004
+16
+Bases d’objets ; variantes niveau 2 décrites après le
+catalogue.
+MC - The Minish Cap
+2004
+34
+États de l’épée, outils, charmes, rouleaux.
+TP - Twilight Princess
+2006
+35
+Armes, trois tenues fonctionnelles et techniques.
+PH - Phantom Hourglass
+2007
+16
+Équipements personnels ; navire hors catalogue de
+combat.
+ST - Spirit Tracks
+2009
+16
+Équipements personnels ; train hors catalogue de
+combat.
+SS - Skyward Sword
+2011
+55
+Armes améliorées, boucliers, outils, sept médailles.
+ALBW - A Link Between Worlds
+2013
+40
+Armes, objets Nice, protections et accessoires.
+TFH - Tri Force Heroes
+2015
+47
+Huit outils, épée et 38 tenues.
+BOTW - Breath of the Wild
+2017
+301
+Bases d’armes, boucliers, flèches, 107 pièces de tenue ;
+DLC / amiibo.
+TOTK - Tears of the Kingdom
+2023
+280
+Bases d’armes, boucliers et 135 pièces ; états de
+restauration paramétrés.
+EOW - Echoes of Wisdom
+2024
+52
+28 accessoires, 11 vêtements, pouvoirs et variantes de
+l’épéiste.
+Limites explicites : listes de sacs et contenants non systématiques ; pas d’inventaire exhaustif des
+consommables, morceaux de cœur, trésors de commerce, pièces de véhicules, structures Zonai ou
+
+===== PAGE 34 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+034
+échos de créatures. Les améliorations de rang purement statistiques sont paramétrées. Avant de viser
+une collection 100 % d’un épisode, un audit d’édition et de localisation doit valider les derniers alias et
+variantes.
+CHAPITRE 26
+Guide du catalogue et priorités de
+normalisation
+Les noms anglais des inventaires consultés sont conservés pour permettre une recherche fiable. Le
+texte du jeu sera localisé en français à partir d’une table de traductions par épisode ; un même nom
+français peut varier entre versions. Les effets de jeu proposés sont déjà exprimés en français. Le champ
+source ne garantit pas une traduction française officielle.
+Colonne
+Interprétation
+ID
+Identifiant de travail stable du registre ; ne pas le renuméroter après import.
+Référence canonique
+Nom documenté et jeu d’origine. Les graphies anglaises restent des clés de recherche.
+Type
+Catégorie de consultation ; les emplacements exacts sont normalisés au moment de la
+production.
+R / profil
+Rang de départ proposé, puis profil d’effet ; statistiques tirées des sections 10 et de la
+légende.
+Accès / source
+Code de déblocage proposé et référence documentaire Sxx ; ce n’est pas l’emplacement
+d’origine dans le jeu Nintendo.
+Procédure d’intégration : sélectionner une famille > vérifier le nom et son édition dans la source > fixer
+slots et tags > appliquer le profil > appliquer une éventuelle fiche distinctive > créer quête structurée et
+texte français > associer modèle et icône > jouer le cas d’usage > seulement alors marquer
+production_ready. Les entrées en l’état restent design_status=proposed.
+Les catégories MAGIE, TRAV, SAC et COS ne doivent pas être importées comme armes par défaut. Les
+sorts de Zelda II et les techniques de TP sont présents pour la progression, pas pour remplir
+artificiellement un inventaire d’objets portés. Les bagues purement commémoratives restent des
+trophées ; elles n’accordent pas un pouvoir présenté comme canonique.
+
+===== PAGE 35 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+035
+ANNEXE A
+Profils et codes de déblocage
+Tous les profils ci-dessous sont des adaptations P. Le type affiché décrit un usage ; il ne remplace pas le
+nombre de mains ou les emplacements de la référence canonique. Lorsqu’un vêtement ancien couvre
+tout le corps, traiter ses trois emplacements comme un ensemble complet.
+Profil
+Usage
+Effet proposé par défaut
+LAME
+Arme 1 main
+Frappe P1 ; enseigne Taillade (30 PA).
+LOURD
+Arme 2 mains
+Frappe P1,25 ; AGI -3 ; enseigne Brise-garde (80 PA).
+LANCE
+Arme 2 mains
+Frappe P1 ; ignore la ligne arrière ; Estoc (30 PA).
+ARC
+Arme 2 mains
+Frappe P1 à distance ; Tir précis (30 PA).
+BATON
+Arme 2 mains
+Puissance convertie en focus magique ; Trait P1,2, 4 PM.
+BOUC
+Main secondaire
+DEF +[4/8/13/19/26] selon rang ; Parade (80 PA).
+FEU
+Arme
+Élément feu ; dégâts +10 % contre Gel ; sort 4 PM, P1,2.
+GLACE
+Arme
+Élément glace ; Gel 25 % sur attaque spéciale à 8 PM.
+FOUDRE
+Arme
+Élément foudre ; touche une cible Mouillée à x1,5.
+LUMIERE
+Arme / relique
+Lumière ; P1,2 contre Spectre ; Dissipation (150 PA).
+OMBRE
+Arme / relique
+Ombre ; puissance +10 %, soins reçus -10 %.
+OUTIL
+Outil de combat
+P0,7 ; active une interaction de terrain ; 3 PM.
+BOMBE
+Outil / munition
+P1,3 neutre de zone ; charge consommée ; brise Carapace.
+MUN
+Munition
+Convertit l’élément du Tir ; une charge par action, pas par impact.
+TRAV
+Exploration
+Drapeau permanent de déplacement ; pas de slot en exploration.
+CHANT
+Instrument / magie
+Commande de soutien, 6 PM ; Hâte ou dissipation selon technique.
+MAGIE
+Sort / relique
+Commande magique liée à une technique ; coût et cible dans sa fiche.
+TENUE
+Tenue / pièce
+Défense du rang ; PV max +3 % par pièce, +5 % ensemble complet.
+EAU
+Tenue / accessoire
+Résistance eau +15 % par pièce ; +5 % ensemble = 50 %.
+IGNI
+Tenue / accessoire
+Résistance feu +15 % par pièce ; ensemble immunise Brûlure.
+FROID
+Tenue / accessoire
+Résistance glace +15 % par pièce ; ensemble immunise Gel.
+ISOL
+Tenue / accessoire
+Résistance foudre +15 % par pièce ; ensemble immunise Choc.
+VIF
+Tenue / accessoire
+AGI +1 par pièce ; ensemble donne +10 % de jauge initiale.
+FORCE
+Tenue / accessoire
+FOR +3 % par pièce ; ensemble donne +5 % aux techniques.
+SAGE
+Tenue / accessoire
+MAG +3 % par pièce ; ensemble réduit les coûts PM de 5 %.
+GARDE
+Tenue / accessoire
+DEF et DFM +3 % par pièce ; ensemble renforce Garde à 60 %.
+ANNEAU
+Accessoire
+Effet individuel dans le registre des 64 anneaux.
+MASQUE
+Masque / relique
+Effet individuel dans le registre des 24 masques.
+ACCES
+Accessoire
+SPR +5 au rang 1, +3 par rang ; ne se cumule pas avec lui-même.
+
+===== PAGE 36 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+036
+Profil
+Usage
+Effet proposé par défaut
+SAC
+Amélioration permanente
+Augmente une capacité ; ne prend aucun emplacement porté.
+COS
+Apparence / trophée
+Débloque une apparence ou une entrée de collection, sans bonus de
+puissance.
+EOW
+Accessoire
+Effet individuel dans le registre Echoes of Wisdom.
+TFH
+Tenue complète
+Effet individuel dans le registre Tri Force Heroes.
+Codes d’acquisition
+Un code fixe une voie garantie. Les chapitres correspondent à la campagne proposée, pas aux lieux
+d’acquisition des jeux d’origine. Les quêtes distinctives du chapitre 11 et 18 remplacent le code
+générique. La disponibilité est également soumise à l’ouverture de l’archive du jeu concerné.
+Code
+Règle
+H1
+Histoire C1 : coffre ou PNJ obligatoire, garanti.
+H2
+Histoire C2 : récompense obligatoire, garantie.
+H3
+Histoire C3 : récompense obligatoire, garantie.
+H4
+Histoire C4 : récompense obligatoire, garantie.
+H5
+Histoire C5 : récompense obligatoire, garantie.
+H6
+Histoire C6 : récompense obligatoire, garantie.
+H7
+Histoire C7 : récompense obligatoire, garantie.
+H8
+Histoire C8 : récompense obligatoire, garantie.
+B1
+Boutique C1, 120 rubis ; copie permanente en stock.
+B2
+Boutique C2, 350 rubis ; copie permanente en stock.
+B3
+Boutique C4, 900 rubis ; copie permanente en stock.
+B4
+Boutique C6, 1 800 rubis ; copie permanente en stock.
+B5
+Boutique après fin, 3 500 rubis ; copie permanente en stock.
+F2
+Forge C2 : précédent + 180 rubis + 3 minerais.
+F3
+Forge C4 : précédent + 500 rubis + 3 essences.
+F4
+Forge C6 : précédent + 1 200 rubis + 2 cristaux.
+F5
+Forge après fin : précédent + 2 500 rubis + 1 sceau.
+M1
+Contrat C1 : vaincre 3 ennemis de la famille ; choix garanti.
+M2
+Contrat C2 : vaincre 5 ennemis de la famille ; choix garanti.
+M3
+Contrat C4 : vaincre 8 ennemis de la famille ; choix garanti.
+M4
+Contrat C6 : vaincre 10 ennemis de la famille ; choix garanti.
+M5
+Arène après fin : victoire élite de la famille ; choix garanti.
+Q1
+Quête régionale C1, coffre fixe marqué après résolution.
+Q2
+Quête régionale C2, coffre fixe marqué après résolution.
+Q3
+Quête régionale C4, coffre fixe marqué après résolution.
+
+===== PAGE 37 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+037
+Code
+Règle
+Q4
+Quête régionale C6, coffre fixe marqué après résolution.
+Q5
+Quête légendaire après fin, récompense unique garantie.
+RING
+Échange Vasu : 1 jeton d’anneau ; choisir un inconnu ; défi régional renouvelable.
+MASK
+Quête de personnage à Termina ; attribution détaillée au registre des masques.
+TAILOR
+Atelier C4 : défi de tenue + 5 tissus + 350 rubis ; choix sans doublon.
+ECHO
+Sanctuaire d’écho C6 : un médaillon par énigme ; choix d’un accessoire inconnu.
+Ouverture d’archive
+Jeux
+Chapitre 1
+Z1, OOT
+Chapitre 2
+Z2, BOTW
+Chapitre 3
+ALTTP, OOS, OOA, OOS/OOA, MC
+Chapitre 4
+MM, FS, FSA, TFH
+Chapitre 5
+TP, ALBW
+Chapitre 6
+LA, WW, PH, ST, EOW
+Chapitre 7
+SS, TOTK
+
+===== PAGE 38 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+038
+ANNEXE B
+Les 24 masques de Majora’s Mask
+Registre des 24 masques à collectionner de MM [S10]. Les noms constituent C ; les effets chiffrés et les
+quêtes ci-dessous constituent P. Les quatre formes classiques, le masque du Géant et les masques
+sociaux partagent ce même total de 24. Le masque antagoniste de Majora n’est pas un vingt-cinquième
+objet normal de cette collection.
+ID
+Masque C
+Fonction P
+Quête de déblocage P
+MM_020
+Deku Mask
+Forme Mojo
+Sauver le fils du majordome ; quête du
+marais.
+MM_021
+Goron Mask
+Forme Goron
+Apaiser la mémoire de Darmani ; pic
+enneigé.
+MM_022
+Zora Mask
+Forme Zora
+Restaurer le chant de Mikau ; baie.
+MM_023
+Fierce Deity’s Mask
+Forme Oni
+Compléter les 23 autres masques et
+l’épreuve lunaire.
+MM_024
+Great Fairy’s Mask
+Coffres féeriques révélés ; SPR +5
+Retrouver cinq fragments de fontaine.
+MM_025
+Kafei’s Mask
+Révèle les pistes de la quête du
+couple
+Parler à Madame Aroma après C4.
+MM_026
+Bremen Mask
+Chant : Hâte de groupe, 12 PM
+Réunir trois musiciens errants.
+MM_027
+Kamaro’s Mask
+Danse : esquive +10 points, 2
+activations, 8 PM
+Reconstituer une chorégraphie.
+MM_028
+Blast Mask
+Explosion P1,6 ; coûte 10 % PV
+non létaux
+Sauver la marchande de bombes.
+MM_029
+Bunny Hood
+AGI +4
+Terminer le relais des poussins.
+MM_030
+Keaton Mask
+Analyse gratuite une fois par
+combat
+Résoudre trois énigmes du renard.
+MM_031
+Postman’s Hat
+Ouvre les boîtes à récompenses ;
+PV +5 %
+Livrer trois lettres du cycle.
+MM_032
+Mask of Truth
+Affiche résistances et intentions
+simples
+Libérer la maison aux araignées.
+MM_033
+Mask of Scents
+Révèle ingrédients ; poison reçu
+-25 %
+Suivre une piste dans le marais.
+MM_034
+Don Gero’s Mask
+Chant : soin 10 % PV de groupe, 8
+PM
+Réunir la chorale de grenouilles.
+MM_035
+Romani’s Mask
+Lait : soin de groupe +15 %
+Défendre le ranch pendant une nuit.
+MM_036
+Garo’s Mask
+Critique +5 points contre
+ennemis analysés
+Vaincre le duel d’Ikana.
+MM_037
+Captain’s Hat
+Dégâts de squelettes -20 %
+Apaiser le capitaine défunt.
+MM_038
+Stone Mask
+Rencontres évitables plus faciles
+à contourner
+Secourir le soldat oublié.
+MM_039
+Circus Leader’s Mask
+Provocation : deux cibles, 6 PM
+Achever le concert des quatre voix.
+MM_040
+All-Night Mask
+Immunité à Sommeil
+Écouter puis restituer une légende.
+
+===== PAGE 39 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+039
+ID
+Masque C
+Fonction P
+Quête de déblocage P
+MM_041
+Gibdo Mask
+Dialogue avec Gibdos ; ombre
+reçue -20 %
+Guérir le savant d’Ikana.
+MM_042
+Couple’s Mask
+Première technique duo du
+combat : coût -10
+Réunir Anju et Kafei dans le cycle.
+MM_043
+Giant’s Mask
+Forme Géant, uniquement arènes
+compatibles
+Défaire le gardien du temple inversé.
+Le nom Circus Leader’s Mask peut apparaître comme Troupe Leader’s Mask selon l’édition ou la source.
+La forme Oni est également connue sous l’appellation Fierce Deity. Ces alias ne créent pas de masque
+supplémentaire. Les couvre-chefs Fierce Deity de BOTW/TOTK ne donnent pas automatiquement la
+transformation de MM.
+ANNEXE C
+Les 64 anneaux des Oracle
+Collection partagée d’Oracle of Seasons et Oracle of Ages, y compris les anneaux liés à la connexion
+entre jeux et les anneaux GBA [S13, S14]. La colonne Effet est une conversion pour ce RPG. Les anneaux
+commémoratifs et d’apparence restent identifiés comme tels. Les noms GBA Time / GBA Nature ne
+doivent pas être ajoutés une seconde fois sous un alias Advance Ring.
+N°
+ID
+Anneau C
+Effet P
+01
+OOS/OOA_001
+Friendship Ring
+PV +5 %
+02
+OOS/OOA_002
+Power Ring L-1
+FOR +5 %, DEF -3 %
+03
+OOS/OOA_003
+Power Ring L-2
+FOR +10 %, DEF -6 %
+04
+OOS/OOA_004
+Power Ring L-3
+FOR +15 %, DEF -10 %
+05
+OOS/OOA_005
+Armor Ring L-1
+DEF +5 %, FOR -3 %
+06
+OOS/OOA_006
+Armor Ring L-2
+DEF +10 %, FOR -6 %
+07
+OOS/OOA_007
+Armor Ring L-3
+DEF +15 %, FOR -10 %
+08
+OOS/OOA_008
+Red Ring
+Techniques de lame +12 %
+09
+OOS/OOA_009
+Blue Ring
+Dégâts physiques reçus -10 %
+10
+OOS/OOA_010
+Green Ring
+FOR et DEF +6 %
+11
+OOS/OOA_011
+Cursed Ring
+FOR +20 % ; dégâts reçus +25 %
+12
+OOS/OOA_012
+Expert’s Ring
+Mains nues : puissance arme 38
+13
+OOS/OOA_013
+Blast Ring
+Bombes +15 %
+14
+OOS/OOA_014
+Rang Ring L-1
+Boomerang +10 %
+15
+OOS/OOA_015
+GBA Time Ring
+Apparence or des effets de chant
+16
+OOS/OOA_016
+Maple’s Ring
+Réduit de 20 % le coût des potions au comptoir Maple
+17
+OOS/OOA_017
+Steadfast Ring
+Immunité au déplacement forcé
+18
+OOS/OOA_018
+Pegasus Ring
+Hâte dure une activation supplémentaire
+19
+OOS/OOA_019
+Toss Ring
+Objets offensifs +15 %
+
+===== PAGE 40 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+040
+N°
+ID
+Anneau C
+Effet P
+20
+OOS/OOA_020
+Heart Ring L-1
+Régénération 2 % PV à la fin de son activation
+21
+OOS/OOA_021
+Heart Ring L-2
+Régénération 4 % PV à la fin de son activation
+22
+OOS/OOA_022
+Swimmer’s Ring
+Eau reçue -20 %
+23
+OOS/OOA_023
+Charge Ring
+Attaque chargée : +100 jauge après résolution
+24
+OOS/OOA_024
+Light Ring L-1
+Rayon d’épée utilisable au-dessus de 90 % PV
+25
+OOS/OOA_025
+Light Ring L-2
+Rayon d’épée utilisable au-dessus de 70 % PV
+26
+OOS/OOA_026
+Bomber’s Ring
+Une bombe inflige +100 de Brèche
+27
+OOS/OOA_027
+Green Luck Ring
+Pièges fixes -25 %
+28
+OOS/OOA_028
+Blue Luck Ring
+Projectiles physiques -8 %
+29
+OOS/OOA_029
+Gold Luck Ring
+Chutes d’exploration sans perte PV
+30
+OOS/OOA_030
+Red Luck Ring
+Feu reçu -20 %
+31
+OOS/OOA_031
+Green Holy Ring
+Immunité à Silence
+32
+OOS/OOA_032
+Blue Holy Ring
+Immunité à Poison
+33
+OOS/OOA_033
+Red Holy Ring
+Immunité à Brûlure
+34
+OOS/OOA_034
+Snowshoe Ring
+Immunité aux sols glissants
+35
+OOS/OOA_035
+Roc’s Ring
+Ignore la première attaque de sol, 1/combat
+36
+OOS/OOA_036
+Quicksand Ring
+Immunité à Enlisement
+37
+OOS/OOA_037
+Red Joy Ring
+Rubis de combat +10 %, équipe, unique
+38
+OOS/OOA_038
+Blue Joy Ring
+Soins des fioles +10 %
+39
+OOS/OOA_039
+Gold Joy Ring
+Matériaux communs : +1 après un contrat
+40
+OOS/OOA_040
+Green Joy Ring
+PA d’équipement +10 %, équipe, unique
+41
+OOS/OOA_041
+Discovery Ring
+Signale les coffres de salle après Analyse
+42
+OOS/OOA_042
+Rang Ring L-2
+Boomerang +20 %
+43
+OOS/OOA_043
+Octo Ring
+Apparence Octorok
+44
+OOS/OOA_044
+Moblin Ring
+Apparence Moblin
+45
+OOS/OOA_045
+Like Like Ring
+Apparence Like Like
+46
+OOS/OOA_046
+Subrosian Ring
+Apparence Subrosien
+47
+OOS/OOA_047
+First Gen Ring
+Apparence Link rétro
+48
+OOS/OOA_048
+Spin Ring
+Attaque circulaire : coût PM -2
+49
+OOS/OOA_049
+Bombproof Ring
+Bombes reçues -30 %
+50
+OOS/OOA_050
+Energy Ring
+Rayon d’épée : P +0,15
+51
+OOS/OOA_051
+Dbl-Edged Ring
+Physique infligé +15 % ; 3 % PV perdus par frappe
+52
+OOS/OOA_052
+GBA Nature Ring
+Apparence verte des effets de chant
+53
+OOS/OOA_053
+Slayer’s Ring
+Trophée : 100 ennemis, sans bonus
+54
+OOS/OOA_054
+Rupee Ring
+Trophée : 5 000 rubis obtenus, sans bonus
+55
+OOS/OOA_055
+Victory Ring
+Trophée : terminer les deux arcs Oracle
+
+===== PAGE 41 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+041
+N°
+ID
+Anneau C
+Effet P
+56
+OOS/OOA_056
+Sign Ring
+Trophée : réparer 20 panneaux
+57
+OOS/OOA_057
+100th Ring
+Trophée : 100 défis, sans bonus
+58
+OOS/OOA_058
+Whisp Ring
+Immunité à Désarmement
+59
+OOS/OOA_059
+Gasha Ring
+Le jardin produit +1 matériau commun
+60
+OOS/OOA_060
+Peace Ring
+Retrait gratuit contre groupe déjà vaincu
+61
+OOS/OOA_061
+Zora Ring
+PM des techniques aquatiques -10 %
+62
+OOS/OOA_062
+Fist Ring
+Mains nues : Brèche +20
+63
+OOS/OOA_063
+Whimsical Ring
+Critique +5 points ; taux total plafonné à 30 %
+64
+OOS/OOA_064
+Protection Ring
+Dégâts d’un coup plafonnés à 45 % PV max ; 1/combat
+Accès par défaut : Vasu échange un jeton contre un anneau inconnu choisi par le joueur. Les anneaux de
+trophée conservent en plus leur condition de collection proposée. Power L1/L2/L3, Armor L1/L2/L3, Heart
+L1/L2, Light L1/L2 et Rang L1/L2 partagent chacun un groupe d’exclusion : seul le meilleur effet porté
+s’applique.
+
+===== PAGE 42 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+042
+ANNEXE D
+Les 38 tenues de Tri Force Heroes
+Ces costumes forment une collection de tenues complètes [S26, S27]. Leur conversion prend les trois
+emplacements d’armure. L’apparence se débloque définitivement dès acquisition. Les effets ne
+s’additionnent pas au profil TENUE : ils le remplacent, tout en conservant la défense de rang 2.
+ID
+Tenue C
+Effet proposé P
+TFH_010
+Bear Minimum
+Apparence de défi ; aucune défense bonus
+TFH_011
+Big Bomb Outfit
+Bombes +20 %
+TFH_012
+Boomeranger
+Boomerang : touche deux cibles à P0,6
+TFH_013
+Cacto Clothes
+Renvoie 8 % des dégâts physiques reçus, cap 100
+TFH_014
+Cheer Outfit
+Coûts PM des alliés -5 %, unique
+TFH_015
+Cheetah Costume
+AGI +4
+TFH_016
+Cozy Parka
+Glace reçue -40 %
+TFH_017
+Cursed Tights
+Choix visuel de défi ; aucun bonus
+TFH_018
+Dapper Spinner
+Circulaire +20 %
+TFH_019
+Dunewalker Duds
+Immunité à Enlisement
+TFH_020
+Energy Gear
+PM max +20 %
+TFH_021
+Fierce Deity Armor
+Rayon d’épée +20 % ; aucune transformation
+TFH_022
+Fire Blazer
+Feu reçu -40 %
+TFH_023
+Goron Garb
+Feu reçu -30 %, DEF +8 %
+TFH_024
+Gust Garb
+Vent +20 %
+TFH_025
+Hammerwear
+Brèche de marteau +40
+TFH_026
+Hero’s Tunic
+PV max +10 %
+TFH_027
+Jack of Hearts
+PV max +15 %
+TFH_028
+Kokiri Clothes
+Tir multi : trois impacts P0,4
+TFH_029
+Lady’s Ensemble
+Soins reçus +10 %
+TFH_030
+Legendary Dress
+Soins produits +15 %
+TFH_031
+Light Armor
+Lumière reçue -35 %
+TFH_032
+Linebeck’s Uniform
+Affiche le contenu des coffres analysés
+TFH_033
+Lucky Loungewear
+Premier coup reçu -30 %
+TFH_034
+Ninja Gi
+Esquive +8 points
+TFH_035
+Queen of Hearts
+PV max +20 %
+TFH_036
+Robowear
+Outil : coût PM -20 %
+TFH_037
+Rupee Regalia
+Rubis de combat +15 %, unique
+TFH_038
+Serpent’s Toga
+Double dégâts infligés et reçus uniquement en défi dédié
+TFH_039
+Showstopper
+Provocation coûte 0 PM
+
+===== PAGE 43 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+043
+ID
+Tenue C
+Effet proposé P
+TFH_040
+Spin Attack Attire
+Circulaire : coût PM -2
+TFH_041
+Sword Master Suit
+Lame +15 %
+TFH_042
+Sword Suit
+Lame +10 %
+TFH_043
+Timeless Tunic
+Aspect 8-bit ; PV +5 %
+TFH_044
+Tingle Tights
+Première chute ignorée
+TFH_045
+Torrent Robe
+Eau +20 %
+TFH_046
+Tri Suit
+Duo : puissance +10 %
+TFH_047
+Zora Costume
+Eau reçue -40 %
+Déblocage P : atelier du chapitre 4, défis thématiques et couture. Bear Minimum / Cursed Tights peuvent
+être proposés comme apparences de défi ; aucune obligation de handicaper le joueur pour une quête
+principale. Fierce Deity Armor est une tenue, distincte de la forme Oni de MM. Les graphies régionales
+telles que Hero’s Tunic / Hero Tunic sont des alias à consolider dans la localisation.
+
+===== PAGE 44 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+044
+ANNEXE E
+Echoes of Wisdom : accessoires et
+vêtements
+Les 28 accessoires documentés sont intégrés comme références de Zelda, puis convertis pour le groupe
+[S44]. Les séries d’amélioration partagent un groupe d’exclusion : Mastery, Heart, Brooch, Energy,
+Survey, Fairy et Charm. Porter deux niveaux d’une même série n’additionne pas leurs bénéfices.
+ID
+Accessoire C
+Effet proposé P
+EOW_001
+Zora’s Flippers
+Nage en exploration ; eau reçue -10 %
+EOW_002
+Zora Scale
+Eau reçue -20 %
+EOW_003
+Gerudo Sandals
+Immunité aux sables mouvants
+EOW_004
+Gold Sash
+Immunité au Vent qui repousse
+EOW_005
+Climbing Band
+AGI +2 ; accès aux parois prévues
+EOW_006
+Goron’s Bracelet
+Porter des rochers ; FOR +5 %
+EOW_007
+Spin Brace
+Circulaire : Brèche +20
+EOW_008
+Ice Spikes
+Immunité aux glissades
+EOW_009
+Frog Ring
+Saut d’exploration ; esquive +5 points
+EOW_010
+Charging Horn
+Brèche +25 avec une forme
+EOW_011
+Stone Anklet
+Immunité au recul
+EOW_012
+Clockwork Bangle
+Automates : durée +1 activation
+EOW_013
+First Mastery
+Forme : coût initial -5 Résonance
+EOW_014
+Second Mastery
+Forme : coût initial -8 Résonance
+EOW_015
+Final Mastery
+Forme : coût initial -10 Résonance
+EOW_016
+Might Bell
+Détecte les défis de force
+EOW_017
+Heart Pin
+Soins de fioles +5 %
+EOW_018
+Heart Barrette
+Soins de fioles +10 %
+EOW_019
+Silver Brooch
+Rubis +10 %, équipe, unique
+EOW_020
+Gold Brooch
+Rubis +15 %, équipe, unique
+EOW_021
+Energy Glove
+Une victoire rend 3 PM au porteur
+EOW_022
+Energy Belt
+Une victoire rend 6 PM au porteur
+EOW_023
+Survey Scope
+Matériaux de contrats +1 commun
+EOW_024
+Survey Binoculars
+Matériaux de contrats +2 communs
+EOW_025
+Fairy Flower
+Potions de soins +10 %
+EOW_026
+Fairy Fragrance
+Potions de soins +15 %
+EOW_027
+Ancient Charm
+Dégâts reçus -5 %
+EOW_028
+Curious Charm
+Dégâts reçus -10 %
+
+===== PAGE 45 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+045
+Onze vêtements de Zelda
+ID
+Vêtement C
+Intégration P
+EOW_029
+Disguise
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_030
+Royal Travel Attire
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_031
+Customary Attire
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_032
+Blue Attire
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_033
+Silk Pajamas
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_034
+Dancing Outfit
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_035
+Cat Clothes
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_036
+Black Cat Clothes
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_037
+Green Tunic
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_038
+Red Tunic
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+EOW_039
+Stamp Suit
+Apparence de Zelda ; acquisition par quête régionale ou défi
+cosmétique.
+Les onze noms comprennent les trois variantes liées aux amiibo : Blue Attire, Red Tunic et Black Cat
+Clothes [S45]. Ici, ces variantes sont obtenues dans le jeu. Les effets pratiques de costumes, tels que les
+interactions félines, peuvent devenir des aptitudes d’exploration de Zelda ; ils ne sont pas attribués
+silencieusement à Link.
+
+===== PAGE 46 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+046
+ANNEXE F
+Catalogue des armes, armures et
+reliques
+Le registre complet contient 1 257 occurrences par jeu en incluant les registres B à E. Les tables
+suivantes ne répètent pas leurs entrées. Noms et origine : C ; rang profil et accès : P. Les détails des
+profils et codes se trouvent en annexe A. Le numéro entre crochets ou après le code renvoie à la
+bibliographie.
+Lecture d’une ligne
+TOTK_xxx | Zora Armor | Torse | R2 / EAU | Q2 / S42 signifie : référence de TOTK, torse rang 2
+proposé, profil eau, quête régionale générique, source S42. Comme l’archive TOTK ouvre au chapitre
+7, sa quête devient disponible au chapitre 7, même si Q2 seul ouvre plus tôt.
+Le JSON incorporé contient aussi les notes d’origine et les règles d’acquisition développées. Il conserve
+les noms anglais pour rechercher les sources et les identifiants pour préparer une base de données. Les
+fiches du chapitre 11 ont priorité sur les effets de profil ; elles ne sont pas encore toutes converties en
+overrides structurés dans ce JSON.
+Les tables restent volontairement compactes : les valeurs complètes sont obtenues par R + profil +
+fiche distinctive. Les jeux anciens incluent des techniques et outils afin de couvrir les apprentissages de
+Link. Une arme du même nom dans deux épisodes n’est pas automatiquement deux armes équipables
+en même temps.
+ANNEXE F.Z1
+The Legend of Zelda
+Archive ouverte au chapitre 1. Première sortie : 1986. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+Z1_001
+Sword
+1 main
+R1 / LAME
+H1 / S04
+Z1_002
+White Sword
+1 main
+R1 / LAME
+H1 / S04
+Z1_003
+Magical Sword
+1 main
+R4 / LAME
+Q4 / S04
+Z1_004
+Small Shield
+Bouclier
+R1 / BOUC
+B1 / S04
+Z1_005
+Magical Shield
+Bouclier
+R1 / BOUC
+B1 / S04
+Z1_006
+Bow
+2 mains
+R2 / ARC
+H2 / S04
+Z1_007
+Silver Arrow
+2 mains
+R2 / ARC
+H2 / S04
+Z1_008
+Arrow
+Munition
+R1 / MUN
+B1 / S04
+Z1_009
+Boomerang
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_010
+Magical Boomerang
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_011
+Recorder
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_012
+Candle
+Outil
+R1 / OUTIL
+Q1 / S04
+
+===== PAGE 47 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+047
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+Z1_013
+Red Candle
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_014
+Magic Rod
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_015
+Book of Magic
+Outil
+R1 / OUTIL
+Q1 / S04
+Z1_016
+Bomb
+Outil
+R1 / BOMBE
+B1 / S04
+Z1_017
+Blue Ring
+Accessoire
+R2 / GARDE
+Q2 / S04
+Z1_018
+Red Ring
+Accessoire
+R2 / GARDE
+Q2 / S04
+Z1_019
+Power Bracelet
+Exploration
+R1 / TRAV
+H1 / S04
+Z1_020
+Raft
+Exploration
+R1 / TRAV
+H1 / S04
+Z1_021
+Stepladder
+Exploration
+R1 / TRAV
+H1 / S04
+Z1_022
+Magical Key
+Exploration
+R3 / TRAV
+Q3 / S04
+ANNEXE F.Z2
+The Adventure of Link
+Archive ouverte au chapitre 2. Première sortie : 1987. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+Z2_001
+Sword
+1 main
+R1 / LAME
+H1 / S05
+Z2_002
+Shield
+Bouclier
+R1 / BOUC
+H1 / S05
+Z2_003
+Candle
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_004
+Handy Glove
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_005
+Raft
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_006
+Boots
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_007
+Flute
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_008
+Magical Key
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_009
+Cross
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_010
+Hammer
+Exploration
+R1 / TRAV
+H1 / S05
+Z2_011
+Shield spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_012
+Jump spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_013
+Life spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_014
+Fairy spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_015
+Fire spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_016
+Reflect spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_017
+Spell spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_018
+Thunder spell
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+Z2_019
+Downward Thrust
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+
+===== PAGE 48 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+048
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+Z2_020
+Jump Thrust
+Pouvoir
+R2 / MAGIE
+Q2 / S05
+ANNEXE F.ALTTP
+A Link to the Past
+Archive ouverte au chapitre 3. Première sortie : 1991. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+ALTTP_001
+Fighter's Sword
+1 main
+R2 / LAME
+H2 / S06
+ALTTP_002
+Master Sword
+1 main
+R4 / LAME
+Q4 / S06
+ALTTP_003
+Tempered Sword
+1 main
+R2 / LAME
+H2 / S06
+ALTTP_004
+Golden Sword
+1 main
+R5 / LAME
+Q5 / S06
+ALTTP_005
+Fighter's Shield
+Bouclier
+R2 / BOUC
+Q2 / S06
+ALTTP_006
+Red Shield
+Bouclier
+R2 / BOUC
+Q2 / S06
+ALTTP_007
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S06
+ALTTP_008
+Green Jerkin
+Tenue
+R2 / TENUE
+Q2 / S06
+ALTTP_009
+Blue Mail
+Tenue
+R2 / TENUE
+Q2 / S06
+ALTTP_010
+Red Mail
+Tenue
+R2 / TENUE
+Q2 / S06
+ALTTP_011
+Pegasus Boots
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_012
+Power Glove
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_013
+Titan's Mitt
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_014
+Zora's Flippers
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_015
+Moon Pearl
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_016
+Bow
+2 mains
+R1 / ARC
+H1 / S06
+ALTTP_017
+Silver Arrow
+Munition
+R4 / MUN
+Q4 / S06
+ALTTP_018
+Bomb
+Outil
+R2 / BOMBE
+B2 / S06
+ALTTP_019
+Super Bomb
+Outil
+R2 / BOMBE
+B2 / S06
+ALTTP_020
+Lamp
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_021
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_022
+Magical Boomerang
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_023
+Bug-Catching Net
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_024
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_025
+Magic Powder
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_026
+Magic Hammer
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_027
+Shovel
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_028
+Cane of Somaria
+Outil
+R2 / OUTIL
+Q2 / S06
+
+===== PAGE 49 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+049
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+ALTTP_029
+Cane of Byrna
+Outil
+R2 / OUTIL
+Q2 / S06
+ALTTP_030
+Fire Rod
+Arme
+R2 / FEU
+Q2 / S06
+ALTTP_031
+Ice Rod
+Arme
+R2 / GLACE
+Q2 / S06
+ALTTP_032
+Flute
+Instrument
+R2 / CHANT
+Q2 / S06
+ALTTP_033
+Magic Cape
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_034
+Magic Mirror
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_035
+Book of Mudora
+Exploration
+R2 / TRAV
+H2 / S06
+ALTTP_036
+Ether Medallion
+Pouvoir
+R3 / MAGIE
+Q3 / S06
+ALTTP_037
+Quake Medallion
+Pouvoir
+R3 / MAGIE
+Q3 / S06
+ALTTP_038
+Bombos Medallion
+Pouvoir
+R3 / MAGIE
+Q3 / S06
+ANNEXE F.LA
+Link’s Awakening
+Archive ouverte au chapitre 6. Première sortie : 1993. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+LA_001
+Sword
+1 main
+R1 / LAME
+H1 / S07
+LA_002
+Koholint Sword
+1 main
+R4 / LAME
+Q4 / S07
+LA_003
+Shield
+Bouclier
+R2 / BOUC
+Q2 / S07
+LA_004
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S07
+LA_005
+Green Tunic
+Tenue
+R2 / TENUE
+Q2 / S07
+LA_006
+Blue Mail
+Tenue
+R2 / TENUE
+Q2 / S07
+LA_007
+Red Mail
+Tenue
+R2 / TENUE
+Q2 / S07
+LA_008
+Bow
+2 mains
+R2 / ARC
+B2 / S07
+LA_009
+Bomb
+Outil
+R1 / BOMBE
+B1 / S07
+LA_010
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S07
+LA_011
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S07
+LA_012
+Magic Powder
+Outil
+R2 / OUTIL
+Q2 / S07
+LA_013
+Deluxe Shovel
+Outil
+R2 / OUTIL
+Q2 / S07
+LA_014
+Magic Rod
+Outil
+R2 / OUTIL
+Q2 / S07
+LA_015
+Pegasus Boots
+Exploration
+R1 / TRAV
+H1 / S07
+LA_016
+Power Bracelet
+Exploration
+R1 / TRAV
+H1 / S07
+LA_017
+Powerful Bracelet
+Exploration
+R1 / TRAV
+H1 / S07
+LA_018
+Roc's Feather
+Exploration
+R1 / TRAV
+H1 / S07
+LA_019
+Flippers
+Exploration
+R1 / TRAV
+H1 / S07
+
+===== PAGE 50 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+050
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+LA_020
+Ocarina
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_021
+Full Moon Cello
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_022
+Conch Horn
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_023
+Sea Lily’s Bell
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_024
+Surf Harp
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_025
+Wind Marimba
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_026
+Coral Triangle
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_027
+Organ of Evening Calm
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_028
+Thunder Drum
+Instrument
+R2 / CHANT
+Q2 / S07
+LA_029
+Fairy Bottle
+Capacité
+R2 / SAC
+Q2 / S07
+ANNEXE F.OOT
+Ocarina of Time
+Archive ouverte au chapitre 1. Première sortie : 1998. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+OOT_001
+Kokiri Sword
+1 main
+R2 / LAME
+H2 / S08
+OOT_002
+Master Sword
+1 main
+R4 / LAME
+Q4 / S08
+OOT_003
+Giant's Knife
+2 mains
+R2 / LOURD
+H2 / S08
+OOT_004
+Biggoron's Sword
+2 mains
+R4 / LOURD
+Q4 / S08
+OOT_005
+Deku Shield
+Bouclier
+R2 / BOUC
+Q2 / S08
+OOT_006
+Hylian Shield
+Bouclier
+R2 / BOUC
+Q2 / S08
+OOT_007
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S08
+OOT_008
+Kokiri Tunic
+Tenue
+R1 / TENUE
+H1 / S08
+OOT_009
+Goron Tunic
+Tenue
+R2 / IGNI
+Q2 / S08
+OOT_010
+Zora Tunic
+Tenue
+R2 / EAU
+H2 / S08
+OOT_011
+Kokiri Boots
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_012
+Iron Boots
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_013
+Hover Boots
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_014
+Goron’s Bracelet
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_015
+Silver Gauntlets
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_016
+Golden Gauntlets
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_017
+Silver Scale
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_018
+Golden Scale
+Exploration
+R2 / TRAV
+H2 / S08
+OOT_019
+Deku Stick
+Outil
+R2 / OUTIL
+Q2 / S08
+
+===== PAGE 51 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+051
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+OOT_020
+Deku Nut
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_021
+Fairy Slingshot
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_022
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_023
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_024
+Longshot
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_025
+Megaton Hammer
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_026
+Lens of Truth
+Outil
+R2 / OUTIL
+Q2 / S08
+OOT_027
+Bomb
+Outil
+R2 / BOMBE
+B2 / S08
+OOT_028
+Bombchu
+Outil
+R2 / BOMBE
+B2 / S08
+OOT_029
+Fairy Bow
+2 mains
+R2 / ARC
+H2 / S08
+OOT_030
+Fire Arrow
+Munition
+R3 / MUN
+Q3 / S08
+OOT_031
+Ice Arrow
+Munition
+R3 / MUN
+Q3 / S08
+OOT_032
+Light Arrow
+Munition
+R3 / MUN
+Q3 / S08
+OOT_033
+Fairy Ocarina
+Instrument
+R2 / CHANT
+H2 / S08
+OOT_034
+Ocarina of Time
+Instrument
+R2 / CHANT
+H2 / S08
+OOT_035
+Din's Fire
+Pouvoir
+R3 / MAGIE
+Q3 / S08
+OOT_036
+Farore's Wind
+Pouvoir
+R3 / MAGIE
+Q3 / S08
+OOT_037
+Nayru's Love
+Pouvoir
+R3 / MAGIE
+Q3 / S08
+OOT_038
+Keaton Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_039
+Skull Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_040
+Spooky Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_041
+Bunny Hood
+Apparence
+R2 / COS
+Q2 / S08
+OOT_042
+Goron Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_043
+Zora Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_044
+Gerudo Mask
+Apparence
+R2 / COS
+Q2 / S08
+OOT_045
+Mask of Truth
+Apparence
+R2 / COS
+Q2 / S08
+OOT_046
+Stone of Agony
+Accessoire
+R2 / ACCES
+Q2 / S08
+OOT_047
+Shard of Agony
+Accessoire
+R2 / ACCES
+Q2 / S08
+Note : les masques Goron et Zora d’OOT sont des masques sociaux, pas les formes de MM. Giant’s Knife
+et Biggoron’s Sword utilisent deux mains ; le système de casse de l’original n’est pas reproduit comme
+perte définitive [S08].
+
+===== PAGE 52 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+052
+ANNEXE F.MM
+Majora’s Mask
+Archive ouverte au chapitre 4. Première sortie : 2000. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+MM_001
+Kokiri Sword
+1 main
+R2 / LAME
+H2 / S09
+MM_002
+Razor Sword
+1 main
+R2 / LAME
+H2 / S09
+MM_003
+Gilded Sword
+1 main
+R4 / LAME
+Q4 / S09
+MM_004
+Great Fairy's Sword
+2 mains
+R4 / LOURD
+Q4 / S09
+MM_005
+Hero's Shield
+Bouclier
+R2 / BOUC
+Q2 / S09
+MM_006
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S09
+MM_007
+Hero's Bow
+2 mains
+R2 / ARC
+H2 / S09
+MM_008
+Fire Arrow
+Munition
+R3 / MUN
+Q3 / S09
+MM_009
+Ice Arrow
+Munition
+R3 / MUN
+Q3 / S09
+MM_010
+Light Arrow
+Munition
+R3 / MUN
+Q3 / S09
+MM_011
+Deku Stick
+Outil
+R2 / OUTIL
+Q2 / S09
+MM_012
+Deku Nut
+Outil
+R2 / OUTIL
+Q2 / S09
+MM_013
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S09
+MM_014
+Lens of Truth
+Outil
+R2 / OUTIL
+Q2 / S09
+MM_015
+Pictograph Box
+Outil
+R2 / OUTIL
+Q2 / S09
+MM_016
+Bomb
+Outil
+R3 / BOMBE
+Q3 / S09
+MM_017
+Bombchu
+Outil
+R3 / BOMBE
+Q3 / S09
+MM_018
+Powder Keg
+Outil
+R3 / BOMBE
+Q3 / S09
+MM_019
+Ocarina of Time
+Instrument
+R2 / CHANT
+H2 / S09
+
+===== PAGE 53 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+053
+ANNEXE F.OOS
+Oracle of Seasons
+Archive ouverte au chapitre 3. Première sortie : 2001. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+OOS_001
+Wooden Sword
+1 main
+R2 / LAME
+H2 / S11
+OOS_002
+Noble Sword
+1 main
+R2 / LAME
+H2 / S11
+OOS_003
+Master Sword
+1 main
+R4 / LAME
+Q4 / S11
+OOS_004
+Biggoron's Sword
+2 mains
+R4 / LOURD
+Q4 / S11
+OOS_005
+Wooden Shield
+Bouclier
+R2 / BOUC
+Q2 / S11
+OOS_006
+Iron Shield
+Bouclier
+R2 / BOUC
+Q2 / S11
+OOS_007
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S11
+OOS_008
+Bomb
+Outil
+R2 / BOMBE
+B2 / S11
+OOS_009
+Bombchu
+Outil
+R2 / BOMBE
+B2 / S11
+OOS_010
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S11
+OOS_011
+Seed Satchel
+Outil
+R2 / OUTIL
+Q2 / S11
+OOS_012
+Shovel
+Outil
+R2 / OUTIL
+Q2 / S11
+OOS_013
+Ember Seeds
+Munition
+R2 / MUN
+B2 / S11
+OOS_014
+Scent Seeds
+Munition
+R2 / MUN
+B2 / S11
+OOS_015
+Pegasus Seeds
+Munition
+R2 / MUN
+B2 / S11
+OOS_016
+Gale Seeds
+Munition
+R2 / MUN
+B2 / S11
+OOS_017
+Mystery Seeds
+Munition
+R2 / MUN
+B2 / S11
+OOS_018
+Ricky's Flute
+Instrument
+R2 / CHANT
+Q2 / S11
+OOS_019
+Dimitri's Flute
+Instrument
+R2 / CHANT
+Q2 / S11
+OOS_020
+Moosh's Flute
+Instrument
+R2 / CHANT
+Q2 / S11
+OOS_021
+Roc's Feather
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_022
+Power Bracelet
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_023
+Rod of Seasons
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_024
+Magnetic Gloves
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_025
+Roc's Cape
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_026
+Flippers
+Exploration
+R2 / TRAV
+H2 / S11
+OOS_027
+Slingshot
+Outil
+R3 / OUTIL
+Q3 / S11
+OOS_028
+Hyper Slingshot
+Outil
+R3 / OUTIL
+Q3 / S11
+OOS_029
+Magical Boomerang
+Outil
+R3 / OUTIL
+Q3 / S11
+
+===== PAGE 54 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+054
+ANNEXE F.OOA
+Oracle of Ages
+Archive ouverte au chapitre 3. Première sortie : 2001. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+OOA_001
+Wooden Sword
+1 main
+R2 / LAME
+H2 / S12
+OOA_002
+Noble Sword
+1 main
+R2 / LAME
+H2 / S12
+OOA_003
+Master Sword
+1 main
+R4 / LAME
+Q4 / S12
+OOA_004
+Biggoron's Sword
+2 mains
+R4 / LOURD
+Q4 / S12
+OOA_005
+Wooden Shield
+Bouclier
+R2 / BOUC
+Q2 / S12
+OOA_006
+Iron Shield
+Bouclier
+R2 / BOUC
+Q2 / S12
+OOA_007
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S12
+OOA_008
+Bomb
+Outil
+R2 / BOMBE
+B2 / S12
+OOA_009
+Bombchu
+Outil
+R2 / BOMBE
+B2 / S12
+OOA_010
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S12
+OOA_011
+Seed Satchel
+Outil
+R2 / OUTIL
+Q2 / S12
+OOA_012
+Shovel
+Outil
+R2 / OUTIL
+Q2 / S12
+OOA_013
+Ember Seeds
+Munition
+R2 / MUN
+B2 / S12
+OOA_014
+Scent Seeds
+Munition
+R2 / MUN
+B2 / S12
+OOA_015
+Pegasus Seeds
+Munition
+R2 / MUN
+B2 / S12
+OOA_016
+Gale Seeds
+Munition
+R2 / MUN
+B2 / S12
+OOA_017
+Mystery Seeds
+Munition
+R2 / MUN
+B2 / S12
+OOA_018
+Ricky's Flute
+Instrument
+R2 / CHANT
+Q2 / S12
+OOA_019
+Dimitri's Flute
+Instrument
+R2 / CHANT
+Q2 / S12
+OOA_020
+Moosh's Flute
+Instrument
+R2 / CHANT
+Q2 / S12
+OOA_021
+Roc's Feather
+Exploration
+R2 / TRAV
+H2 / S12
+OOA_022
+Power Bracelet
+Exploration
+R2 / TRAV
+H2 / S12
+OOA_023
+Harp of Ages
+Instrument
+R3 / CHANT
+H3 / S12
+OOA_024
+Seed Shooter
+Outil
+R3 / OUTIL
+Q3 / S12
+OOA_025
+Switch Hook
+Outil
+R3 / OUTIL
+Q3 / S12
+OOA_026
+Long Hook
+Outil
+R3 / OUTIL
+Q3 / S12
+OOA_027
+Cane of Somaria
+Outil
+R3 / OUTIL
+Q3 / S12
+OOA_028
+Power Glove
+Exploration
+R3 / TRAV
+H3 / S12
+OOA_029
+Zora’s Flippers
+Exploration
+R3 / TRAV
+H3 / S12
+OOA_030
+Mermaid Suit
+Exploration
+R3 / TRAV
+H3 / S12
+
+===== PAGE 55 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+055
+ANNEXE F.FS
+Four Swords
+Archive ouverte au chapitre 4. Première sortie : 2002. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+FS_001
+Four Sword
+1 main
+R4 / LAME
+Q4 / S16
+FS_002
+Shield
+Bouclier
+R1 / BOUC
+H1 / S15
+FS_003
+Bow
+2 mains
+R1 / ARC
+H1 / S15
+FS_004
+Bomb
+Outil
+R1 / BOMBE
+B1 / S15
+FS_005
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S15
+FS_006
+Chain Chomp
+Outil
+R2 / OUTIL
+Q2 / S15
+FS_007
+Magnetic Glove
+Outil
+R2 / OUTIL
+Q2 / S15
+FS_008
+Gnat Hat
+Exploration
+R2 / TRAV
+H2 / S15
+FS_009
+Pegasus Boots
+Exploration
+R2 / TRAV
+H2 / S15
+FS_010
+Roc's Cape
+Exploration
+R2 / TRAV
+H2 / S15
+FS_011
+Armor Seed
+Accessoire
+R1 / ACCES
+Q1 / S15
+FS_012
+Pegasus Seed
+Accessoire
+R1 / ACCES
+Q1 / S15
+FS_013
+Razor Seed
+Accessoire
+R1 / ACCES
+Q1 / S15
+FS_014
+Medal of Courage
+Apparence
+R2 / COS
+Q2 / S15
+ANNEXE F.WW
+The Wind Waker
+Archive ouverte au chapitre 6. Première sortie : 2002. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+WW_001
+Hero's Sword
+1 main
+R2 / LAME
+H2 / S17
+WW_002
+Master Sword
+1 main
+R4 / LAME
+Q4 / S17
+WW_003
+Hero's Shield
+Bouclier
+R2 / BOUC
+Q2 / S17
+WW_004
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S17
+WW_005
+Hero's Clothes
+Tenue
+R1 / TENUE
+H1 / S17
+WW_006
+Outset Clothes
+Tenue
+R1 / TENUE
+H1 / S17
+WW_007
+Magic Armor
+Tenue
+R4 / GARDE
+Q4 / S17
+WW_008
+Telescope
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_009
+Grappling Hook
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_010
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_011
+Deku Leaf
+Outil
+R2 / OUTIL
+Q2 / S17
+
+===== PAGE 56 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+056
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+WW_012
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_013
+Skull Hammer
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_014
+Picto Box
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_015
+Deluxe Picto Box
+Outil
+R2 / OUTIL
+Q2 / S17
+WW_016
+Hero's Bow
+2 mains
+R2 / ARC
+H2 / S17
+WW_017
+Fire Arrow
+Munition
+R3 / MUN
+Q3 / S17
+WW_018
+Ice Arrow
+Munition
+R3 / MUN
+Q3 / S17
+WW_019
+Light Arrow
+Munition
+R3 / MUN
+Q3 / S17
+WW_020
+Bomb
+Outil
+R2 / BOMBE
+B2 / S17
+WW_021
+Wind Waker
+Instrument
+R2 / CHANT
+H2 / S17
+WW_022
+Sail
+Exploration
+R2 / TRAV
+H2 / S17
+WW_023
+Swift Sail
+Exploration
+R2 / TRAV
+H2 / S17
+WW_024
+Power Bracelets
+Exploration
+R2 / TRAV
+H2 / S17
+WW_025
+Iron Boots
+Exploration
+R2 / TRAV
+H2 / S17
+WW_026
+Pirate's Charm
+Accessoire
+R2 / ACCES
+Q2 / S17
+WW_027
+Hero's Charm
+Accessoire
+R2 / ACCES
+Q2 / S17
+WW_028
+Tingle Tuner
+Outil
+R1 / OUTIL
+Q1 / S17
+WW_029
+Tingle Bottle
+Outil
+R1 / OUTIL
+Q1 / S17
+Éditions : Swift Sail et Tingle Bottle sont liés à HD ; Tingle Tuner à GameCube. Magic Armor change de
+fonctionnement entre versions. Le présent RPG retient la dépense de rubis de sa fiche distinctive [S17].
+ANNEXE F.FSA
+Four Swords Adventures
+Archive ouverte au chapitre 4. Première sortie : 2004. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+FSA_001
+Four Sword
+1 main
+R4 / LAME
+Q4 / S16
+FSA_002
+Shield
+Bouclier
+R1 / BOUC
+H1 / S18
+FSA_003
+Bow
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_004
+Slingshot
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_005
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_006
+Fire Rod
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_007
+Lamp
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_008
+Magic Hammer
+Outil
+R2 / OUTIL
+Q2 / S18
+FSA_009
+Shovel
+Outil
+R2 / OUTIL
+Q2 / S18
+
+===== PAGE 57 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+057
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+FSA_010
+Bomb
+Outil
+R2 / BOMBE
+Q2 / S18
+FSA_011
+Pegasus Boots
+Exploration
+R2 / TRAV
+H2 / S18
+FSA_012
+Roc's Feather
+Exploration
+R2 / TRAV
+H2 / S18
+FSA_013
+Blue Bracelet
+Accessoire
+R2 / ACCES
+Q2 / S18
+FSA_014
+Power Bracelet
+Accessoire
+R2 / ACCES
+Q2 / S18
+FSA_015
+Bombos Medallion
+Pouvoir
+R3 / MAGIE
+Q3 / S18
+FSA_016
+Quake Medallion
+Pouvoir
+R3 / MAGIE
+Q3 / S18
+Les outils de FSA possèdent aussi des améliorations de niveau 2. Les traiter comme upgrade_level=2 de
+la base : profil conservé, puissance ou portée améliorée, sans nouvelle identité canonique inventée
+[S18].
+ANNEXE F.MC
+The Minish Cap
+Archive ouverte au chapitre 3. Première sortie : 2004. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+MC_001
+Smith’s Sword
+1 main
+R2 / LAME
+H2 / S19
+MC_002
+Broken Picori Blade
+Relique de quête
+R2 / COS
+H2 / S19
+MC_003
+White Sword
+1 main
+R2 / LAME
+H2 / S19
+MC_004
+White Sword (two elements)
+1 main
+R2 / LAME
+H2 / S19
+MC_005
+White Sword (three elements)
+1 main
+R2 / LAME
+H2 / S19
+MC_006
+Four Sword
+1 main
+R4 / LAME
+Q4 / S19
+MC_007
+Small Shield
+Bouclier
+R2 / BOUC
+Q2 / S19
+MC_008
+Mirror Shield
+Bouclier
+R2 / BOUC
+Q2 / S19
+MC_009
+Bomb
+Outil
+R2 / BOMBE
+Q2 / S19
+MC_010
+Remote Bomb
+Outil
+R2 / BOMBE
+Q2 / S19
+MC_011
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S19
+MC_012
+Magical Boomerang
+Outil
+R2 / OUTIL
+Q2 / S19
+MC_013
+Gust Jar
+Outil
+R2 / OUTIL
+Q2 / S19
+MC_014
+Cane of Pacci
+Outil
+R2 / OUTIL
+Q2 / S19
+MC_015
+Flame Lantern
+Outil
+R2 / OUTIL
+Q2 / S19
+MC_016
+Bow
+2 mains
+R2 / ARC
+Q2 / S19
+MC_017
+Light Arrow
+Munition
+R4 / MUN
+Q4 / S19
+MC_018
+Ocarina of Wind
+Instrument
+R2 / CHANT
+Q2 / S19
+MC_019
+Grip Ring
+Exploration
+R2 / TRAV
+H2 / S19
+MC_020
+Flippers
+Exploration
+R2 / TRAV
+H2 / S19
+
+===== PAGE 58 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+058
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+MC_021
+Power Bracelets
+Exploration
+R2 / TRAV
+H2 / S19
+MC_022
+Pegasus Boots
+Exploration
+R2 / TRAV
+H2 / S19
+MC_023
+Roc’s Cape
+Exploration
+R2 / TRAV
+H2 / S19
+MC_024
+Din’s Charm
+Accessoire
+R3 / ACCES
+Q3 / S19
+MC_025
+Farore’s Charm
+Accessoire
+R3 / ACCES
+Q3 / S19
+MC_026
+Nayru’s Charm
+Accessoire
+R3 / ACCES
+Q3 / S19
+MC_027
+Tiger Scroll: Spin Attack
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_028
+Tiger Scroll: Sword Beam
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_029
+Tiger Scroll: Dash Attack
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_030
+Tiger Scroll: Peril Beam
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_031
+Tiger Scroll: Rock Breaker
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_032
+Tiger Scroll: Roll Attack
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_033
+Tiger Scroll: Down Thrust
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+MC_034
+Tiger Scroll: Great Spin Attack
+Pouvoir
+R2 / MAGIE
+Q2 / S19
+ANNEXE F.TP
+Twilight Princess
+Archive ouverte au chapitre 5. Première sortie : 2006. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TP_001
+Wooden Sword
+1 main
+R2 / LAME
+H2 / S20
+TP_002
+Ordon Sword
+1 main
+R2 / LAME
+H2 / S20
+TP_003
+Master Sword
+1 main
+R4 / LAME
+Q4 / S20
+TP_004
+Light Sword
+1 main
+R2 / LAME
+H2 / S20
+TP_005
+Ordon Shield
+Bouclier
+R2 / BOUC
+Q2 / S20
+TP_006
+Wooden Shield
+Bouclier
+R2 / BOUC
+Q2 / S20
+TP_007
+Hylian Shield
+Bouclier
+R2 / BOUC
+Q2 / S20
+TP_008
+Hero's Clothes
+Tenue
+R1 / TENUE
+H1 / S20
+TP_009
+Zora Armor
+Tenue
+R2 / EAU
+H2 / S20
+TP_010
+Magic Armor
+Tenue
+R4 / GARDE
+Q4 / S20
+TP_011
+Gale Boomerang
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_012
+Slingshot
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_013
+Lantern
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_014
+Clawshot
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_015
+Double Clawshots
+Outil
+R2 / OUTIL
+Q2 / S20
+
+===== PAGE 59 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+059
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TP_016
+Spinner
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_017
+Ball and Chain
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_018
+Dominion Rod
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_019
+Fishing Rod
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_020
+Hawkeye
+Outil
+R2 / OUTIL
+Q2 / S20
+TP_021
+Hero's Bow
+2 mains
+R2 / ARC
+H2 / S20
+TP_022
+Bomb
+Outil
+R2 / BOMBE
+B2 / S20
+TP_023
+Water Bomb
+Outil
+R2 / BOMBE
+B2 / S20
+TP_024
+Bombling
+Outil
+R2 / BOMBE
+B2 / S20
+TP_025
+Bomb Arrow
+Outil
+R2 / BOMBE
+B2 / S20
+TP_026
+Iron Boots
+Exploration
+R2 / TRAV
+H2 / S20
+TP_027
+Horse Call
+Exploration
+R2 / TRAV
+H2 / S20
+TP_028
+Ilia’s Charm
+Exploration
+R2 / TRAV
+H2 / S20
+TP_029
+Ending Blow
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_030
+Shield Attack
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_031
+Back Slice
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_032
+Helm Splitter
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_033
+Mortal Draw
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_034
+Jump Strike
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+TP_035
+Great Spin
+Pouvoir
+R3 / MAGIE
+Q3 / S20
+ANNEXE F.PH
+Phantom Hourglass
+Archive ouverte au chapitre 6. Première sortie : 2007. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+PH_001
+Oshus's Sword
+1 main
+R2 / LAME
+H2 / S21
+PH_002
+Phantom Sword
+1 main
+R4 / LAME
+Q4 / S21
+PH_003
+Wooden Shield
+Bouclier
+R1 / BOUC
+H1 / S21
+PH_004
+Bow
+2 mains
+R2 / ARC
+Q2 / S21
+PH_005
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S21
+PH_006
+Grappling Hook
+Outil
+R2 / OUTIL
+Q2 / S21
+PH_007
+Hammer
+Outil
+R2 / OUTIL
+Q2 / S21
+PH_008
+Shovel
+Outil
+R2 / OUTIL
+Q2 / S21
+PH_009
+Bomb
+Outil
+R2 / BOMBE
+B2 / S21
+
+===== PAGE 60 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+060
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+PH_010
+Bombchu
+Outil
+R2 / BOMBE
+B2 / S21
+PH_011
+Phantom Hourglass
+Exploration
+R2 / TRAV
+H2 / S21
+PH_012
+Cyclone Slate
+Exploration
+R2 / TRAV
+H2 / S21
+PH_013
+Swordsman’s Scroll
+Pouvoir
+R3 / MAGIE
+Q3 / S21
+PH_014
+Spirit of Power
+Pouvoir
+R3 / MAGIE
+Q3 / S21
+PH_015
+Spirit of Wisdom
+Pouvoir
+R3 / MAGIE
+Q3 / S21
+PH_016
+Spirit of Courage
+Pouvoir
+R3 / MAGIE
+Q3 / S21
+ANNEXE F.ST
+Spirit Tracks
+Archive ouverte au chapitre 6. Première sortie : 2009. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+ST_001
+Sword
+1 main
+R2 / LAME
+H2 / S22
+ST_002
+Lokomo Sword
+1 main
+R4 / LAME
+Q4 / S22
+ST_003
+Shield
+Bouclier
+R2 / BOUC
+Q2 / S22
+ST_004
+Shield of Antiquity
+Bouclier
+R2 / BOUC
+Q2 / S22
+ST_005
+Recruit Uniform
+Tenue
+R1 / TENUE
+H1 / S22
+ST_006
+Engineer’s Clothes
+Tenue
+R1 / TENUE
+H1 / S22
+ST_007
+Whirlwind
+Outil
+R2 / OUTIL
+Q2 / S22
+ST_008
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S22
+ST_009
+Whip
+Outil
+R2 / OUTIL
+Q2 / S22
+ST_010
+Sand Wand
+Outil
+R2 / OUTIL
+Q2 / S22
+ST_011
+Bow
+2 mains
+R3 / ARC
+Q3 / S22
+ST_012
+Bow of Light
+2 mains
+R3 / ARC
+Q3 / S22
+ST_013
+Bomb
+Outil
+R2 / BOMBE
+B2 / S22
+ST_014
+Spirit Flute
+Instrument
+R2 / CHANT
+H2 / S22
+ST_015
+Swordsman’s Scroll I
+Pouvoir
+R3 / MAGIE
+Q3 / S22
+ST_016
+Swordsman’s Scroll II
+Pouvoir
+R3 / MAGIE
+Q3 / S22
+
+===== PAGE 61 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+061
+ANNEXE F.SS
+Skyward Sword
+Archive ouverte au chapitre 7. Première sortie : 2011. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+SS_001
+Practice Sword
+1 main
+R2 / LAME
+H2 / S23
+SS_002
+Goddess Sword
+1 main
+R2 / LAME
+H2 / S23
+SS_003
+Goddess Longsword
+1 main
+R2 / LAME
+H2 / S23
+SS_004
+Goddess White Sword
+1 main
+R2 / LAME
+H2 / S23
+SS_005
+Master Sword
+1 main
+R4 / LAME
+Q4 / S23
+SS_006
+True Master Sword
+1 main
+R5 / LAME
+Q5 / S23
+SS_007
+Wooden Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_008
+Banded Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_009
+Braced Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_010
+Iron Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_011
+Reinforced Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_012
+Fortified Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_013
+Sacred Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_014
+Divine Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_015
+Goddess Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_016
+Hylian Shield
+Bouclier
+R2 / BOUC
+Q2 / S24
+SS_017
+Knight’s Uniform
+Tenue
+R1 / TENUE
+H1 / S23
+SS_018
+Slingshot
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_019
+Scattershot
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_020
+Beetle
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_021
+Hook Beetle
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_022
+Quick Beetle
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_023
+Tough Beetle
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_024
+Gust Bellows
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_025
+Whip
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_026
+Clawshots
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_027
+Bug Net
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_028
+Big Bug Net
+Outil
+R2 / OUTIL
+Q2 / S24
+SS_029
+Bow
+2 mains
+R2 / ARC
+Q2 / S24
+SS_030
+Iron Bow
+2 mains
+R2 / ARC
+Q2 / S24
+SS_031
+Sacred Bow
+2 mains
+R4 / ARC
+Q4 / S24
+
+===== PAGE 62 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+062
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+SS_032
+Bomb
+Outil
+R2 / BOMBE
+B2 / S23
+SS_033
+Sailcloth
+Exploration
+R2 / TRAV
+H2 / S23
+SS_034
+Digging Mitts
+Exploration
+R2 / TRAV
+H2 / S23
+SS_035
+Mogma Mitts
+Exploration
+R2 / TRAV
+H2 / S23
+SS_036
+Water Dragon’s Scale
+Exploration
+R2 / TRAV
+H2 / S23
+SS_037
+Fireshield Earrings
+Accessoire
+R3 / IGNI
+Q3 / S23
+SS_038
+Goddess's Harp
+Instrument
+R2 / CHANT
+H2 / S23
+SS_039
+Bug Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_040
+Cursed Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_041
+Heart Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_042
+Life Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_043
+Rupee Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_044
+Treasure Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_045
+Potion Medal
+Accessoire
+R2 / ACCES
+Q2 / S24
+SS_046
+Adventure Pouch
+Capacité
+R2 / SAC
+Q2 / S24
+SS_047
+Small Seed Satchel
+Capacité
+R2 / SAC
+Q2 / S24
+SS_048
+Medium Seed Satchel
+Capacité
+R2 / SAC
+Q2 / S24
+SS_049
+Large Seed Satchel
+Capacité
+R2 / SAC
+Q2 / S24
+SS_050
+Bomb Bag
+Capacité
+R2 / SAC
+Q2 / S24
+SS_051
+Medium Bomb Bag
+Capacité
+R2 / SAC
+Q2 / S24
+SS_052
+Large Bomb Bag
+Capacité
+R2 / SAC
+Q2 / S24
+SS_053
+Small Quiver
+Capacité
+R2 / SAC
+Q2 / S24
+SS_054
+Medium Quiver
+Capacité
+R2 / SAC
+Q2 / S24
+SS_055
+Large Quiver
+Capacité
+R2 / SAC
+Q2 / S24
+Les médailles sont sept types, même si plusieurs exemplaires de certaines existent. L’épée progresse
+par états successifs ; la vraie Master Sword ne s’équipe pas en même temps que sa version antérieure
+[S23, S24].
+
+===== PAGE 63 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+063
+ANNEXE F.ALBW
+A Link Between Worlds
+Archive ouverte au chapitre 5. Première sortie : 2013. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+ALBW_001
+Captain’s Sword
+1 main
+R2 / LAME
+H2 / S25
+ALBW_002
+Master Sword
+1 main
+R4 / LAME
+Q4 / S25
+ALBW_003
+Master Sword Lv2
+1 main
+R2 / LAME
+H2 / S25
+ALBW_004
+Master Sword Lv3
+1 main
+R5 / LAME
+Q5 / S25
+ALBW_005
+Shield
+Bouclier
+R2 / BOUC
+Q2 / S25
+ALBW_006
+Hylian Shield
+Bouclier
+R2 / BOUC
+Q2 / S25
+ALBW_007
+Green Tunic
+Tenue
+R2 / TENUE
+Q2 / S25
+ALBW_008
+Blue Mail
+Tenue
+R2 / TENUE
+Q2 / S25
+ALBW_009
+Red Mail
+Tenue
+R2 / TENUE
+Q2 / S25
+ALBW_010
+Bombs
+Outil
+R2 / BOMBE
+Q2 / S25
+ALBW_011
+Nice Bombs
+Outil
+R2 / BOMBE
+Q2 / S25
+ALBW_012
+Bow
+2 mains
+R2 / ARC
+Q2 / S25
+ALBW_013
+Nice Bow
+2 mains
+R2 / ARC
+Q2 / S25
+ALBW_014
+Bow of Light
+2 mains
+R2 / ARC
+Q2 / S25
+ALBW_015
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_016
+Nice Boomerang
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_017
+Fire Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_018
+Nice Fire Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_019
+Ice Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_020
+Nice Ice Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_021
+Hammer
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_022
+Nice Hammer
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_023
+Hookshot
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_024
+Nice Hookshot
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_025
+Sand Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_026
+Nice Sand Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_027
+Tornado Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_028
+Nice Tornado Rod
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_029
+Lamp
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_030
+Super Lamp
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_031
+Bug Net
+Outil
+R2 / OUTIL
+Q2 / S25
+
+===== PAGE 64 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+064
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+ALBW_032
+Super Net
+Outil
+R2 / OUTIL
+Q2 / S25
+ALBW_033
+Ravio’s Bracelet
+Exploration
+R2 / TRAV
+H2 / S25
+ALBW_034
+Power Glove
+Exploration
+R2 / TRAV
+H2 / S25
+ALBW_035
+Titan’s Mitt
+Exploration
+R2 / TRAV
+H2 / S25
+ALBW_036
+Pegasus Boots
+Exploration
+R2 / TRAV
+H2 / S25
+ALBW_037
+Flippers
+Exploration
+R2 / TRAV
+H2 / S25
+ALBW_038
+Hint Glasses
+Accessoire
+R2 / ACCES
+Q2 / S25
+ALBW_039
+Bee Badge
+Accessoire
+R2 / ACCES
+Q2 / S25
+ALBW_040
+Stamina Scroll
+Accessoire
+R2 / ACCES
+Q2 / S25
+ANNEXE F.TFH
+Tri Force Heroes
+Archive ouverte au chapitre 4. Première sortie : 2015. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TFH_001
+Sword
+1 main
+R1 / LAME
+H1 / S26
+TFH_002
+Bomb
+Outil
+R2 / BOMBE
+Q2 / S26
+TFH_003
+Bow
+2 mains
+R2 / ARC
+Q2 / S26
+TFH_004
+Boomerang
+Outil
+R2 / OUTIL
+Q2 / S26
+TFH_005
+Fire Gloves
+Outil
+R2 / OUTIL
+Q2 / S26
+TFH_006
+Gripshot
+Outil
+R2 / OUTIL
+Q2 / S26
+TFH_007
+Gust Jar
+Outil
+R2 / OUTIL
+Q2 / S26
+TFH_008
+Magic Hammer
+Outil
+R2 / OUTIL
+Q2 / S26
+TFH_009
+Water Rod
+Outil
+R2 / OUTIL
+Q2 / S26
+
+===== PAGE 65 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+065
+ANNEXE F.BOTW
+Breath of the Wild
+Archive ouverte au chapitre 2. Première sortie : 2017. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_001
+Master Sword
+1 main
+R4 / LUMIERE
+Q4 / S28
+BOTW_002
+Tree Branch
+1 main
+R1 / LAME
+B1 / S28
+BOTW_003
+Torch
+1 main
+R1 / LAME
+B1 / S28
+BOTW_004
+Soup Ladle
+1 main
+R1 / LAME
+B1 / S28
+BOTW_005
+Boomerang
+1 main
+R2 / LAME
+B2 / S28
+BOTW_006
+Spring-Loaded Hammer
+1 main
+R2 / LAME
+B2 / S28
+BOTW_007
+Traveler's Sword
+1 main
+R1 / LAME
+B1 / S28
+BOTW_008
+Soldier's Broadsword
+1 main
+R2 / LAME
+B2 / S28
+BOTW_009
+Knight's Broadsword
+1 main
+R3 / LAME
+B3 / S28
+BOTW_010
+Royal Broadsword
+1 main
+R4 / LAME
+B4 / S28
+BOTW_011
+Forest Dweller's Sword
+1 main
+R2 / LAME
+B2 / S28
+BOTW_012
+Zora Sword
+1 main
+R2 / LAME
+B2 / S28
+BOTW_013
+Feathered Edge
+1 main
+R2 / LAME
+B2 / S28
+BOTW_014
+Gerudo Scimitar
+1 main
+R2 / LAME
+B2 / S28
+BOTW_015
+Moonlight Scimitar
+1 main
+R2 / LAME
+B2 / S28
+BOTW_016
+Scimitar of the Seven
+1 main
+R5 / LAME
+Q5 / S28
+BOTW_017
+Eightfold Blade
+1 main
+R2 / LAME
+B2 / S28
+BOTW_018
+Ancient Short Sword
+1 main
+R4 / LAME
+B4 / S28
+BOTW_019
+Rusty Broadsword
+1 main
+R1 / LAME
+B1 / S28
+BOTW_020
+Royal Guard's Sword
+1 main
+R4 / LAME
+B4 / S28
+BOTW_021
+Flameblade
+1 main
+R3 / FEU
+B3 / S28
+BOTW_022
+Frostblade
+1 main
+R3 / GLACE
+B3 / S28
+BOTW_023
+Thunderblade
+1 main
+R3 / FOUDRE
+B3 / S28
+BOTW_024
+Boko Club
+1 main
+R1 / LAME
+M1 / S28
+BOTW_025
+Spiked Boko Club
+1 main
+R1 / LAME
+M1 / S28
+BOTW_026
+Dragonbone Boko Club
+1 main
+R3 / LAME
+M3 / S28
+BOTW_027
+Lizal Boomerang
+1 main
+R2 / LAME
+M2 / S28
+BOTW_028
+Lizal Forked Boomerang
+1 main
+R2 / LAME
+M2 / S28
+BOTW_029
+Lizal Tri-Boomerang
+1 main
+R2 / LAME
+M2 / S28
+BOTW_030
+Guardian Sword
+1 main
+R3 / LAME
+M3 / S28
+BOTW_031
+Guardian Sword+
+1 main
+R3 / LAME
+M3 / S28
+
+===== PAGE 66 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+066
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_032
+Guardian Sword++
+1 main
+R4 / LAME
+M4 / S28
+BOTW_033
+Lynel Sword
+1 main
+R2 / LAME
+M2 / S28
+BOTW_034
+Mighty Lynel Sword
+1 main
+R4 / LAME
+M4 / S28
+BOTW_035
+Savage Lynel Sword
+1 main
+R5 / LAME
+M5 / S28
+BOTW_036
+Fire Rod
+1 main
+R2 / FEU
+B2 / S28
+BOTW_037
+Meteor Rod
+1 main
+R2 / FEU
+B2 / S28
+BOTW_038
+Ice Rod
+1 main
+R2 / GLACE
+B2 / S28
+BOTW_039
+Blizzard Rod
+1 main
+R2 / GLACE
+B2 / S28
+BOTW_040
+Lightning Rod
+1 main
+R2 / FOUDRE
+B2 / S28
+BOTW_041
+Thunderstorm Rod
+1 main
+R3 / FOUDRE
+B3 / S28
+BOTW_042
+Vicious Sickle
+1 main
+R2 / LAME
+B2 / S28
+BOTW_043
+Demon Carver
+1 main
+R2 / LAME
+B2 / S28
+BOTW_044
+Korok Leaf
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_045
+Farming Hoe
+2 mains
+R1 / LOURD
+B1 / S29
+BOTW_046
+Boat Oar
+2 mains
+R1 / LOURD
+B1 / S29
+BOTW_047
+Woodcutter's Axe
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_048
+Double Axe
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_049
+Iron Sledgehammer
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_050
+Giant Boomerang
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_051
+Traveler's Claymore
+2 mains
+R1 / LOURD
+B1 / S29
+BOTW_052
+Soldier's Claymore
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_053
+Knight's Claymore
+2 mains
+R3 / LOURD
+B3 / S29
+BOTW_054
+Royal Claymore
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_055
+Silver Longsword
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_056
+Cobble Crusher
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_057
+Stone Smasher
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_058
+Boulder Breaker
+2 mains
+R5 / LOURD
+Q5 / S29
+BOTW_059
+Golden Claymore
+2 mains
+R3 / LOURD
+B3 / S29
+BOTW_060
+Eightfold Longblade
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_061
+Edge of Duality
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_062
+Ancient Bladesaw
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_063
+Rusty Claymore
+2 mains
+R1 / LOURD
+B1 / S29
+BOTW_064
+Royal Guard's Claymore
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_065
+Great Flameblade
+2 mains
+R3 / FEU
+B3 / S29
+BOTW_066
+Great Frostblade
+2 mains
+R3 / GLACE
+B3 / S29
+BOTW_067
+Great Thunderblade
+2 mains
+R3 / FOUDRE
+B3 / S29
+
+===== PAGE 67 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+067
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_068
+Boko Bat
+2 mains
+R1 / LOURD
+M1 / S29
+BOTW_069
+Spiked Boko Bat
+2 mains
+R1 / LOURD
+M1 / S29
+BOTW_070
+Dragonbone Boko Bat
+2 mains
+R3 / LOURD
+M3 / S29
+BOTW_071
+Moblin Club
+2 mains
+R2 / LOURD
+M2 / S29
+BOTW_072
+Spiked Moblin Club
+2 mains
+R2 / LOURD
+M2 / S29
+BOTW_073
+Dragonbone Moblin Club
+2 mains
+R3 / LOURD
+M3 / S29
+BOTW_074
+Ancient Battle Axe
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_075
+Ancient Battle Axe+
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_076
+Ancient Battle Axe++
+2 mains
+R4 / LOURD
+B4 / S29
+BOTW_077
+Lynel Crusher
+2 mains
+R2 / LOURD
+M2 / S29
+BOTW_078
+Mighty Lynel Crusher
+2 mains
+R4 / LOURD
+M4 / S29
+BOTW_079
+Savage Lynel Crusher
+2 mains
+R5 / LOURD
+M5 / S29
+BOTW_080
+Windcleaver
+2 mains
+R2 / LOURD
+B2 / S29
+BOTW_081
+Moblin Arm
+2 mains
+R2 / LOURD
+M2 / S29
+BOTW_082
+Wooden Mop
+Lance
+R1 / LANCE
+B1 / S30
+BOTW_083
+Farmer's Pitchfork
+Lance
+R1 / LANCE
+B1 / S30
+BOTW_084
+Fishing Harpoon
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_085
+Throwing Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_086
+Traveler's Spear
+Lance
+R1 / LANCE
+B1 / S30
+BOTW_087
+Soldier's Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_088
+Knight's Halberd
+Lance
+R3 / LANCE
+B3 / S30
+BOTW_089
+Royal Halberd
+Lance
+R4 / LANCE
+B4 / S30
+BOTW_090
+Forest Dweller's Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_091
+Zora Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_092
+Silverscale Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_093
+Ceremonial Trident
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_094
+Lightscale Trident
+Lance
+R5 / LANCE
+Q5 / S30
+BOTW_095
+Drillshaft
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_096
+Feathered Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_097
+Gerudo Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_098
+Serpentine Spear
+Lance
+R2 / LANCE
+B2 / S30
+BOTW_099
+Ancient Spear
+Lance
+R4 / LANCE
+B4 / S30
+BOTW_100
+Rusty Halberd
+Lance
+R1 / LANCE
+B1 / S30
+BOTW_101
+Royal Guard's Spear
+Lance
+R4 / LANCE
+B4 / S30
+BOTW_102
+Flamespear
+Lance
+R3 / FEU
+B3 / S30
+BOTW_103
+Frostspear
+Lance
+R3 / GLACE
+B3 / S30
+
+===== PAGE 68 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+068
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_104
+Thunderspear
+Lance
+R3 / FOUDRE
+B3 / S30
+BOTW_105
+Boko Spear
+Lance
+R1 / LANCE
+M1 / S30
+BOTW_106
+Spiked Boko Spear
+Lance
+R1 / LANCE
+M1 / S30
+BOTW_107
+Dragonbone Boko Spear
+Lance
+R3 / LANCE
+M3 / S30
+BOTW_108
+Moblin Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_109
+Spiked Moblin Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_110
+Dragonbone Moblin Spear
+Lance
+R3 / LANCE
+M3 / S30
+BOTW_111
+Lizal Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_112
+Enhanced Lizal Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_113
+Forked Lizal Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_114
+Guardian Spear
+Lance
+R3 / LANCE
+M3 / S30
+BOTW_115
+Guardian Spear+
+Lance
+R3 / LANCE
+M3 / S30
+BOTW_116
+Guardian Spear++
+Lance
+R4 / LANCE
+M4 / S30
+BOTW_117
+Lynel Spear
+Lance
+R2 / LANCE
+M2 / S30
+BOTW_118
+Mighty Lynel Spear
+Lance
+R4 / LANCE
+M4 / S30
+BOTW_119
+Savage Lynel Spear
+Lance
+R5 / LANCE
+M5 / S30
+BOTW_120
+Bow of Light
+Arc
+R5 / LUMIERE
+Q5 / S31
+BOTW_121
+Wooden Bow
+Arc
+R1 / ARC
+B1 / S31
+BOTW_122
+Traveler's Bow
+Arc
+R1 / ARC
+B1 / S31
+BOTW_123
+Soldier's Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_124
+Knight's Bow
+Arc
+R3 / ARC
+B3 / S31
+BOTW_125
+Royal Bow
+Arc
+R4 / ARC
+B4 / S31
+BOTW_126
+Forest Dweller's Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_127
+Silver Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_128
+Swallow Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_129
+Falcon Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_130
+Great Eagle Bow
+Arc
+R5 / ARC
+Q5 / S31
+BOTW_131
+Phrenic Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_132
+Golden Bow
+Arc
+R3 / ARC
+B3 / S31
+BOTW_133
+Ancient Bow
+Arc
+R4 / ARC
+B4 / S31
+BOTW_134
+Royal Guard's Bow
+Arc
+R4 / ARC
+B4 / S31
+BOTW_135
+Boko Bow
+Arc
+R1 / ARC
+M1 / S31
+BOTW_136
+Spiked Boko Bow
+Arc
+R1 / ARC
+M1 / S31
+BOTW_137
+Dragon Bone Boko Bow
+Arc
+R3 / ARC
+M3 / S31
+BOTW_138
+Lizal Bow
+Arc
+R2 / ARC
+M2 / S31
+BOTW_139
+Strengthened Lizal Bow
+Arc
+R2 / ARC
+M2 / S31
+
+===== PAGE 69 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+069
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_140
+Steel Lizal Bow
+Arc
+R3 / ARC
+M3 / S31
+BOTW_141
+Duplex Bow
+Arc
+R2 / ARC
+B2 / S31
+BOTW_142
+Lynel Bow
+Arc
+R2 / ARC
+M2 / S31
+BOTW_143
+Mighty Lynel Bow
+Arc
+R4 / ARC
+M4 / S31
+BOTW_144
+Savage Lynel Bow
+Arc
+R5 / ARC
+M5 / S31
+BOTW_145
+Twilight Bow (amiibo)
+Arc
+R4 / ARC
+B4 / S31
+BOTW_146
+Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_147
+Fire Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_148
+Ice Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_149
+Shock Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_150
+Bomb Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_151
+Ancient Arrow
+Arc
+R4 / MUN
+B4 / S31
+BOTW_152
+Light Arrow
+Arc
+R2 / MUN
+B2 / S31
+BOTW_153
+Bokoblin Arm
+1 main
+R2 / LAME
+M2 / S28
+BOTW_154
+Lizalfos Arm
+1 main
+R2 / LAME
+M2 / S28
+BOTW_155
+Hylian Shield
+Bouclier
+R5 / BOUC
+Q5 / S32
+BOTW_156
+Pot Lid
+Bouclier
+R1 / BOUC
+B1 / S32
+BOTW_157
+Wooden Shield
+Bouclier
+R1 / BOUC
+B1 / S32
+BOTW_158
+Emblazoned Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_159
+Hunter's Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_160
+Fisherman's Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_161
+Traveler's Shield
+Bouclier
+R1 / BOUC
+B1 / S32
+BOTW_162
+Soldier's Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_163
+Knight's Shield
+Bouclier
+R3 / BOUC
+B3 / S32
+BOTW_164
+Royal Shield
+Bouclier
+R4 / BOUC
+B4 / S32
+BOTW_165
+Forest Dweller's Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_166
+Silver Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_167
+Kite Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_168
+Gerudo Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_169
+Radiant Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_170
+Daybreaker
+Bouclier
+R5 / BOUC
+Q5 / S32
+BOTW_171
+Shield of the Mind's Eye
+Bouclier
+R2 / BOUC
+B2 / S32
+BOTW_172
+Ancient Shield
+Bouclier
+R4 / BOUC
+B4 / S32
+BOTW_173
+Rusty Shield
+Bouclier
+R1 / BOUC
+B1 / S32
+BOTW_174
+Royal Guard's Shield
+Bouclier
+R4 / BOUC
+B4 / S32
+BOTW_175
+Hero's Shield
+Bouclier
+R2 / BOUC
+B2 / S32
+
+===== PAGE 70 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+070
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_176
+Boko Shield
+Bouclier
+R2 / BOUC
+M2 / S32
+BOTW_177
+Spiked Boko Shield
+Bouclier
+R2 / BOUC
+M2 / S32
+BOTW_178
+Dragonbone Boko Shield
+Bouclier
+R3 / BOUC
+M3 / S32
+BOTW_179
+Lizal Shield
+Bouclier
+R2 / BOUC
+M2 / S32
+BOTW_180
+Reinforced Lizal Shield
+Bouclier
+R2 / BOUC
+M2 / S32
+BOTW_181
+Steel Lizal Shield
+Bouclier
+R3 / BOUC
+M3 / S32
+BOTW_182
+Guardian Shield
+Bouclier
+R3 / BOUC
+M3 / S32
+BOTW_183
+Guardian Shield+
+Bouclier
+R3 / BOUC
+M3 / S32
+BOTW_184
+Guardian Shield++
+Bouclier
+R4 / BOUC
+M4 / S32
+BOTW_185
+Lynel Shield
+Bouclier
+R2 / BOUC
+M2 / S32
+BOTW_186
+Mighty Lynel Shield
+Bouclier
+R4 / BOUC
+M4 / S32
+BOTW_187
+Savage Lynel Shield
+Bouclier
+R5 / BOUC
+M5 / S32
+BOTW_188
+Sword
+1 main
+R2 / LAME
+B2 / S33
+BOTW_189
+Goddess Sword
+2 mains
+R2 / LOURD
+B2 / S33
+BOTW_190
+Biggoron's Sword
+2 mains
+R4 / LOURD
+Q4 / S33
+BOTW_191
+Sword of the Six Sages
+2 mains
+R4 / LOURD
+B4 / S33
+BOTW_192
+Fierce Deity Sword
+2 mains
+R5 / LOURD
+Q5 / S33
+BOTW_193
+Sea-Breeze Boomerang
+1 main
+R2 / LAME
+B2 / S33
+BOTW_194
+One-Hit Obliterator
+Apparence
+R5 / COS
+Q5 / S50
+BOTW_195
+Stealth Mask
+Tête
+R2 / VIF
+Q2 / S34
+BOTW_196
+Stealth Chest Guard
+Torse
+R2 / VIF
+Q2 / S34
+BOTW_197
+Stealth Tights
+Jambes
+R2 / VIF
+Q2 / S34
+BOTW_198
+Flamebreaker Helm
+Tête
+R2 / IGNI
+Q2 / S34
+BOTW_199
+Flamebreaker Armor
+Torse
+R2 / IGNI
+Q2 / S34
+BOTW_200
+Flamebreaker Boots
+Jambes
+R2 / IGNI
+Q2 / S34
+BOTW_201
+Zora Helm
+Tête
+R2 / EAU
+Q2 / S34
+BOTW_202
+Zora Armor
+Torse
+R2 / EAU
+Q2 / S34
+BOTW_203
+Zora Greaves
+Jambes
+R2 / EAU
+Q2 / S34
+BOTW_204
+Snowquill Headdress
+Tête
+R2 / FROID
+Q2 / S34
+BOTW_205
+Snowquill Tunic
+Torse
+R2 / FROID
+Q2 / S34
+BOTW_206
+Snowquill Trousers
+Jambes
+R2 / FROID
+Q2 / S34
+BOTW_207
+Hylian Hood
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_208
+Hylian Tunic
+Torse
+R2 / TENUE
+Q2 / S34
+BOTW_209
+Hylian Trousers
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_210
+Gerudo Veil
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_211
+Gerudo Top
+Torse
+R2 / TENUE
+Q2 / S34
+
+===== PAGE 71 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+071
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_212
+Gerudo Sirwal
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_213
+Climber's Bandanna
+Tête
+R2 / VIF
+Q2 / S34
+BOTW_214
+Climbing Gear
+Torse
+R2 / VIF
+Q2 / S34
+BOTW_215
+Climbing Boots
+Jambes
+R2 / VIF
+Q2 / S34
+BOTW_216
+Desert Voe Headband
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_217
+Desert Voe Spaulder
+Torse
+R2 / TENUE
+Q2 / S34
+BOTW_218
+Desert Voe Trousers
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_219
+Soldier's Helm
+Tête
+R2 / GARDE
+Q2 / S34
+BOTW_220
+Soldier's Armor
+Torse
+R2 / GARDE
+Q2 / S34
+BOTW_221
+Soldier's Greaves
+Jambes
+R2 / GARDE
+Q2 / S34
+BOTW_222
+Barbarian Helm
+Tête
+R2 / FORCE
+Q2 / S34
+BOTW_223
+Barbarian Armor
+Torse
+R2 / FORCE
+Q2 / S34
+BOTW_224
+Barbarian Leg Wraps
+Jambes
+R2 / FORCE
+Q2 / S34
+BOTW_225
+Rubber Helm
+Tête
+R2 / ISOL
+Q2 / S34
+BOTW_226
+Rubber Armor
+Torse
+R2 / ISOL
+Q2 / S34
+BOTW_227
+Rubber Tights
+Jambes
+R2 / ISOL
+Q2 / S34
+BOTW_228
+Radiant Mask
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_229
+Radiant Shirt
+Torse
+R2 / TENUE
+Q2 / S34
+BOTW_230
+Radiant Tights
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_231
+Ancient Helm
+Tête
+R3 / TENUE
+Q3 / S34
+BOTW_232
+Ancient Cuirass
+Torse
+R3 / TENUE
+Q3 / S34
+BOTW_233
+Ancient Greaves
+Jambes
+R3 / TENUE
+Q3 / S34
+BOTW_234
+Dark Hood
+Tête
+R2 / VIF
+Q2 / S34
+BOTW_235
+Dark Tunic
+Torse
+R2 / VIF
+Q2 / S34
+BOTW_236
+Dark Trousers
+Jambes
+R2 / VIF
+Q2 / S34
+BOTW_237
+Cap of the Wild
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_238
+Tunic of the Wild
+Torse
+R2 / TENUE
+Q2 / S34
+BOTW_239
+Trousers of the Wild
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_240
+Salvager Headwear
+Tête
+R2 / TENUE
+Q2 / S34
+BOTW_241
+Salvager Vest
+Torse
+R2 / TENUE
+Q2 / S34
+BOTW_242
+Salvager Trousers
+Jambes
+R2 / TENUE
+Q2 / S34
+BOTW_243
+Phantom Ganon Skull
+Tête
+R3 / FORCE
+Q3 / S34
+BOTW_244
+Phantom Ganon Armor
+Torse
+R3 / FORCE
+Q3 / S34
+BOTW_245
+Phantom Ganon Greaves
+Jambes
+R3 / FORCE
+Q3 / S34
+BOTW_246
+Phantom Helmet
+Tête
+R3 / FORCE
+Q3 / S34
+BOTW_247
+Phantom Armor
+Torse
+R3 / FORCE
+Q3 / S34
+
+===== PAGE 72 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+072
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_248
+Phantom Greaves
+Jambes
+R3 / FORCE
+Q3 / S34
+BOTW_249
+Tingle's Hood
+Tête
+R2 / VIF
+Q2 / S34
+BOTW_250
+Tingle's Shirt
+Torse
+R2 / VIF
+Q2 / S35
+BOTW_251
+Tingle's Tights
+Jambes
+R2 / VIF
+Q2 / S35
+BOTW_252
+Royal Guard Cap
+Tête
+R3 / GARDE
+Q3 / S35
+BOTW_253
+Royal Guard Uniform
+Torse
+R3 / GARDE
+Q3 / S35
+BOTW_254
+Royal Guard Boots
+Jambes
+R3 / GARDE
+Q3 / S35
+BOTW_255
+Cap of the Hero
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_256
+Tunic of the Hero
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_257
+Trousers of the Hero
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_258
+Cap of Time
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_259
+Tunic of Time
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_260
+Trousers of Time
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_261
+Cap of the Wind
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_262
+Tunic of the Wind
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_263
+Trousers of the Wind
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_264
+Cap of Twilight
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_265
+Tunic of Twilight
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_266
+Trousers of Twilight
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_267
+Cap of the Sky
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_268
+Tunic of the Sky
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_269
+Trousers of the Sky
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_270
+Fierce Deity Mask
+Tête
+R3 / FORCE
+Q3 / S35
+BOTW_271
+Fierce Deity Armor
+Torse
+R3 / FORCE
+Q3 / S35
+BOTW_272
+Fierce Deity Boots
+Jambes
+R3 / FORCE
+Q3 / S35
+BOTW_273
+Diamond Circlet
+Tête
+R2 / FORCE
+Q2 / S35
+BOTW_274
+Ruby Circlet
+Tête
+R2 / IGNI
+Q2 / S35
+BOTW_275
+Sapphire Circlet
+Tête
+R2 / FROID
+Q2 / S35
+BOTW_276
+Topaz Earrings
+Tête
+R2 / ISOL
+Q2 / S35
+BOTW_277
+Opal Earrings
+Tête
+R2 / EAU
+Q2 / S35
+BOTW_278
+Amber Earrings
+Tête
+R2 / GARDE
+Q2 / S35
+BOTW_279
+Thunder Helm
+Tête
+R2 / ISOL
+Q2 / S35
+BOTW_280
+Bokoblin Mask
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_281
+Moblin Mask
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_282
+Lizalfos Mask
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_283
+Lynel Mask
+Tête
+R2 / TENUE
+Q2 / S35
+
+===== PAGE 73 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+073
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+BOTW_284
+Korok Mask
+Tête
+R2 / SAGE
+Q2 / S35
+BOTW_285
+Midna's Helmet
+Tête
+R2 / GARDE
+Q2 / S35
+BOTW_286
+Majora's Mask
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_287
+Zant's Helmet
+Tête
+R2 / FROID
+Q2 / S35
+BOTW_288
+Ravio's Hood
+Tête
+R2 / TENUE
+Q2 / S35
+BOTW_289
+Sheik's Mask
+Tête
+R2 / VIF
+Q2 / S35
+BOTW_290
+Vah Medoh Divine Helm
+Tête
+R3 / TENUE
+Q3 / S35
+BOTW_291
+Vah Rudania Divine Helm
+Tête
+R3 / IGNI
+Q3 / S35
+BOTW_292
+Vah Ruta Divine Helm
+Tête
+R3 / TENUE
+Q3 / S35
+BOTW_293
+Vah Naboris Divine Helm
+Tête
+R3 / ISOL
+Q3 / S35
+BOTW_294
+Old Shirt
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_295
+Champion's Tunic
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_296
+Island Lobster Shirt
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_297
+Warm Doublet
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_298
+Nintendo Switch Shirt
+Torse
+R2 / TENUE
+Q2 / S35
+BOTW_299
+Well-Worn Trousers
+Jambes
+R2 / TENUE
+Q2 / S35
+BOTW_300
+Sand Boots
+Jambes
+R2 / VIF
+Q2 / S35
+BOTW_301
+Snow Boots
+Jambes
+R2 / VIF
+Q2 / S35
+107 pièces de tenue sont listées, compléments DLC, amiibo et promotionnels compris. Les tuniques des
+anciens héros sont des tenues de BOTW faisant référence à d’autres jeux. L’obtention par amiibo n’est
+pas conservée comme exigence dans ce RPG [S33-S35].
+ANNEXE F.TOTK
+Tears of the Kingdom
+Archive ouverte au chapitre 7. Première sortie : 2023. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_001
+Bokoblin Arm
+1 main
+R2 / LAME
+M2 / S36
+TOTK_002
+Boomerang
+1 main
+R2 / LAME
+B2 / S36
+TOTK_003
+Decayed Master Sword
+Relique de quête
+R5 / COS
+Q5 / S36
+TOTK_004
+Eightfold Blade
+1 main
+R2 / LAME
+B2 / S36
+TOTK_005
+Feathered Edge
+1 main
+R2 / LAME
+B2 / S36
+TOTK_006
+Forest Dweller's Sword
+1 main
+R2 / LAME
+B2 / S36
+TOTK_007
+Gerudo Scimitar
+1 main
+R2 / LAME
+B2 / S36
+TOTK_008
+Gloom Sword
+1 main
+R3 / OMBRE
+B3 / S36
+TOTK_009
+Gnarled Wooden Stick
+1 main
+R3 / LAME
+B3 / S36
+
+===== PAGE 74 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+074
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_010
+Knight's Broadsword
+1 main
+R3 / LAME
+B3 / S36
+TOTK_011
+Lizal Boomerang
+1 main
+R2 / LAME
+M2 / S36
+TOTK_012
+Lizalfos Arm
+1 main
+R2 / LAME
+M2 / S36
+TOTK_013
+Magic Rod
+1 main
+R2 / BATON
+B2 / S36
+TOTK_014
+Master Sword
+1 main
+R4 / LUMIERE
+Q4 / S36
+TOTK_015
+Mighty Zonaite Sword
+1 main
+R4 / LAME
+B4 / S36
+TOTK_016
+Royal Broadsword
+1 main
+R4 / LAME
+B4 / S36
+TOTK_017
+Royal Guard's Sword
+1 main
+R4 / LAME
+B4 / S36
+TOTK_018
+Rusty Broadsword
+1 main
+R1 / LAME
+B1 / S36
+TOTK_019
+Scimitar of the Seven
+1 main
+R5 / LAME
+Q5 / S36
+TOTK_020
+Sea-Breeze Boomerang
+1 main
+R2 / LAME
+B2 / S36
+TOTK_021
+Soldier's Broadsword
+1 main
+R2 / LAME
+B2 / S36
+TOTK_022
+Soup Ladle
+1 main
+R1 / LAME
+B1 / S36
+TOTK_023
+Strong Zonaite Sword
+1 main
+R3 / LAME
+B3 / S36
+TOTK_024
+Sturdy Wooden Stick
+1 main
+R1 / LAME
+B1 / S36
+TOTK_025
+Sword of the Hero
+1 main
+R2 / LAME
+B2 / S36
+TOTK_026
+Torch
+1 main
+R1 / LAME
+B1 / S36
+TOTK_027
+Traveler's Sword
+1 main
+R1 / LAME
+B1 / S36
+TOTK_028
+Tree Branch
+1 main
+R1 / LAME
+B1 / S36
+TOTK_029
+White Sword of the Sky
+1 main
+R4 / LAME
+B4 / S36
+TOTK_030
+Wooden Stick
+1 main
+R1 / LAME
+B1 / S36
+TOTK_031
+Zonaite Sword
+1 main
+R3 / LAME
+B3 / S36
+TOTK_032
+Zora Sword
+1 main
+R2 / LAME
+B2 / S36
+TOTK_033
+Biggoron's Sword
+2 mains
+R4 / LOURD
+Q4 / S37
+TOTK_034
+Boat Oar
+2 mains
+R1 / LOURD
+B1 / S37
+TOTK_035
+Boulder Breaker
+2 mains
+R5 / LOURD
+Q5 / S37
+TOTK_036
+Cobble Crusher
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_037
+Dusk Claymore
+2 mains
+R4 / LOURD
+B4 / S37
+TOTK_038
+Eightfold Longblade
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_039
+Farming Hoe
+2 mains
+R1 / LOURD
+B1 / S37
+TOTK_040
+Fierce Deity Sword
+2 mains
+R5 / LOURD
+Q5 / S37
+TOTK_041
+Gerudo Claymore
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_042
+Giant Boomerang
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_043
+Gloom Club
+2 mains
+R3 / OMBRE
+B3 / S37
+TOTK_044
+Gnarled Thick Stick
+2 mains
+R3 / LOURD
+B3 / S37
+TOTK_045
+Knight's Claymore
+2 mains
+R3 / LOURD
+B3 / S37
+
+===== PAGE 75 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+075
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_046
+Magic Scepter
+2 mains
+R2 / BATON
+B2 / S37
+TOTK_047
+Mighty Zonaite Longsword
+2 mains
+R4 / LOURD
+B4 / S37
+TOTK_048
+Moblin Arm
+2 mains
+R2 / LOURD
+M2 / S37
+TOTK_049
+Royal Claymore
+2 mains
+R4 / LOURD
+B4 / S37
+TOTK_050
+Royal Guard's Claymore
+2 mains
+R4 / LOURD
+B4 / S37
+TOTK_051
+Rusty Claymore
+2 mains
+R1 / LOURD
+B1 / S37
+TOTK_052
+Soldier's Claymore
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_053
+Strong Zonaite Longsword
+2 mains
+R3 / LOURD
+B3 / S37
+TOTK_054
+Sturdy Thick Stick
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_055
+Thick Stick
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_056
+Traveler's Claymore
+2 mains
+R1 / LOURD
+B1 / S37
+TOTK_057
+Zonaite Longsword
+2 mains
+R3 / LOURD
+B3 / S37
+TOTK_058
+Zora Longsword
+2 mains
+R2 / LOURD
+B2 / S37
+TOTK_059
+Farmer's Pitchfork
+Lance
+R1 / LANCE
+B1 / S38
+TOTK_060
+Feathered Spear
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_061
+Fishing Harpoon
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_062
+Forest Dweller's Spear
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_063
+Gerudo Spear
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_064
+Gloom Spear
+Lance
+R3 / OMBRE
+B3 / S38
+TOTK_065
+Gnarled Long Stick
+Lance
+R3 / LANCE
+B3 / S38
+TOTK_066
+Knight's Halberd
+Lance
+R3 / LANCE
+B3 / S38
+TOTK_067
+Lightscale Trident
+Lance
+R5 / LANCE
+Q5 / S38
+TOTK_068
+Long Stick
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_069
+Magic Staff
+Lance
+R2 / BATON
+B2 / S38
+TOTK_070
+Mighty Zonaite Spear
+Lance
+R4 / LANCE
+B4 / S38
+TOTK_071
+Royal Guard's Spear
+Lance
+R4 / LANCE
+B4 / S38
+TOTK_072
+Royal Halberd
+Lance
+R4 / LANCE
+B4 / S38
+TOTK_073
+Rusty Halberd
+Lance
+R1 / LANCE
+B1 / S38
+TOTK_074
+Soldier's Spear
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_075
+Strong Zonaite Spear
+Lance
+R3 / LANCE
+B3 / S38
+TOTK_076
+Sturdy Long Stick
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_077
+Throwing Spear
+Lance
+R2 / LANCE
+B2 / S38
+TOTK_078
+Traveler's Spear
+Lance
+R1 / LANCE
+B1 / S38
+TOTK_079
+Wooden Mop
+Lance
+R1 / LANCE
+B1 / S38
+TOTK_080
+Zonaite Spear
+Lance
+R3 / LANCE
+B3 / S38
+TOTK_081
+Zora Spear
+Lance
+R2 / LANCE
+B2 / S38
+
+===== PAGE 76 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+076
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_082
+Boko Bow
+Arc
+R1 / ARC
+M1 / S39
+TOTK_083
+Construct Bow
+Arc
+R2 / ARC
+M2 / S39
+TOTK_084
+Demon King's Bow
+Arc
+R5 / OMBRE
+Q5 / S39
+TOTK_085
+Dragonbone Boko Bow
+Arc
+R3 / ARC
+M3 / S39
+TOTK_086
+Duplex Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_087
+Dusk Bow
+Arc
+R4 / ARC
+B4 / S39
+TOTK_088
+Falcon Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_089
+Forest Dweller's Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_090
+Gerudo Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_091
+Great Eagle Bow
+Arc
+R5 / ARC
+Q5 / S39
+TOTK_092
+Knight's Bow
+Arc
+R3 / ARC
+B3 / S39
+TOTK_093
+Lizal Bow
+Arc
+R2 / ARC
+M2 / S39
+TOTK_094
+Lynel Bow
+Arc
+R2 / ARC
+M2 / S39
+TOTK_095
+Mighty Construct Bow
+Arc
+R4 / ARC
+M4 / S39
+TOTK_096
+Mighty Lynel Bow
+Arc
+R4 / ARC
+M4 / S39
+TOTK_097
+Old Wooden Bow
+Arc
+R1 / ARC
+B1 / S39
+TOTK_098
+Phrenic Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_099
+Royal Bow
+Arc
+R4 / ARC
+B4 / S39
+TOTK_100
+Royal Guard's Bow
+Arc
+R4 / ARC
+B4 / S39
+TOTK_101
+Savage Lynel Bow
+Arc
+R5 / ARC
+M5 / S39
+TOTK_102
+Soldier's Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_103
+Spiked Boko Bow
+Arc
+R1 / ARC
+M1 / S39
+TOTK_104
+Steel Lizal Bow
+Arc
+R3 / ARC
+M3 / S39
+TOTK_105
+Strengthened Lizal Bow
+Arc
+R2 / ARC
+M2 / S39
+TOTK_106
+Strong Construct Bow
+Arc
+R3 / ARC
+M3 / S39
+TOTK_107
+Swallow Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_108
+Traveler's Bow
+Arc
+R1 / ARC
+B1 / S39
+TOTK_109
+Wooden Bow
+Arc
+R1 / ARC
+B1 / S39
+TOTK_110
+Zonaite Bow
+Arc
+R3 / ARC
+B3 / S39
+TOTK_111
+Zora Bow
+Arc
+R2 / ARC
+B2 / S39
+TOTK_112
+Arrow
+Arc
+R2 / MUN
+B2 / S39
+TOTK_113
+Boko Shield
+Bouclier
+R2 / BOUC
+M2 / S40
+TOTK_114
+Daybreaker
+Bouclier
+R5 / BOUC
+Q5 / S40
+TOTK_115
+Dragonbone Boko Shield
+Bouclier
+R3 / BOUC
+M3 / S40
+TOTK_116
+Emblazoned Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_117
+Fisherman's Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+
+===== PAGE 77 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+077
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_118
+Forest Dweller's Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_119
+Gerudo Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_120
+Hunter's Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_121
+Hylian Shield
+Bouclier
+R5 / BOUC
+Q5 / S40
+TOTK_122
+Kite Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_123
+Knight's Shield
+Bouclier
+R3 / BOUC
+B3 / S40
+TOTK_124
+Lizal Shield
+Bouclier
+R2 / BOUC
+M2 / S40
+TOTK_125
+Lynel Shield
+Bouclier
+R2 / BOUC
+M2 / S40
+TOTK_126
+Mighty Lynel Shield
+Bouclier
+R4 / BOUC
+M4 / S40
+TOTK_127
+Mighty Zonaite Shield
+Bouclier
+R4 / BOUC
+B4 / S40
+TOTK_128
+Old Wooden Shield
+Bouclier
+R1 / BOUC
+B1 / S40
+TOTK_129
+Pot Lid
+Bouclier
+R1 / BOUC
+B1 / S40
+TOTK_130
+Radiant Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_131
+Reinforced Lizal Shield
+Bouclier
+R2 / BOUC
+M2 / S40
+TOTK_132
+Royal Guard's Shield
+Bouclier
+R4 / BOUC
+B4 / S40
+TOTK_133
+Royal Shield
+Bouclier
+R4 / BOUC
+B4 / S40
+TOTK_134
+Rusty Shield
+Bouclier
+R1 / BOUC
+B1 / S40
+TOTK_135
+Savage Lynel Shield
+Bouclier
+R5 / BOUC
+M5 / S40
+TOTK_136
+Sea-Breeze Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_137
+Shield of the Mind's Eye
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_138
+Soldier's Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_139
+Spiked Boko Shield
+Bouclier
+R2 / BOUC
+M2 / S40
+TOTK_140
+Steel Lizal Shield
+Bouclier
+R3 / BOUC
+M3 / S40
+TOTK_141
+Strong Zonaite Shield
+Bouclier
+R3 / BOUC
+B3 / S40
+TOTK_142
+Traveler's Shield
+Bouclier
+R1 / BOUC
+B1 / S40
+TOTK_143
+Wooden Shield
+Bouclier
+R1 / BOUC
+B1 / S40
+TOTK_144
+Zonaite Shield
+Bouclier
+R3 / BOUC
+B3 / S40
+TOTK_145
+Zora Shield
+Bouclier
+R2 / BOUC
+B2 / S40
+TOTK_146
+Hylian Hood
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_147
+Soldier's Helm
+Tête
+R2 / GARDE
+Q2 / S41
+TOTK_148
+Snowquill Headdress
+Tête
+R2 / FROID
+Q2 / S41
+TOTK_149
+Flamebreaker Helm
+Tête
+R2 / IGNI
+Q2 / S41
+TOTK_150
+Zora Helm
+Tête
+R2 / EAU
+Q2 / S41
+TOTK_151
+Desert Voe Headband
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_152
+Rubber Helm
+Tête
+R2 / ISOL
+Q2 / S41
+TOTK_153
+Stealth Mask
+Tête
+R2 / VIF
+Q2 / S41
+
+===== PAGE 78 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+078
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_154
+Climber's Bandanna
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_155
+Barbarian Helm
+Tête
+R2 / FORCE
+Q2 / S41
+TOTK_156
+Radiant Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_157
+Royal Guard Cap
+Tête
+R3 / GARDE
+Q3 / S41
+TOTK_158
+Froggy Hood
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_159
+Glide Mask
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_160
+Hood of the Depths
+Tête
+R2 / SAGE
+Q2 / S41
+TOTK_161
+Miner's Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_162
+Mystic Headpiece
+Tête
+R2 / SAGE
+Q2 / S41
+TOTK_163
+Ember Headdress
+Tête
+R2 / FORCE
+Q2 / S41
+TOTK_164
+Charged Headdress
+Tête
+R2 / FORCE
+Q2 / S41
+TOTK_165
+Frostbite Headdress
+Tête
+R2 / FORCE
+Q2 / S41
+TOTK_166
+Yiga Mask
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_167
+Vah Medoh Divine Helm
+Tête
+R3 / TENUE
+Q3 / S41
+TOTK_168
+Vah Rudania Divine Helm
+Tête
+R3 / IGNI
+Q3 / S41
+TOTK_169
+Vah Ruta Divine Helm
+Tête
+R3 / TENUE
+Q3 / S41
+TOTK_170
+Vah Naboris Divine Helm
+Tête
+R3 / ISOL
+Q3 / S41
+TOTK_171
+Zonaite Helm
+Tête
+R2 / SAGE
+Q2 / S41
+TOTK_172
+Diamond Circlet
+Tête
+R2 / FORCE
+Q2 / S41
+TOTK_173
+Ruby Circlet
+Tête
+R2 / IGNI
+Q2 / S41
+TOTK_174
+Sapphire Circlet
+Tête
+R2 / FROID
+Q2 / S41
+TOTK_175
+Topaz Earrings
+Tête
+R2 / ISOL
+Q2 / S41
+TOTK_176
+Opal Earrings
+Tête
+R2 / EAU
+Q2 / S41
+TOTK_177
+Amber Earrings
+Tête
+R2 / GARDE
+Q2 / S41
+TOTK_178
+Well-Worn Hair Band
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_179
+Cece Hat
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_180
+Lightning Helm
+Tête
+R2 / ISOL
+Q2 / S41
+TOTK_181
+Bokoblin Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_182
+Horriblin Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_183
+Moblin Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_184
+Lizalfos Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_185
+Lynel Mask
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_186
+Ravio's Hood
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_187
+Zant's Helmet
+Tête
+R2 / FROID
+Q2 / S41
+TOTK_188
+Midna's Helmet
+Tête
+R2 / GARDE
+Q2 / S41
+TOTK_189
+Majora's Mask
+Tête
+R2 / TENUE
+Q2 / S41
+
+===== PAGE 79 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+079
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_190
+Korok Mask
+Tête
+R2 / SAGE
+Q2 / S41
+TOTK_191
+Tingle's Hood
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_192
+Phantom Helmet
+Tête
+R3 / FORCE
+Q3 / S41
+TOTK_193
+Evil Spirit Mask
+Tête
+R3 / SAGE
+Q3 / S41
+TOTK_194
+Sheik's Mask
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_195
+Dark Hood
+Tête
+R2 / VIF
+Q2 / S41
+TOTK_196
+Fierce Deity Mask
+Tête
+R3 / FORCE
+Q3 / S41
+TOTK_197
+Mask of Awakening
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_198
+Cap of the Wild
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_199
+Cap of the Hero
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_200
+Cap of Time
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_201
+Cap of the Wind
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_202
+Cap of Twilight
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_203
+Cap of the Sky
+Tête
+R2 / TENUE
+Q2 / S41
+TOTK_204
+Ancient Hero's Aspect
+Tenue complète
+R3 / TENUE
+Q3 / S41
+TOTK_205
+Archaic Tunic
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_206
+Hylian Tunic
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_207
+Soldier's Armor
+Torse
+R2 / GARDE
+Q2 / S42
+TOTK_208
+Snowquill Tunic
+Torse
+R2 / FROID
+Q2 / S42
+TOTK_209
+Flamebreaker Armor
+Torse
+R2 / IGNI
+Q2 / S42
+TOTK_210
+Zora Armor
+Torse
+R2 / EAU
+Q2 / S42
+TOTK_211
+Desert Voe Spaulder
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_212
+Rubber Armor
+Torse
+R2 / ISOL
+Q2 / S42
+TOTK_213
+Stealth Chest Guard
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_214
+Climbing Gear
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_215
+Barbarian Armor
+Torse
+R2 / FORCE
+Q2 / S42
+TOTK_216
+Radiant Shirt
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_217
+Royal Guard Uniform
+Torse
+R3 / GARDE
+Q3 / S42
+TOTK_218
+Froggy Sleeve
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_219
+Glide Shirt
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_220
+Tunic of the Depths
+Torse
+R2 / SAGE
+Q2 / S42
+TOTK_221
+Miner's Top
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_222
+Mystic Robe
+Torse
+R2 / SAGE
+Q2 / S42
+TOTK_223
+Ember Shirt
+Torse
+R2 / FORCE
+Q2 / S42
+TOTK_224
+Charged Shirt
+Torse
+R2 / FORCE
+Q2 / S42
+TOTK_225
+Frostbite Shirt
+Torse
+R2 / FORCE
+Q2 / S42
+
+===== PAGE 80 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+080
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_226
+Yiga Armor
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_227
+Zonaite Waistguard
+Torse
+R2 / SAGE
+Q2 / S42
+TOTK_228
+Tunic of Memories
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_229
+Champion's Leathers
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_230
+Island Lobster Shirt
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_231
+Tingle's Shirt
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_232
+Phantom Armor
+Torse
+R3 / FORCE
+Q3 / S42
+TOTK_233
+Evil Spirit Armor
+Torse
+R3 / SAGE
+Q3 / S42
+TOTK_234
+Dark Tunic
+Torse
+R2 / VIF
+Q2 / S42
+TOTK_235
+Fierce Deity Armor
+Torse
+R3 / FORCE
+Q3 / S42
+TOTK_236
+Tunic of Awakening
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_237
+Tunic of the Wild
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_238
+Tunic of the Hero
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_239
+Tunic of Time
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_240
+Tunic of the Wind
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_241
+Tunic of Twilight
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_242
+Tunic of the Sky
+Torse
+R2 / TENUE
+Q2 / S42
+TOTK_243
+Archaic Legwear
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_244
+Archaic Warm Greaves
+Jambes
+R2 / FROID
+Q2 / S43
+TOTK_245
+Hylian Trousers
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_246
+Soldier's Greaves
+Jambes
+R2 / GARDE
+Q2 / S43
+TOTK_247
+Snowquill Trousers
+Jambes
+R2 / FROID
+Q2 / S43
+TOTK_248
+Flamebreaker Boots
+Jambes
+R2 / IGNI
+Q2 / S43
+TOTK_249
+Zora Greaves
+Jambes
+R2 / EAU
+Q2 / S43
+TOTK_250
+Desert Voe Trousers
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_251
+Rubber Tights
+Jambes
+R2 / ISOL
+Q2 / S43
+TOTK_252
+Stealth Tights
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_253
+Climbing Boots
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_254
+Barbarian Leg Wraps
+Jambes
+R2 / FORCE
+Q2 / S43
+TOTK_255
+Radiant Tights
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_256
+Royal Guard Boots
+Jambes
+R3 / GARDE
+Q3 / S43
+TOTK_257
+Froggy Leggings
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_258
+Glide Tights
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_259
+Gaiters of the Depths
+Jambes
+R2 / SAGE
+Q2 / S43
+TOTK_260
+Miner's Trousers
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_261
+Mystic Trousers
+Jambes
+R2 / SAGE
+Q2 / S43
+
+===== PAGE 81 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+081
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+TOTK_262
+Ember Trousers
+Jambes
+R2 / FORCE
+Q2 / S43
+TOTK_263
+Charged Trousers
+Jambes
+R2 / FORCE
+Q2 / S43
+TOTK_264
+Frostbite Trousers
+Jambes
+R2 / FORCE
+Q2 / S43
+TOTK_265
+Yiga Tights
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_266
+Zonaite Shin Guards
+Jambes
+R2 / SAGE
+Q2 / S43
+TOTK_267
+Sand Boots
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_268
+Snow Boots
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_269
+Tingle's Tights
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_270
+Phantom Greaves
+Jambes
+R3 / FORCE
+Q3 / S43
+TOTK_271
+Evil Spirit Greaves
+Jambes
+R3 / SAGE
+Q3 / S43
+TOTK_272
+Dark Trousers
+Jambes
+R2 / VIF
+Q2 / S43
+TOTK_273
+Fierce Deity Boots
+Jambes
+R3 / FORCE
+Q3 / S43
+TOTK_274
+Trousers of Awakening
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_275
+Trousers of the Wild
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_276
+Trousers of the Hero
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_277
+Trousers of Time
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_278
+Trousers of the Wind
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_279
+Trousers of Twilight
+Jambes
+R2 / TENUE
+Q2 / S43
+TOTK_280
+Trousers of the Sky
+Jambes
+R2 / TENUE
+Q2 / S43
+135 pièces de tenue sont listées ; Ancient Hero’s Aspect occupe tout le corps. Les bases d’armes
+nommées sont séparées des états intact/détérioré et des résultats d’Amalgame. Vérifier l’éligibilité de
+chaque base avant d’activer pristine : toute arme n’a pas une version intacte [S36-S43].
+ANNEXE F.EOW
+Echoes of Wisdom
+Archive ouverte au chapitre 6. Première sortie : 2024. Les références de jeu sont documentées dans les sources
+indiquées à chaque ligne. Les valeurs de rang et les voies d’obtention sont des propositions du RPG.
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+EOW_040
+Tri Rod
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_041
+Sword of Might
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_042
+Sword of Might Lv. 2
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_043
+Sword of Might Lv. 3
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_044
+Bow of Might
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_045
+Bow of Might Lv. 2
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_046
+Bow of Might Lv. 3
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_047
+Bombs of Might
+Pouvoir
+R3 / MAGIE
+H6 / S49
+
+===== PAGE 82 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+082
+ID
+Référence canonique C
+Type
+R / profil P
+Accès P / source
+EOW_048
+Bombs of Might Lv. 2
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_049
+Bombs of Might Lv. 3
+Pouvoir
+R3 / MAGIE
+H6 / S49
+EOW_050
+Hylian Shield
+Bouclier
+R4 / BOUC
+Q4 / S49
+EOW_051
+Clockwork Key
+Capacité
+R2 / SAC
+Q2 / S49
+EOW_052
+Fairy Bottle
+Capacité
+R2 / SAC
+Q2 / S49
+Sword of Might est aussi référencée comme Mysterious Sword. Les variantes Lv. 2 / Lv. 3 sont des
+niveaux d’amélioration du même pouvoir ; Bow of Might et Bombs of Might suivent la même logique. Tri
+Rod appartient au système de Zelda [S49].
+ANNEXE G
+Variantes, alias et héritages
+particuliers
+Cas
+Décision de normalisation
+Même objet dans plusieurs
+épisodes
+Conserver origin_occurrences[] et une définition de combat commune seulement si
+une revue manuelle confirme le partage. Les références du catalogue sont des
+occurrences.
+Master Sword / Goddess Sword /
+Golden Sword
+Certaines entrées sont des étapes de transformation ou d’amélioration ; enregistrer
+un arbre de progression. Ne pas affirmer que tous les héros possèdent ces états
+simultanément.
+Green / Blue / Red Mail
+Conserver l’origine : les effets d’ALTTP et de LA ne sont pas automatiquement
+identiques. Les valeurs RPG se fixent indépendamment.
+Magical Boomerang / Magic
+Boomerang
+Conserver le nom source et ajouter un alias de recherche ; ne pas créer deux
+entrées faute de normalisation.
+Oracle : Biggoron et Master
+Sword
+Accès lié aux possibilités de partie reliée ; le RPG remplace les mots de passe par
+une quête croisée des deux archives.
+Anneaux GBA / trophées
+Conserver leur identité de collection ; une apparence ou un trophée suffit lorsqu’il
+n’existe pas d’utilité offensive.
+Nice, +, ++, Lv2, Lv3
+Conserver les variantes nommées du jeu source. Les variantes internes R1-R5 du
+nouveau RPG ne sont pas de nouveaux objets canoniques.
+Armes intactes TOTK
+État paramétré de bases éligibles, pas génération aveugle de doublons pour toutes
+les armes.
+One-Hit Obliterator / armes de
+scénario
+Défis et codex ; aucune arme à victoire instantanée disponible dans la campagne
+normale.
+Ezlo, Midna, Fi, Tri
+Personnages ou guides, même lorsqu’ils sont associés à un objet. Ils ne deviennent
+pas de simples pièces d’équipement échangeables.
+Vêtements de départ /
+promotionnels
+Apparences collectables ; éviter une puissance supérieure liée à une référence
+matérielle ou promotionnelle.
+Navires, trains, selles et brides
+Collections d’exploration séparées. Leur absence du catalogue d’équipement
+personnel est une limite de périmètre annoncée.
+
+===== PAGE 83 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+083
+Complément des accessoires classiques
+Les médailles de Skyward Sword peuvent recevoir des profils plus précis que ACCES : Bug, aide de
+collecte ; Treasure, +1 matériau de contrat ; Rupee, rubis +10 % ; Heart, soins de fioles +10 % ; Life, PV
+max +10 % ; Potion, durée des bonus de potion +1 activation ; Cursed, rubis +20 % mais commande
+Objet bloquée. Ce sont des conversions P des sept références [S24].
+Les charmes Din / Farore / Nayru de MC deviennent respectivement FOR +10 %, FOR et DEF +5 %, DEF
++10 %, avec un seul charme actif. La Cape magique donne une esquive temporaire, la Canne de Byrna
+une barrière, Somaria un bloc de terrain et Pacci une interaction de retournement. Ces commandes
+doivent recevoir des fiches spécifiques avant intégration ; le profil générique OUTIL n’est qu’un
+emplacement de préproduction.
+ANNEXE H
+Jeux dérivés : extension prévue,
+inventaire distinct
+« Tout Zelda » peut aussi englober les jeux dérivés, éditions de diffusion, crossovers et adaptations. Le
+cœur documenté de ce dossier se limite aux 21 jeux principaux. Cette annexe montre comment ouvrir le
+système aux dérivés sans présenter leur contenu comme automatiquement interchangeable avec la
+chronologie principale. Leurs inventaires ne sont pas annoncés exhaustifs.
+Hyrule Warriors : familles documentées
+Les types suivants proviennent du registre d’armes Hyrule Warriors, Legends / Definitive Edition [S47].
+Ils constituent des pistes de classes de compagnons. Leurs niveaux, recolorations et variantes 8-bit ne
+sont pas tous détaillés ici.
+Personnage
+Familles d’armes documentées
+Intégration P
+Link
+Hylian Sword, Magic Rod, Great Fairy, Gauntlets,
+Master Sword, Horse, Spinner
+Lame / mage / invocation
+/ exploration.
+Impa / Sheik
+Giant Blade, Naginata / Harp
+Gardienne lourde /
+soutien musical.
+Lana / Zelda
+Book of Sorcery, Spear, Summoning Gate / Rapier,
+Baton, Dominion Rod
+Magie de terrain /
+lumière.
+Ganondorf / Darunia / Ruto
+Great Swords, Trident / Hammer / Zora Scale
+Boss / tank / mage eau.
+Agitha / Midna / Zant
+Parasol / Shackle / Scimitars
+Invités facultatifs.
+Fi / Ghirahim / Cia
+Goddess Blade / Demon Blade / Scepter
+Esprit ou boss, pas
+équipement ordinaire de
+Link.
+Volga / Wizzro / Twili Midna
+Dragon Spear / Ring / Mirror
+Boss à conversion de
+phase.
+Young Link / Tingle / Linkle
+Mask / Balloon / Crossbows, Boots
+Forme / invité /
+arbalétrière.
+Skull Kid / Toon Link / Tetra
+Ocarina / Light Sword, Sand Wand / Cutlass
+Invités d’archive.
+King Daphnes / Medli / Marin
+Sail / Rito Harp / Bell
+Navigation / soutien /
+chant.
+
+===== PAGE 84 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+084
+Personnage
+Familles d’armes documentées
+Intégration P
+Toon Zelda / Ravio / Yuga
+Phantom Arms / Rental Hammer / Picture Frame
+Possession / outil /
+adversaire.
+Age of Calamity peut inspirer les rôles de groupe et les liens avec les Champions. Age of Imprisonment
+possède sa propre fiche officielle, centrée notamment sur Zelda, Rauru et Mineru [S48]. Leurs
+inventaires complets nécessitent un lot documentaire séparé avant tout engagement de collection
+totale.
+Autres ensembles de références
+Traitement
+Cadence of Hyrule
+Extension rythmique facultative ; ne pas imposer le rythme au combat
+principal. Inventaire non audité ici.
+BS Zelda / Ancient Stone Tablets
+Archives de conservation à étudier séparément ; éditions et diffusion
+particulières.
+Jeux Tingle
+Économie et mini-jeux facultatifs ; pas de présomption de même
+protagoniste ou système d’équipement.
+Jeux CD-i
+Périmètre à décider ; références séparées, jamais mélangées
+silencieusement aux 21 jeux principaux.
+Smash Bros., manga, animation et
+produits dérivés
+Références de représentation, pas preuve d’un objet équipable dans un
+Zelda principal.
+
+===== PAGE 85 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+085
+ANNEXE I
+Données incorporées et remise au
+développeur
+Ce PDF contient une pièce jointe nommée catalogue_zelda_rpg.json. Pour l’extraire, ouvrir le panneau
+« Pièces jointes » d’un lecteur PDF compatible. Certains aperçus web ne montrent pas ce panneau ;
+l’intégralité des références reste lisible dans les tables du document.
+Donnée incorporée
+Contenu
+Version / périmètre
+Date, version du document, statut de proposition et limites du registre.
+items[]
+1257 occurrences avec ID, jeu, nom, catégorie, profil, rang, effet proposé, code d’accès et
+source.
+profiles{}
+Effets génériques et usage de chaque profil.
+unlock_rules{}
+Interprétation complète des codes H / B / Q / M / F / registres.
+sources[]
+50 références avec titre, URL et date de consultation.
+Premier travail de développement recommandé : créer le modèle de données du chapitre 22, importer
+uniquement les douze équipements du prototype, transformer les quatre calculs de la Citerne en tests,
+puis construire le menu d’équipement. Importer le reste du catalogue par familles après validation du
+premier cas complet.
+Critère de fin du premier jalon : Link peut gagner un niveau, porter la tenue Zora, apprendre une
+technique, combattre avec Sheik et Mipha, se transformer trois activations, gagner le boss et recharger
+une sauvegarde correcte. Ce jalon démontre les demandes principales avant l’extension de contenu.
+
+===== PAGE 86 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+086
+ANNEXE J
+Sources et méthode de recherche
+Recherche consultée le 20 septembre 2026. La chronologie et les fiches éditeurs servent aux points
+officiels ; les inventaires communautaires servent au recensement détaillé. Les listes peuvent évoluer ou
+employer des noms régionaux. Le document conserve les URL pour audit et sépare systématiquement
+l’identité de l’objet de l’équilibrage proposé.
+Les descriptions de jeu sont rédigées pour ce projet ; aucun guide de progression original n’est reproduit
+intégralement. Les lieux et procédures d’obtention du RPG sont des créations de conception. La
+présence d’une référence ne signifie pas que le wiki constitue une source officielle Nintendo.
+S01 · Nintendo - histoire officielle de la série
+Nintendo · Ouvrir la source
+https://www.nintendo.com/jp/character/zelda/en/history/index.html
+S02 · Final Fantasy IX - fiche Nintendo / Square Enix
+Éditeur · Ouvrir la source
+https://www.nintendo.com/us/store/products/final-fantasy-ix-switch/
+S03 · Godot - Resources
+Documentation technique · Ouvrir la source
+https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html
+S04 · The Legend of Zelda - Items
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/The_Legend_of_Zelda_Items
+S05 · The Adventure of Link - Items
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/The_Adventure_of_Link_Items
+S06 · A Link to the Past - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/A_Link_to_the_Past_Items
+S07 · Link's Awakening - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Link's_Awakening_Items
+S08 · Ocarina of Time - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Ocarina_of_Time_Items
+S09 · Majora's Mask - Items / Equipment
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/majoras-mask/items/
+S10 · Majora's Mask - les 24 masques
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/Majora%27s_Mask_Masks
+
+===== PAGE 87 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+087
+S11 · Oracle of Seasons - Items / Equipment
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/oracle-of-seasons/items-equipment/
+S12 · Oracle of Ages - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Oracle_of_Ages_Items
+S13 · Magic Ring - registre des 64 anneaux
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Magic_Ring
+S14 · Oracle of Ages - Magical Rings
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/oracle-of-ages/magical-rings/
+S15 · Four Swords - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Items_in_Four_Swords
+S16 · Four Sword - occurrences
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/Four_Sword
+S17 · The Wind Waker - Items
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/The_Wind_Waker_Items
+S18 · Four Swords Adventures - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Four_Swords_Adventures_Items
+S19 · The Minish Cap - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/The_Minish_Cap_Items
+S20 · Twilight Princess - Items / Equipment
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/twilight-princess/items-equipment/
+S21 · Phantom Hourglass - Items / Equipment
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/phantom-hourglass/items-equipment/
+S22 · Spirit Tracks - Items / Equipment
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/spirit-tracks/items-equipment/
+S23 · Skyward Sword - Items
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/Skyward_Sword_Items
+S24 · Skyward Sword - inventaire et améliorations
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Items_in_Skyward_Sword
+
+===== PAGE 88 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+088
+S25 · A Link Between Worlds - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/A_Link_Between_Worlds_Items
+S26 · Tri Force Heroes - Items
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Items_in_Tri_Force_Heroes
+S27 · Tri Force Heroes - Outfits
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Outfit
+S28 · BOTW - armes à une main
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_One-Handed_Weapons
+S29 · BOTW - armes à deux mains
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_Two-Handed_Weapons
+S30 · BOTW - lances
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_Spears
+S31 · BOTW - arcs et flèches
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_Bows
+S32 · BOTW - boucliers
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Shields_in_Breath_of_the_Wild
+S33 · BOTW - objets amiibo
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_amiibo_Exclusive_Weapons
+S34 · BOTW - armures
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Breath_of_the_Wild_Armor
+S35 · BOTW - armures et accessoires
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Armor_in_Breath_of_the_Wild
+S36 · TOTK - armes à une main
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_One-Handed_Weapons
+S37 · TOTK - armes à deux mains
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Two-Handed_Weapons
+S38 · TOTK - lances
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Spears
+
+===== PAGE 89 =====
+LES ÉCHOS DE LA TRIFORCE
+CONCEPTION  /  20.09.2026
+C : référence documentaire     P : adaptation proposée
+089
+S39 · TOTK - arcs
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Bows
+S40 · TOTK - boucliers
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Shields
+S41 · TOTK - armures
+Inventaire communautaire · Ouvrir la source
+https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Armor
+S42 · TOTK - ensembles
+Inventaire communautaire · Ouvrir la source
+https://zeldacentral.com/games/tears-of-the-kingdom/armor-sets/
+S43 · TOTK - inventaire des tenues
+Guide de presse · Ouvrir la source
+https://www.nintendolife.com/guides/zelda-tears-of-the-kingdom-all-armour-locations-and-best-armour-sets
+S44 · Echoes of Wisdom - accessoires
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Accessories_in_Echoes_of_Wisdom
+S45 · Echoes of Wisdom - vêtements
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Clothing_in_Echoes_of_Wisdom
+S46 · Sheik - identité et apparitions
+Inventaire communautaire · Ouvrir la source
+https://www.zeldadungeon.net/wiki/Sheik
+S47 · Hyrule Warriors - familles d’armes
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Weapons_in_Hyrule_Warriors
+S48 · Hyrule Warriors: Age of Imprisonment
+Nintendo · Ouvrir la source
+https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-imprisonment-switch-2/
+S49 · Echoes of Wisdom - inventaire
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/Items_in_Echoes_of_Wisdom
+S50 · One-Hit Obliterator - arme de défi
+Inventaire communautaire · Ouvrir la source
+https://zeldawiki.wiki/wiki/One-Hit_Obliterator

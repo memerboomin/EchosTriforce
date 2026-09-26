@@ -1,0 +1,95 @@
+{
+ "Consumables": [
+  {
+   "Id": "POTION_RED",
+   "Name": "Potion rouge",
+   "Desc": "Rend 35 % PV max à une cible.",
+   "Target": "Ally",
+   "HealHPPct": 0.35,
+   "HealMPPct": 0.0,
+   "Revive": 0.0,
+   "Cleanse": [],
+   "Price": 40,
+   "Max": 10
+  },
+  {
+   "Id": "POTION_GREEN",
+   "Name": "Potion verte",
+   "Desc": "Rend 25 % PM max à une cible.",
+   "Target": "Ally",
+   "HealHPPct": 0.0,
+   "HealMPPct": 0.25,
+   "Revive": 0.0,
+   "Cleanse": [],
+   "Price": 65,
+   "Max": 10
+  },
+  {
+   "Id": "POTION_BLUE",
+   "Name": "Potion bleue",
+   "Desc": "Rend 50 % PV et 30 % PM.",
+   "Target": "Ally",
+   "HealHPPct": 0.5,
+   "HealMPPct": 0.3,
+   "Revive": 0.0,
+   "Cleanse": [],
+   "Price": 150,
+   "Max": 5
+  },
+  {
+   "Id": "FAIRY",
+   "Name": "Fée en flacon",
+   "Desc": "Réanime à 25 % PV sur commande.",
+   "Target": "DeadAlly",
+   "HealHPPct": 0.0,
+   "HealMPPct": 0.0,
+   "Revive": 0.25,
+   "Cleanse": [],
+   "Price": 0,
+   "Max": 3
+  },
+  {
+   "Id": "REMEDY",
+   "Name": "Remède",
+   "Desc": "Retire Poison, Brûlure, Silence ou Cécité.",
+   "Target": "Ally",
+   "HealHPPct": 0.0,
+   "HealMPPct": 0.0,
+   "Revive": 0.0,
+   "Cleanse": [
+    "Poison",
+    "Burn",
+    "Silence",
+    "Blind"
+   ],
+   "Price": 35,
+   "Max": 10
+  },
+  {
+   "Id": "MILK",
+   "Name": "Lait de Lon Lon",
+   "Desc": "Rend 15 % PV au groupe.",
+   "Target": "AllAllies",
+   "HealHPPct": 0.15,
+   "HealMPPct": 0.0,
+   "Revive": 0.0,
+   "Cleanse": [],
+   "Price": 70,
+   "Max": 5
+  },
+  {
+   "Id": "TOWEL",
+   "Name": "Serviette sèche",
+   "Desc": "Retire Mouillé d'une cible.",
+   "Target": "Ally",
+   "HealHPPct": 0.0,
+   "HealMPPct": 0.0,
+   "Revive": 0.0,
+   "Cleanse": [
+    "Wet"
+   ],
+   "Price": 20,
+   "Max": 10
+  }
+ ]
+}

@@ -1,0 +1,399 @@
+{
+  "file": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/exports/SKM_LinkHybrid_LOD1.fbx",
+  "errors": [
+    "image missing: T_Link_Body_BaseColor",
+    "image missing: T_Link_Body_Metallic",
+    "image missing: T_Link_Body_Normal",
+    "image missing: T_Link_Body_Roughness",
+    "image missing: T_Link_Gear_BaseColor",
+    "image missing: T_Link_Gear_Metallic",
+    "image missing: T_Link_Gear_Normal",
+    "image missing: T_Link_Gear_Roughness",
+    "image missing: T_Link_Head_BaseColor",
+    "image missing: T_Link_Head_Metallic",
+    "image missing: T_Link_Head_Normal",
+    "image missing: T_Link_Head_Roughness"
+  ],
+  "meshes": [
+    {
+      "name": "CH_Link_Belt_LOD1",
+      "tris": 99,
+      "verts": 76,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Buckle_LOD1",
+      "tris": 60,
+      "verts": 32,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Head_LOD1",
+      "tris": 6398,
+      "verts": 3478,
+      "uv": true,
+      "materials": [
+        "M_Link_Head"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Pouch_LOD1",
+      "tris": 60,
+      "verts": 32,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Shield_LOD1",
+      "tris": 1022,
+      "verts": 513,
+      "uv": true,
+      "materials": [
+        "M_Link_Gear"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Body_LOD1",
+      "tris": 8933,
+      "verts": 4553,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_BootCuff_L_LOD1",
+      "tris": 302,
+      "verts": 151,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_BootCuff_R_LOD1",
+      "tris": 302,
+      "verts": 151,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_CapTail_LOD1",
+      "tris": 118,
+      "verts": 61,
+      "uv": true,
+      "materials": [
+        "M_Link_Head"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Mask_LOD1",
+      "tris": 184,
+      "verts": 94,
+      "uv": true,
+      "materials": [
+        "M_Link_Gear"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Ocarina_LOD1",
+      "tris": 150,
+      "verts": 77,
+      "uv": true,
+      "materials": [
+        "M_Link_Gear"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_Sheath_LOD1",
+      "tris": 60,
+      "verts": 32,
+      "uv": true,
+      "materials": [
+        "M_Link_Gear"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_ShieldRim_LOD1",
+      "tris": 292,
+      "verts": 146,
+      "uv": true,
+      "materials": [
+        "M_Link_Gear"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    },
+    {
+      "name": "CH_Link_TunicSkirt_LOD1",
+      "tris": 1128,
+      "verts": 564,
+      "uv": true,
+      "materials": [
+        "M_Link_Body"
+      ],
+      "skinned": true,
+      "shape_keys": 0
+    }
+  ],
+  "armatures": [
+    {
+      "name": "root",
+      "bones": [
+        "pelvis",
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05",
+        "neck_01",
+        "neck_02",
+        "head",
+        "clavicle_l",
+        "upperarm_l",
+        "lowerarm_l",
+        "lowerarm_twist_02_l",
+        "lowerarm_twist_01_l",
+        "hand_l",
+        "index_metacarpal_l",
+        "index_01_l",
+        "index_02_l",
+        "index_03_l",
+        "middle_metacarpal_l",
+        "middle_01_l",
+        "middle_02_l",
+        "middle_03_l",
+        "thumb_01_l",
+        "thumb_02_l",
+        "thumb_03_l",
+        "pinky_metacarpal_l",
+        "pinky_01_l",
+        "pinky_02_l",
+        "pinky_03_l",
+        "ring_metacarpal_l",
+        "ring_01_l",
+        "ring_02_l",
+        "ring_03_l",
+        "upperarm_twist_01_l",
+        "upperarm_twist_02_l",
+        "clavicle_r",
+        "upperarm_r",
+        "lowerarm_r",
+        "lowerarm_twist_02_r",
+        "lowerarm_twist_01_r",
+        "hand_r",
+        "pinky_metacarpal_r",
+        "pinky_01_r",
+        "pinky_02_r",
+        "pinky_03_r",
+        "ring_metacarpal_r",
+        "ring_01_r",
+        "ring_02_r",
+        "ring_03_r",
+        "middle_metacarpal_r",
+        "middle_01_r",
+        "middle_02_r",
+        "middle_03_r",
+        "index_metacarpal_r",
+        "index_01_r",
+        "index_02_r",
+        "index_03_r",
+        "thumb_01_r",
+        "thumb_02_r",
+        "thumb_03_r",
+        "weapon_r",
+        "upperarm_twist_01_r",
+        "upperarm_twist_02_r",
+        "thigh_r",
+        "calf_r",
+        "foot_r",
+        "ball_r",
+        "calf_twist_02_r",
+        "calf_twist_01_r",
+        "thigh_twist_01_r",
+        "thigh_twist_02_r",
+        "thigh_l",
+        "calf_l",
+        "foot_l",
+        "ball_l",
+        "calf_twist_02_l",
+        "calf_twist_01_l",
+        "thigh_twist_01_l",
+        "thigh_twist_02_l",
+        "ik_foot_root",
+        "ik_foot_l",
+        "ik_foot_r",
+        "ik_hand_root",
+        "ik_hand_gun",
+        "ik_hand_l",
+        "ik_hand_r",
+        "interaction",
+        "center_of_mass"
+      ],
+      "roots": [
+        "pelvis",
+        "ik_foot_root",
+        "ik_hand_root",
+        "interaction",
+        "center_of_mass"
+      ]
+    }
+  ],
+  "clips": [],
+  "materials": [
+    "M_Link_Body",
+    "M_Link_Gear",
+    "M_Link_Head"
+  ],
+  "images": [
+    {
+      "name": "T_Link_Body_BaseColor",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Body_Metallic",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Body_Normal",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Body_Roughness",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Gear_BaseColor",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Gear_Metallic",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Gear_Normal",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Gear_Roughness",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Head_BaseColor",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Head_Metallic",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Head_Normal",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    },
+    {
+      "name": "T_Link_Head_Roughness",
+      "size": [
+        0,
+        0
+      ],
+      "ok": false
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -0.5761,
+      -0.3051,
+      -0.0
+    ],
+    "max": [
+      0.5673,
+      0.2131,
+      1.8507
+    ],
+    "size": [
+      1.1433,
+      0.5182,
+      1.8507
+    ]
+  },
+  "height_m": 1.8507,
+  "render": "review/09_roundtrip/LOD1/roundtrip_clay_threequarter.png"
+}

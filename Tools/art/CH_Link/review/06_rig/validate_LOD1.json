@@ -1,0 +1,579 @@
+{
+  "blend": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "summary": {
+    "tris_by_lod": {
+      "1": 19240
+    },
+    "fail": [],
+    "warn": [
+      "root: multiple root bones: pelvis, ik_foot_root, ik_hand_root, interaction, center_of_mass"
+    ]
+  },
+  "objects": [
+    {
+      "name": "CH_Link_Belt_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 99,
+        "verts_evaluated": 76,
+        "verts": 76,
+        "faces": 99,
+        "boundary_edges": 53,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Body_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 8933,
+        "verts_evaluated": 4553,
+        "verts": 4553,
+        "faces": 8933,
+        "boundary_edges": 159,
+        "nonmanifold_edges": 0,
+        "islands": 5,
+        "flipped_vs_recalc": 412,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_BootCuff_L_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 302,
+        "verts_evaluated": 151,
+        "verts": 151,
+        "faces": 302,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_BootCuff_R_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 302,
+        "verts_evaluated": 151,
+        "verts": 151,
+        "faces": 302,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Buckle_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 60,
+        "verts_evaluated": 32,
+        "verts": 32,
+        "faces": 60,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_CapTail_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 118,
+        "verts_evaluated": 61,
+        "verts": 61,
+        "faces": 118,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Head"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Guard_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 74,
+        "verts_evaluated": 39,
+        "verts": 39,
+        "faces": 74,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Head_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 6398,
+        "verts_evaluated": 3478,
+        "verts": 3478,
+        "faces": 6398,
+        "boundary_edges": 574,
+        "nonmanifold_edges": 0,
+        "islands": 3,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Head"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Hilt_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 58,
+        "verts_evaluated": 31,
+        "verts": 31,
+        "faces": 58,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Mask_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 184,
+        "verts_evaluated": 94,
+        "verts": 94,
+        "faces": 184,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Ocarina_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 150,
+        "verts_evaluated": 77,
+        "verts": 77,
+        "faces": 150,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Pouch_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 60,
+        "verts_evaluated": 32,
+        "verts": 32,
+        "faces": 60,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Sheath_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 60,
+        "verts_evaluated": 32,
+        "verts": 32,
+        "faces": 60,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_ShieldRim_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 292,
+        "verts_evaluated": 146,
+        "verts": 146,
+        "faces": 292,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_Shield_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 1022,
+        "verts_evaluated": 513,
+        "verts": 513,
+        "faces": 1022,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Gear"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "CH_Link_TunicSkirt_LOD1",
+      "type": "MESH",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "tris_evaluated": 1128,
+        "verts_evaluated": 564,
+        "verts": 564,
+        "faces": 1128,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "islands": 1,
+        "uv_loops_outside_0_1": 0,
+        "materials": [
+          "M_Link_Body"
+        ],
+        "modifiers": [
+          "ARMATURE:Armature"
+        ],
+        "skin": {
+          "armature": "root",
+          "unweighted": 0,
+          "over_influences": 0,
+          "not_normalised": 0,
+          "tiny_weights": 0,
+          "orphan_groups": []
+        }
+      }
+    },
+    {
+      "name": "SOCKET_weapon_r",
+      "type": "SOCKET",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "parent": "root",
+        "parent_bone": "hand_r",
+        "props": {
+          "owner": "phase:06_rig"
+        }
+      }
+    },
+    {
+      "name": "SOCKET_weapon_l",
+      "type": "SOCKET",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "parent": "root",
+        "parent_bone": "hand_l",
+        "props": {
+          "owner": "phase:06_rig"
+        }
+      }
+    },
+    {
+      "name": "SOCKET_back_shield",
+      "type": "SOCKET",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "parent": "root",
+        "parent_bone": "spine_05",
+        "props": {
+          "owner": "phase:06_rig"
+        }
+      }
+    },
+    {
+      "name": "SOCKET_back_sword",
+      "type": "SOCKET",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "parent": "root",
+        "parent_bone": "spine_05",
+        "props": {
+          "owner": "phase:06_rig"
+        }
+      }
+    },
+    {
+      "name": "SOCKET_head",
+      "type": "SOCKET",
+      "warn": [],
+      "fail": [],
+      "info": {
+        "parent": "root",
+        "parent_bone": "head",
+        "props": {
+          "owner": "phase:06_rig"
+        }
+      }
+    },
+    {
+      "name": "root",
+      "type": "ARMATURE",
+      "warn": [
+        "multiple root bones: pelvis, ik_foot_root, ik_hand_root, interaction, center_of_mass"
+      ],
+      "fail": [],
+      "info": {
+        "bones": 88,
+        "deform_bones": 88,
+        "roots": [
+          "pelvis",
+          "ik_foot_root",
+          "ik_hand_root",
+          "interaction",
+          "center_of_mass"
+        ]
+      }
+    }
+  ]
+}

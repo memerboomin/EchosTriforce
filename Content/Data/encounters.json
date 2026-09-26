@@ -1,0 +1,45 @@
+{
+ "Encounters": [
+  {
+   "Id": "ENC_VESTIBULE",
+   "Name": "Vestibule — Octorok",
+   "Enemies": [
+    "octorok"
+   ],
+   "Room": 1,
+   "Boss": false,
+   "Tutorial": "Garde : dégâts reçus ×0,5 jusqu'à ta prochaine activation."
+  },
+  {
+   "Id": "ENC_BASSIN",
+   "Name": "Bassin — deux Chuchus",
+   "Enemies": [
+    "chuchu_water",
+    "chuchu_water"
+   ],
+   "Room": 2,
+   "Boss": false,
+   "Tutorial": "Compare ta tenue actuelle et la tenue Zora : Eau -50 %."
+  },
+  {
+   "Id": "ENC_ECLUSE",
+   "Name": "Écluse — Sentinelle électrique",
+   "Enemies": [
+    "sentinel_elec"
+   ],
+   "Room": 7,
+   "Boss": false,
+   "Tutorial": "Tout aquatique n'est pas une faiblesse unique : Mouillé rend la foudre dangereuse."
+  },
+  {
+   "Id": "ENC_NEREIDE",
+   "Name": "Gardien Néréide",
+   "Enemies": [
+    "nereide"
+   ],
+   "Room": 10,
+   "Boss": true,
+   "Tutorial": "Grappin sur un conduit pendant « Crue » ; deux vannes annulent « Déluge »."
+  }
+ ]
+}

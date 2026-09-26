@@ -1,0 +1,56 @@
+{
+  "blend": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "mode": "material",
+  "engine": "cycles",
+  "bbox_min": [
+    -0.16514910757541656,
+    -0.1869182586669922,
+    1.4899556636810303
+  ],
+  "bbox_max": [
+    0.16303379833698273,
+    0.15998107194900513,
+    1.851040244102478
+  ],
+  "size_xyz": [
+    0.3281829059123993,
+    0.3468993306159973,
+    0.36108458042144775
+  ],
+  "objects": [
+    "CH_Link_Head_LOD0",
+    "CH_Link_Body_LOD0",
+    "CH_Link_CapTail_LOD0",
+    "CH_Link_Hilt_LOD0",
+    "CH_Link_Guard_LOD0"
+  ],
+  "renders": {
+    "side": {
+      "file": "review/05_materials/face/material_side.png",
+      "az_el_lens": [
+        90,
+        0,
+        0
+      ],
+      "distance": 4.1640914529562
+    },
+    "threequarter": {
+      "file": "review/05_materials/face/material_threequarter.png",
+      "az_el_lens": [
+        35,
+        15,
+        50
+      ],
+      "distance": 0.9337916259860825
+    },
+    "front": {
+      "file": "review/05_materials/face/material_front.png",
+      "az_el_lens": [
+        0,
+        0,
+        0
+      ],
+      "distance": 4.173449665307999
+    }
+  }
+}

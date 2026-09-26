@@ -1,0 +1,304 @@
+{
+ "Sources": [
+  {
+   "Id": "S01",
+   "Title": "Nintendo - histoire officielle de la série",
+   "Url": "https://www.nintendo.com/jp/character/zelda/en/history/index.html",
+   "Kind": "Nintendo"
+  },
+  {
+   "Id": "S02",
+   "Title": "Final Fantasy IX - fiche Nintendo / Square Enix",
+   "Url": "https://www.nintendo.com/us/store/products/final-fantasy-ix-switch/",
+   "Kind": "Éditeur"
+  },
+  {
+   "Id": "S03",
+   "Title": "Godot - Resources",
+   "Url": "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html",
+   "Kind": "Documentation technique"
+  },
+  {
+   "Id": "S04",
+   "Title": "The Legend of Zelda - Items",
+   "Url": "https://www.zeldadungeon.net/wiki/The_Legend_of_Zelda_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S05",
+   "Title": "The Adventure of Link - Items",
+   "Url": "https://www.zeldadungeon.net/wiki/The_Adventure_of_Link_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S06",
+   "Title": "A Link to the Past - Items",
+   "Url": "https://zeldadungeon.net/wiki/A_Link_to_the_Past_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S07",
+   "Title": "Link's Awakening - Items",
+   "Url": "https://zeldadungeon.net/wiki/Link's_Awakening_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S08",
+   "Title": "Ocarina of Time - Items",
+   "Url": "https://zeldadungeon.net/wiki/Ocarina_of_Time_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S09",
+   "Title": "Majora's Mask - Items / Equipment",
+   "Url": "https://zeldacentral.com/games/majoras-mask/items/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S10",
+   "Title": "Majora's Mask - les 24 masques",
+   "Url": "https://www.zeldadungeon.net/wiki/Majora%27s_Mask_Masks",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S11",
+   "Title": "Oracle of Seasons - Items / Equipment",
+   "Url": "https://zeldacentral.com/games/oracle-of-seasons/items-equipment/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S12",
+   "Title": "Oracle of Ages - Items",
+   "Url": "https://zeldadungeon.net/wiki/Oracle_of_Ages_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S13",
+   "Title": "Magic Ring - registre des 64 anneaux",
+   "Url": "https://zeldawiki.wiki/wiki/Magic_Ring",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S14",
+   "Title": "Oracle of Ages - Magical Rings",
+   "Url": "https://zeldacentral.com/games/oracle-of-ages/magical-rings/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S15",
+   "Title": "Four Swords - Items",
+   "Url": "https://zeldawiki.wiki/wiki/Items_in_Four_Swords",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S16",
+   "Title": "Four Sword - occurrences",
+   "Url": "https://www.zeldadungeon.net/wiki/Four_Sword",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S17",
+   "Title": "The Wind Waker - Items",
+   "Url": "https://www.zeldadungeon.net/wiki/The_Wind_Waker_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S18",
+   "Title": "Four Swords Adventures - Items",
+   "Url": "https://zeldadungeon.net/wiki/Four_Swords_Adventures_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S19",
+   "Title": "The Minish Cap - Items",
+   "Url": "https://zeldadungeon.net/wiki/The_Minish_Cap_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S20",
+   "Title": "Twilight Princess - Items / Equipment",
+   "Url": "https://zeldacentral.com/games/twilight-princess/items-equipment/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S21",
+   "Title": "Phantom Hourglass - Items / Equipment",
+   "Url": "https://zeldacentral.com/games/phantom-hourglass/items-equipment/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S22",
+   "Title": "Spirit Tracks - Items / Equipment",
+   "Url": "https://zeldacentral.com/games/spirit-tracks/items-equipment/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S23",
+   "Title": "Skyward Sword - Items",
+   "Url": "https://www.zeldadungeon.net/wiki/Skyward_Sword_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S24",
+   "Title": "Skyward Sword - inventaire et améliorations",
+   "Url": "https://zeldawiki.wiki/wiki/Items_in_Skyward_Sword",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S25",
+   "Title": "A Link Between Worlds - Items",
+   "Url": "https://zeldadungeon.net/wiki/A_Link_Between_Worlds_Items",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S26",
+   "Title": "Tri Force Heroes - Items",
+   "Url": "https://zeldawiki.wiki/wiki/Items_in_Tri_Force_Heroes",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S27",
+   "Title": "Tri Force Heroes - Outfits",
+   "Url": "https://zeldawiki.wiki/wiki/Outfit",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S28",
+   "Title": "BOTW - armes à une main",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_One-Handed_Weapons",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S29",
+   "Title": "BOTW - armes à deux mains",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_Two-Handed_Weapons",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S30",
+   "Title": "BOTW - lances",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_Spears",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S31",
+   "Title": "BOTW - arcs et flèches",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_Bows",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S33",
+   "Title": "BOTW - objets amiibo",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_amiibo_Exclusive_Weapons",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S34",
+   "Title": "BOTW - armures",
+   "Url": "https://zeldadungeon.net/wiki/Breath_of_the_Wild_Armor",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S36",
+   "Title": "TOTK - armes à une main",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_One-Handed_Weapons",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S37",
+   "Title": "TOTK - armes à deux mains",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Two-Handed_Weapons",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S38",
+   "Title": "TOTK - lances",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Spears",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S39",
+   "Title": "TOTK - arcs",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Bows",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S40",
+   "Title": "TOTK - boucliers",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Shields",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S41",
+   "Title": "TOTK - armures",
+   "Url": "https://zeldadungeon.net/wiki/Tears_of_the_Kingdom_Armor",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S32",
+   "Title": "BOTW - boucliers",
+   "Url": "https://zeldawiki.wiki/wiki/Shields_in_Breath_of_the_Wild",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S35",
+   "Title": "BOTW - armures et accessoires",
+   "Url": "https://zeldawiki.wiki/wiki/Armor_in_Breath_of_the_Wild",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S42",
+   "Title": "TOTK - ensembles",
+   "Url": "https://zeldacentral.com/games/tears-of-the-kingdom/armor-sets/",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S43",
+   "Title": "TOTK - inventaire des tenues",
+   "Url": "https://www.nintendolife.com/guides/zelda-tears-of-the-kingdom-all-armour-locations-and-best-armour-sets",
+   "Kind": "Guide de presse"
+  },
+  {
+   "Id": "S44",
+   "Title": "Echoes of Wisdom - accessoires",
+   "Url": "https://zeldawiki.wiki/wiki/Accessories_in_Echoes_of_Wisdom",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S45",
+   "Title": "Echoes of Wisdom - vêtements",
+   "Url": "https://zeldawiki.wiki/wiki/Clothing_in_Echoes_of_Wisdom",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S46",
+   "Title": "Sheik - identité et apparitions",
+   "Url": "https://www.zeldadungeon.net/wiki/Sheik",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S47",
+   "Title": "Hyrule Warriors - familles d’armes",
+   "Url": "https://zeldawiki.wiki/wiki/Weapons_in_Hyrule_Warriors",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S48",
+   "Title": "Hyrule Warriors: Age of Imprisonment",
+   "Url": "https://www.nintendo.com/us/store/products/hyrule-warriors-age-of-imprisonment-switch-2/",
+   "Kind": "Nintendo"
+  },
+  {
+   "Id": "S49",
+   "Title": "Echoes of Wisdom - inventaire",
+   "Url": "https://zeldawiki.wiki/wiki/Items_in_Echoes_of_Wisdom",
+   "Kind": "Inventaire communautaire"
+  },
+  {
+   "Id": "S50",
+   "Title": "One-Hit Obliterator - arme de défi",
+   "Url": "https://zeldawiki.wiki/wiki/One-Hit_Obliterator",
+   "Kind": "Inventaire communautaire"
+  }
+ ]
+}

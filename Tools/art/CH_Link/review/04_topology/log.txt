@@ -1,0 +1,27 @@
+00:00.255  blend            | Read blend: "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend"
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+[04_topology] Belt           LOD0    240 tris (0 doubles merged)
+[04_topology] Body           LOD0  21270 tris (1 doubles merged)
+[04_topology] BootCuff_L     LOD0    720 tris (0 doubles merged)
+[04_topology] BootCuff_R     LOD0    720 tris (0 doubles merged)
+[04_topology] Buckle         LOD0    108 tris (0 doubles merged)
+[04_topology] CapTail        LOD0    284 tris (0 doubles merged)
+[04_topology] Guard          LOD0    180 tris (0 doubles merged)
+[04_topology] Head           LOD0  15996 tris (0 doubles merged)
+[04_topology] Hilt           LOD0    116 tris (0 doubles merged)
+[04_topology] Mask           LOD0    440 tris (0 doubles merged)
+[04_topology] Ocarina        LOD0    360 tris (0 doubles merged)
+[04_topology] Pouch          LOD0    108 tris (0 doubles merged)
+[04_topology] Sheath         LOD0    140 tris (0 doubles merged)
+[04_topology] ShieldRim      LOD0    696 tris (0 doubles merged)
+[04_topology] Shield         LOD0   2436 tris (0 doubles merged)
+[04_topology] TunicSkirt     LOD0   2688 tris (0 doubles merged)
+[04_topology] totals {0: 46502, 1: 19240, 2: 7129}
+Info: Saved as "CH_Link_master.blend"
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

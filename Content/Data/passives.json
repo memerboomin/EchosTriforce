@@ -1,0 +1,82 @@
+{
+ "Passives": [
+  {
+   "Id": "P_POISON_RES",
+   "Name": "Résistance poison",
+   "Cost": 4,
+   "AP": 80,
+   "Mods": [
+    {
+     "Stat": "STATUSRES_Poison",
+     "Value": 0.5
+    }
+   ],
+   "Desc": "Poison : chance d'application ×0,5."
+  },
+  {
+   "Id": "P_COUNTER",
+   "Name": "Contre-attaque légère",
+   "Cost": 4,
+   "AP": 150,
+   "Mods": [
+    {
+     "Stat": "COUNTER",
+     "Value": 0.5
+    }
+   ],
+   "Desc": "Après un coup physique subi : riposte P0,5 (sans Résonance)."
+  },
+  {
+   "Id": "P_MP_UP",
+   "Name": "PM +10 %",
+   "Cost": 4,
+   "AP": 80,
+   "Mods": [
+    {
+     "Stat": "MP_PCT",
+     "Value": 0.1
+    }
+   ],
+   "Desc": "PM max +10 %."
+  },
+  {
+   "Id": "P_GUARD_RECOVER",
+   "Name": "Récupération après Garde",
+   "Cost": 2,
+   "AP": 30,
+   "Mods": [
+    {
+     "Stat": "GUARD_REGEN",
+     "Value": 0.05
+    }
+   ],
+   "Desc": "Garde rend 5 % PV max."
+  },
+  {
+   "Id": "PASSIVE_WATER_GUARD",
+   "Name": "Garde aquatique",
+   "Cost": 2,
+   "AP": 80,
+   "Mods": [
+    {
+     "Stat": "RES_Water",
+     "Value": 0.1
+    }
+   ],
+   "Desc": "Résistance eau +10 % (appris avec la tenue Zora)."
+  },
+  {
+   "Id": "P_HP_UP",
+   "Name": "PV +10 %",
+   "Cost": 6,
+   "AP": 150,
+   "Mods": [
+    {
+     "Stat": "HP_PCT",
+     "Value": 0.1
+    }
+   ],
+   "Desc": "PV max +10 %."
+  }
+ ]
+}

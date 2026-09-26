@@ -1,0 +1,93 @@
+{
+  "blend": "/Users/memerboomin/Documents/Claude/Code/Zelda RPG/Tools/art/CH_Link/CH_Link_master.blend",
+  "mode": "clay",
+  "engine": "workbench",
+  "bbox_min": [
+    -0.942002534866333,
+    -0.22200000286102295,
+    0.0
+  ],
+  "bbox_max": [
+    0.9420063495635986,
+    0.21552814543247223,
+    1.851040244102478
+  ],
+  "size_xyz": [
+    1.8840088844299316,
+    0.437528133392334,
+    1.851040244102478
+  ],
+  "objects": [
+    "CH_Link_Body_LOD0",
+    "CH_Link_TunicSkirt_LOD0",
+    "CH_Link_Belt_LOD0",
+    "CH_Link_Buckle_LOD0",
+    "CH_Link_BootCuff_L_LOD0",
+    "CH_Link_BootCuff_R_LOD0",
+    "CH_Link_Head_LOD0",
+    "CH_Link_CapTail_LOD0",
+    "CH_Link_Shield_LOD0",
+    "CH_Link_ShieldRim_LOD0",
+    "CH_Link_Sheath_LOD0",
+    "CH_Link_Hilt_LOD0",
+    "CH_Link_Guard_LOD0",
+    "CH_Link_Pouch_LOD0",
+    "CH_Link_Ocarina_LOD0",
+    "CH_Link_Mask_LOD0"
+  ],
+  "renders": {
+    "front": {
+      "file": "review/03_forms/clay_front.png",
+      "az_el_lens": [
+        0,
+        0,
+        0
+      ],
+      "distance": 4.218764066696167
+    },
+    "side": {
+      "file": "review/03_forms/clay_side.png",
+      "az_el_lens": [
+        90,
+        0,
+        0
+      ],
+      "distance": 4.942004442214966
+    },
+    "threequarter": {
+      "file": "review/03_forms/clay_threequarter.png",
+      "az_el_lens": [
+        35,
+        15,
+        50
+      ],
+      "distance": 3.906115599597493
+    },
+    "back": {
+      "file": "review/03_forms/clay_back.png",
+      "az_el_lens": [
+        180,
+        0,
+        0
+      ],
+      "distance": 4.218764066696167
+    },
+    "ref": {
+      "file": "review/03_forms/clay_ref.png",
+      "az_el_lens": [
+        30.0,
+        15.0,
+        50.0
+      ],
+      "distance": 3.8002471451958013
+    },
+    "gameplay": {
+      "file": "review/03_forms/clay_gameplay_160px.png",
+      "subject_px": 160
+    },
+    "turntable": {
+      "frames": 8,
+      "pattern": "clay_turntable_NN.png"
+    }
+  }
+}

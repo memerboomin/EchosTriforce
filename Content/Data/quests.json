@@ -1,0 +1,92 @@
+{
+ "Quests": [
+  {
+   "Id": "Q_WATER_01",
+   "Name": "La rivière muette",
+   "Chapter": 2,
+   "Steps": [
+    "Analyser une vanne",
+    "Sauver le mécanicien",
+    "Ouvrir trois conduits",
+    "Parler à Mipha"
+   ],
+   "Reward": "Tenue Zora de départ ; apprentissage résistance eau."
+  },
+  {
+   "Id": "Q_FORGE_02",
+   "Name": "Le serment de Biggoron",
+   "Chapter": 6,
+   "Steps": [
+    "Obtenir le plan",
+    "Ramener trois minerais uniques",
+    "Réussir le duel à armes lourdes"
+   ],
+   "Reward": "Épée de Biggoron ; apparence ancienne et moderne."
+  },
+  {
+   "Id": "Q_MOON_24",
+   "Name": "Les visages retrouvés",
+   "Chapter": 8,
+   "Steps": [
+    "Terminer 23 quêtes de masques",
+    "Résoudre quatre salles lunaires",
+    "Refuser de sacrifier un écho"
+   ],
+   "Reward": "Masque du Dieu démon et forme Oni."
+  },
+  {
+   "Id": "Q_SHEIK_03",
+   "Name": "Une seule mémoire",
+   "Chapter": 5,
+   "Steps": [
+    "Protéger les archives",
+    "Reconnaître les trois mélodies",
+    "Choix de dialogue sans verrou de puissance"
+   ],
+   "Reward": "Posture Zelda ; duo Ombre et lame."
+  },
+  {
+   "Id": "Q_MAJOR_01",
+   "Name": "Le reflet apaisé",
+   "Chapter": 9,
+   "Steps": [
+    "Victoire au colisée",
+    "Trois sceaux lunaires",
+    "Duel contre sa propre forme"
+   ],
+   "Reward": "Relique originale Résonance de Majora."
+  },
+  {
+   "Id": "Q_MASTER_01",
+   "Name": "Les trois sceaux",
+   "Chapter": 5,
+   "Steps": [
+    "Preuve de Courage",
+    "Preuve de Sagesse",
+    "Preuve de Puissance",
+    "Retour au piédestal"
+   ],
+   "Reward": "Épée de légende R4 ; amélioration C8."
+  },
+  {
+   "Id": "Q_RING_64",
+   "Name": "Cabinet de Vasu",
+   "Chapter": 3,
+   "Steps": [
+    "Obtenir des jetons dans les deux arcs Oracle",
+    "Choisir un anneau manquant"
+   ],
+   "Reward": "64 anneaux sans dépendance au hasard."
+  },
+  {
+   "Id": "Q_TAILOR_38",
+   "Name": "L'atelier des trois héros",
+   "Chapter": 4,
+   "Steps": [
+    "Défis bombes, arc, vent, exploration, défense",
+    "Crédits de couture"
+   ],
+   "Reward": "38 tenues TFH ; aucun achat externe."
+  }
+ ]
+}

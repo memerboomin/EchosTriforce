@@ -1,0 +1,168 @@
+{
+ "Spirits": [
+  {
+   "Id": "GreatFairy",
+   "Name": "Grande Fée",
+   "Resonance": 60,
+   "Kind": "Heal",
+   "Target": "AllAllies",
+   "Power": 2.0,
+   "Element": "Neutral",
+   "Remove": [
+    "Poison",
+    "Burn",
+    "Silence"
+   ],
+   "Apply": [],
+   "Desc": "Groupe : soin P2 et retire Poison / Brûlure / Silence ; n'annule pas KO.",
+   "Acquire": "C2, première fontaine",
+   "Passive": "Soins +5 %",
+   "Color": "#F4A8D8"
+  },
+  {
+   "Id": "Valoo",
+   "Name": "Valoo",
+   "Resonance": 75,
+   "Kind": "Magical",
+   "Target": "AllEnemies",
+   "Power": 2.3,
+   "Element": "Fire",
+   "Remove": [],
+   "Apply": [
+    {
+     "Status": "Burn",
+     "Chance": 1.0,
+     "Duration": 3,
+     "Magnitude": 0.0
+    }
+   ],
+   "Desc": "Tous ennemis : feu P2,3 ; Brûlure 100 % si sensible.",
+   "Acquire": "C6, sommet de l'île",
+   "Passive": "Feu +5 %",
+   "Color": "#E0522B"
+  },
+  {
+   "Id": "Jabun",
+   "Name": "Jabun",
+   "Resonance": 75,
+   "Kind": "Magical",
+   "Target": "AllEnemies",
+   "Power": 2.0,
+   "Element": "Water",
+   "Remove": [],
+   "Apply": [
+    {
+     "Status": "Wet",
+     "Chance": 1.0,
+     "Duration": 2,
+     "Magnitude": 0.0
+    }
+   ],
+   "Desc": "Tous ennemis : eau P2 ; Mouillé ; alliés eau reçue -25 % durant 2 activations.",
+   "Acquire": "C6, grotte marine",
+   "Passive": "Eau +5 %",
+   "Color": "#3E8FD1"
+  },
+  {
+   "Id": "FourGiants",
+   "Name": "Les Quatre Géants",
+   "Resonance": 100,
+   "Kind": "Magical",
+   "Target": "AllEnemies",
+   "Power": 2.0,
+   "Element": "Earth",
+   "Remove": [],
+   "Apply": [],
+   "Desc": "Tous ennemis P2 terre ; annule une attaque de catastrophe télégraphiée compatible.",
+   "Acquire": "C4, pacte des quatre régions",
+   "Passive": "Brèche +5",
+   "Color": "#8C7A55",
+   "CancelPrepare": true
+  },
+  {
+   "Id": "WindFish",
+   "Name": "Poisson-Rêve",
+   "Resonance": 100,
+   "Kind": "Support",
+   "Target": "AllAllies",
+   "Power": 0.0,
+   "Element": "Neutral",
+   "Remove": [],
+   "Apply": [],
+   "Desc": "Restaure 20 % PM au groupe et dissipe tous les bonus ennemis non scénarisés.",
+   "Acquire": "C6, réunir huit instruments",
+   "Passive": "PM max +5 %",
+   "Color": "#C9D8F0",
+   "MPRestorePct": 0.2,
+   "Dispel": true
+  },
+  {
+   "Id": "ForestSpirit",
+   "Name": "Esprit de la forêt",
+   "Resonance": 60,
+   "Kind": "Support",
+   "Target": "AllAllies",
+   "Power": 0.0,
+   "Element": "Neutral",
+   "Remove": [],
+   "Apply": [
+    {
+     "Status": "Regen",
+     "Chance": 1.0,
+     "Duration": 3,
+     "Magnitude": 0.05
+    }
+   ],
+   "Desc": "Groupe : régénération 5 % PV, 3 activations ; entrave les ennemis terrestres.",
+   "Acquire": "C1-3, quête Saria",
+   "Passive": "Poison reçu -10 %",
+   "Color": "#63B35C"
+  },
+  {
+   "Id": "Nayru",
+   "Name": "Protection de Nayru",
+   "Resonance": 80,
+   "Kind": "Support",
+   "Target": "AllAllies",
+   "Power": 0.0,
+   "Element": "Neutral",
+   "Remove": [],
+   "Apply": [
+    {
+     "Status": "MagicShield",
+     "Chance": 1.0,
+     "Duration": 2,
+     "Magnitude": 0.5
+    }
+   ],
+   "Desc": "Groupe : dégâts magiques ×0,5, 2 activations (bénédiction, pas contrôle d'une déesse).",
+   "Acquire": "C3, fontaine",
+   "Passive": "",
+   "Color": "#5DA9E9"
+  },
+  {
+   "Id": "Farore",
+   "Name": "Souffle de Farore",
+   "Resonance": 70,
+   "Kind": "Support",
+   "Target": "AllAllies",
+   "Power": 0.0,
+   "Element": "Neutral",
+   "Remove": [
+    "Mire"
+   ],
+   "Apply": [
+    {
+     "Status": "Haste",
+     "Chance": 1.0,
+     "Duration": 2,
+     "Magnitude": 0.0
+    }
+   ],
+   "Desc": "Groupe : Hâte 2 activations ; retire Enlisement.",
+   "Acquire": "C3, fontaine",
+   "Passive": "AGI +1",
+   "Color": "#6CCB70"
+  }
+ ]
+}

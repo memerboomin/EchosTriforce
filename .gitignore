@@ -1,0 +1,20 @@
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.xcworkspace
+*.xcodeproj
+*.sln
+.DS_Store
+
+# Assets extraits de Twilight Princess (régénérables depuis l'ISO : voir README) — jamais dans le dépôt
+Tools/art/tp/
+Content/Art/TP/
+Content/Maps/L_TPLakebed.umap
+# Sources Blender de plus de 100 Mo (refusées par GitHub)
+Tools/art/source/link_model.fbx
+Tools/art/CH_Link/CH_Link_master.blend
+Tools/art/CH_Link/review/03_forms/_body.blend
+*.blend1
+__pycache__/

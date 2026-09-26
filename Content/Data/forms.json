@@ -1,0 +1,160 @@
+{
+ "Forms": [
+  {
+   "Id": "Deku",
+   "Name": "Forme Mojo",
+   "MaskItem": "MM_020",
+   "Resonance": 40,
+   "ATQ": 0.8,
+   "AMAG": 1.1,
+   "DEF": 1.0,
+   "AGI": 1.15,
+   "Taken": {
+    "Fire": 1.25
+   },
+   "Commands": [
+    "F_DEKU_BUBBLE",
+    "F_DEKU_SEEDS",
+    "F_DEKU_POLLEN"
+   ],
+   "Scale": 0.62,
+   "Color": "#6E8B3D",
+   "Weakness": "Feu reçu ×1,25 ; fleurs de propulsion en exploration.",
+   "Late": false,
+   "Flag": "form.deku"
+  },
+  {
+   "Id": "Goron",
+   "Name": "Forme Goron",
+   "MaskItem": "MM_021",
+   "Resonance": 60,
+   "ATQ": 1.25,
+   "AMAG": 1.0,
+   "DEF": 1.3,
+   "AGI": 0.8,
+   "Taken": {
+    "Water": 1.25
+   },
+   "Commands": [
+    "F_GORON_PUNCH",
+    "F_GORON_ROLL",
+    "F_GORON_POUND"
+   ],
+   "Scale": 1.35,
+   "Color": "#B7874A",
+   "Weakness": "Eau reçue ×1,25 ; dalles lourdes et rochers.",
+   "Late": false,
+   "Flag": "form.goron"
+  },
+  {
+   "Id": "Zora",
+   "Name": "Forme Zora",
+   "MaskItem": "MM_022",
+   "Resonance": 60,
+   "ATQ": 1.0,
+   "AMAG": 1.2,
+   "DEF": 1.0,
+   "AGI": 1.1,
+   "Taken": {
+    "Water": 0.75,
+    "Thunder": 1.25
+   },
+   "Commands": [
+    "F_ZORA_FINS",
+    "F_ZORA_WAVE",
+    "F_ZORA_BARRIER"
+   ],
+   "Scale": 1.05,
+   "Color": "#9FD6E6",
+   "Weakness": "Foudre reçue ×1,25 ; nage et mécanismes sous-marins.",
+   "Late": false,
+   "Flag": "form.zora"
+  },
+  {
+   "Id": "Oni",
+   "Name": "Dieu démon (Oni)",
+   "MaskItem": "MM_023",
+   "Resonance": 100,
+   "ATQ": 1.35,
+   "AMAG": 1.2,
+   "DEF": 1.0,
+   "AGI": 1.0,
+   "Taken": {},
+   "Commands": [
+    "F_ONI_BLADE",
+    "F_ONI_BEAM",
+    "F_ONI_MOON"
+   ],
+   "Scale": 1.18,
+   "Color": "#E8E6EE",
+   "Weakness": "Après retour : coût PM +20 % pendant 2 activations. Forme tardive.",
+   "Late": true,
+   "Flag": "form.oni"
+  },
+  {
+   "Id": "Giant",
+   "Name": "Forme Géant",
+   "MaskItem": "MM_043",
+   "Resonance": 100,
+   "ATQ": 1.3,
+   "AMAG": 1.0,
+   "DEF": 1.2,
+   "AGI": 1.0,
+   "Taken": {},
+   "Commands": [
+    "F_GIANT_STRIKE",
+    "F_GIANT_GRAB"
+   ],
+   "Scale": 2.6,
+   "Color": "#4F7A3A",
+   "Weakness": "Seulement dans les arènes marquées giant_allowed.",
+   "Late": true,
+   "Flag": "form.giant",
+   "ArenaOnly": true
+  },
+  {
+   "Id": "Wolf",
+   "Name": "Loup du crépuscule",
+   "MaskItem": "",
+   "Resonance": 50,
+   "ATQ": 1.1,
+   "AMAG": 1.0,
+   "DEF": 1.0,
+   "AGI": 1.2,
+   "Taken": {},
+   "Commands": [
+    "F_WOLF_BITE",
+    "F_WOLF_HUNT",
+    "F_WOLF_SENSE"
+   ],
+   "Scale": 0.9,
+   "Color": "#5A5F66",
+   "Weakness": "Aucun arc ni objet tenu ; lié à TP, pas à MM.",
+   "Late": false,
+   "Flag": "form.wolf",
+   "NoItems": true
+  },
+  {
+   "Id": "Majora",
+   "Name": "Résonance de Majora",
+   "MaskItem": "",
+   "Resonance": 100,
+   "ATQ": 1.15,
+   "AMAG": 1.35,
+   "DEF": 1.0,
+   "AGI": 1.0,
+   "Taken": {},
+   "Commands": [
+    "F_MAJORA_ORB",
+    "F_MAJORA_DANCE",
+    "F_MAJORA_RIFT"
+   ],
+   "Scale": 1.1,
+   "Color": "#6B3FA0",
+   "Weakness": "Création de fan après fin ; corruption +20/action ; fin à 60 ; retire 10 % PV non létaux au retour.",
+   "Late": true,
+   "Flag": "form.majora",
+   "Corruption": 20
+  }
+ ]
+}

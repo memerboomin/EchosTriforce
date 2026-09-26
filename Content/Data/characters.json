@@ -1,0 +1,250 @@
+{
+ "Characters": [
+  {
+   "Id": "link",
+   "Name": "Link",
+   "Role": "Polyvalent",
+   "Mult": {
+    "HP": 1.0,
+    "MP": 1.0,
+    "STR": 1.0,
+    "MAG": 1.0,
+    "VIT": 1.0,
+    "SPR": 1.0,
+    "AGI": 1.0,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "L01",
+    "R01",
+    "G01",
+    "S01"
+   ],
+   "Equipment": {
+    "Weapon": "OOT_001",
+    "Offhand": "OOT_005",
+    "Outfit": "OOT_008"
+   },
+   "Color": "#3F8F3A",
+   "Recruit": "Départ",
+   "Portrait": "T_Portrait_Link",
+   "Identity": "link",
+   "Weapon": "Blade",
+   "Stances": [],
+   "Lore": "Le héros choisi par l'épée. Porteur de la Triforce du Courage à travers les âges."
+  },
+  {
+   "Id": "sheik",
+   "Name": "Sheik",
+   "Role": "Furtive / soutien",
+   "Mult": {
+    "HP": 0.9,
+    "MP": 1.0,
+    "STR": 0.9,
+    "MAG": 1.1,
+    "VIT": 1.0,
+    "SPR": 1.0,
+    "AGI": 1.2,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "SHEIK_NEEDLE",
+    "SHEIK_VEIL",
+    "SHEIK_REVEAL",
+    "C01"
+   ],
+   "Equipment": {},
+   "Color": "#3A4A7A",
+   "Recruit": "C1 : Temple du Temps",
+   "Portrait": "T_Portrait_Sheik",
+   "Identity": "sheik",
+   "Weapon": "Needle",
+   "Stances": [
+    "Sheik",
+    "Zelda"
+   ],
+   "Lore": "Identité adoptée par Zelda dans Ocarina of Time. Posture Zelda débloquée en C5 (Q_SHEIK_03)."
+  },
+  {
+   "Id": "impa",
+   "Name": "Impa",
+   "Role": "Gardienne",
+   "Mult": {
+    "HP": 1.05,
+    "MP": 1.0,
+    "STR": 1.05,
+    "MAG": 1.0,
+    "VIT": 1.0,
+    "SPR": 1.0,
+    "AGI": 1.05,
+    "LCK": 1.0,
+    "DEF": 1.1
+   },
+   "Abilities": [
+    "IMPA_BLADE",
+    "G03",
+    "IMPA_MARK"
+   ],
+   "Equipment": {},
+   "Color": "#7A2E2E",
+   "Recruit": "C2 : défense de Cocorico",
+   "Portrait": "T_Portrait_Impa",
+   "Identity": "impa",
+   "Weapon": "Blade",
+   "Stances": [],
+   "Lore": "Sheikah, protectrice de la famille royale."
+  },
+  {
+   "Id": "midna",
+   "Name": "Midna",
+   "Role": "Magie d'ombre",
+   "Mult": {
+    "HP": 0.9,
+    "MP": 1.0,
+    "STR": 1.0,
+    "MAG": 1.25,
+    "VIT": 1.0,
+    "SPR": 1.1,
+    "AGI": 1.0,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "MIDNA_BOLT",
+    "MIDNA_DISPEL"
+   ],
+   "Equipment": {},
+   "Color": "#2F3B3F",
+   "Recruit": "C5 : miroir réparé",
+   "Portrait": "T_Portrait_Midna",
+   "Identity": "midna",
+   "Weapon": "Magic",
+   "Stances": [],
+   "Lore": "Princesse du Crépuscule ; ouvre le duo Crépuscule avec Link loup."
+  },
+  {
+   "Id": "mipha",
+   "Name": "Mipha",
+   "Role": "Soigneuse",
+   "Mult": {
+    "HP": 0.95,
+    "MP": 1.0,
+    "STR": 1.0,
+    "MAG": 1.2,
+    "VIT": 1.0,
+    "SPR": 1.2,
+    "AGI": 1.0,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "MIPHA_SPEAR",
+    "MIPHA_HEAL",
+    "MIPHA_WAVE",
+    "MIPHA_REVIVE"
+   ],
+   "Equipment": {
+    "Weapon": "BOTW_093"
+   },
+   "Color": "#C0303A",
+   "Recruit": "C2 : citerne",
+   "Portrait": "T_Portrait_Mipha",
+   "Identity": "mipha",
+   "Weapon": "Spear",
+   "Stances": [],
+   "Lore": "Princesse zora et Prodige ; rencontrée comme écho conscient d'une mémoire."
+  },
+  {
+   "Id": "daruk",
+   "Name": "Daruk",
+   "Role": "Protecteur",
+   "Mult": {
+    "HP": 1.3,
+    "MP": 1.0,
+    "STR": 1.1,
+    "MAG": 1.0,
+    "VIT": 1.3,
+    "SPR": 1.0,
+    "AGI": 0.8,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "DARUK_HAMMER",
+    "G02",
+    "G05",
+    "DARUK_PERC"
+   ],
+   "Equipment": {},
+   "Color": "#A0703A",
+   "Recruit": "C2 : mine en péril",
+   "Portrait": "T_Portrait_Daruk",
+   "Identity": "daruk",
+   "Weapon": "Heavy",
+   "Stances": [],
+   "Lore": "Prodige goron, porteur du Bouclier de Daruk."
+  },
+  {
+   "Id": "revali",
+   "Name": "Revali",
+   "Role": "Tireur",
+   "Mult": {
+    "HP": 0.9,
+    "MP": 1.0,
+    "STR": 1.1,
+    "MAG": 1.0,
+    "VIT": 1.0,
+    "SPR": 1.0,
+    "AGI": 1.2,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "REVALI_SHOT",
+    "REVALI_VOLLEY",
+    "REVALI_GALE",
+    "ANALYZE"
+   ],
+   "Equipment": {},
+   "Color": "#3E5AA8",
+   "Recruit": "C3 : épreuve aérienne",
+   "Portrait": "T_Portrait_Revali",
+   "Identity": "revali",
+   "Weapon": "Bow",
+   "Stances": [],
+   "Lore": "Prodige piaf ; maître de l'arc et des courants aériens."
+  },
+  {
+   "Id": "urbosa",
+   "Name": "Urbosa",
+   "Role": "Foudre",
+   "Mult": {
+    "HP": 1.1,
+    "MP": 1.0,
+    "STR": 1.15,
+    "MAG": 1.05,
+    "VIT": 1.0,
+    "SPR": 1.0,
+    "AGI": 1.0,
+    "LCK": 1.0,
+    "DEF": 1.0
+   },
+   "Abilities": [
+    "URBOSA_SCIM",
+    "URBOSA_ARC",
+    "R03",
+    "URBOSA_FURY"
+   ],
+   "Equipment": {},
+   "Color": "#D8A63A",
+   "Recruit": "C3 : duel du désert",
+   "Portrait": "T_Portrait_Urbosa",
+   "Identity": "urbosa",
+   "Weapon": "Blade",
+   "Stances": [],
+   "Lore": "Cheffe gerudo et Prodige ; commande la foudre."
+  }
+ ]
+}
